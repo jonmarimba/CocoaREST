@@ -42,16 +42,14 @@ The bare basics that are required to request data from or send data to a social 
 	(b) Set its username and password, if your task requires authentication
 	(c) Optionally, you can set your application's information
 	(d) For more control, you can set the maximum tasks that can be run simultaneously
-
-	NOTE: All of these are @properties listed inside SDSocialNetworkManager.h
+	(e) All of these are @properties listed inside SDSocialNetworkManager.h
 
 (2) Create an SDSocialNetworkTask (usually with +task)
 
 	(a) Set its service if necessary (defaults to Twitter.com for now)
 	(b) Set the task type it should use
 	(c) Set any required properties for the specified task (ie. screenName, text, or statusID)
-
-	NOTE: Check SDSocialNetworkTask.h for a list of writable properties, and service/task types
+	(d) Check SDSocialNetworkTask.h for a list of writable properties, and service/task types
 
 (3) Run the task via [manager runTask:task]
 
@@ -59,8 +57,6 @@ The bare basics that are required to request data from or send data to a social 
 	(b) After every task, SDSocialNetworkManager object will have new rate-limiting information set on it. You can reliably et this data from the SDSocialNetworkManager @properties limitMaxAmount, limitRemainingAmount, and limitResetEpochDate, whenever necessary. They will always reflect the real-time limiting information
 	(c) The `results` @property of the Task object will contain returned information from the social networking service.
 	(d) Once a task has completed, it will deallocate. It should not be retained, and cannot be run a second time. Read the documentation on NSOperation for more information on this.
-
-	NOTE: For backwards-compatibility with MGTwitterEngine, each Task object contains a unique string identifier, created inside -init. These unique string identifiers are compatible with MGTwitterEngine's and may be used as keys in dictionaries if you so desire. However, they are deprecated. If anything, the task itself should be stored in a collection, but usually this is not necessary, as each task encapsulates sufficient information inside it for determining any contextual information needed to understand the returned data.
 
 
 A note on threads and performance
@@ -75,6 +71,7 @@ A note about the format of returned values
 
 You may get any kind of ObjC type in the `results` property, anything from NSArray to NSDictionary, NSString to NSNumber, etc. Because of the JSON parser, these results (or the objects in a collection) may not always be of the classes you might expect. So be sure to ask for a value's -class when testing the services.
 
+UUIDs: For backwards-compatibility with MGTwitterEngine, each Task object contains a unique string identifier (or UUID), created inside -init. These unique string identifiers are compatible with MGTwitterEngine's and may be used as keys in dictionaries if you so desire. However, they are deprecated, to be removed in the (hopefully near) future. If anything, the task itself should be stored in a collection, but usually this is not necessary, as each task encapsulates sufficient information inside it for determining any contextual information needed to understand the returned data.
 
 
 Other people's Source Code used in this project
@@ -90,23 +87,19 @@ http://lloyd.github.com/yajl/
 
 
 
-A note about using SDSocialNetworkManager on the iPhone
-=======================================================
+SDSocialNetworkManager and the iPhone
+=====================================
 
 Most of the classes used in this project should be available on the iPhone SDK as well as Leopard. Similarly, YAJL.framework should work just fine when compiled against the iPhone SDK. Thus, it should be perfectly suitable for using on the iPhone SDK.
 
 Note: I have not tested this against the iPhone SDK as of the date of writing (5-29-09) so if anyone tests it and finds that it either works or fails, please let me know!
 
 
-
-
-
-
+Standard ending of a README
+===========================
 
 That's about it. If you have trouble with the code, or want to make a feature request or report a bug (or even contribute some improvements), you can get in touch with me using the info below. I hope you enjoy using SDSocialNetworkManager!
 
-
-Metabolically,
 -Steven Degutis
 
 
@@ -115,7 +108,7 @@ AIM:      stevendegutis
 MSN:      steven.degutis@hotmail.com
 Twitter:  sdegutis
 
-P.S. Special Thanks to Matt Gemmell for providing the initial structure of this README and the Source Code License file!
+P.S. Special Thanks to Matt Gemmell for providing the initial structure of this README and the Source Code License file! Thanks also to Matt for the idea of a twitter engine Cocoa class, and thanks to @chockenberry for finding `yajl`
 
 
 
