@@ -19,6 +19,7 @@
 - (void) _sendResultsToDelegate;
 - (void) _sendResultsToDelegateFromMainThread;
 - (void) _setBasicHTTPAuthorizationForRequest:(NSMutableURLRequest*)request;
+- (void) _setURLAndParametersForRequest:(NSMutableURLRequest*)request;
 
 @end
 
@@ -75,7 +76,7 @@
 	[request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
 	[request setTimeoutInterval:30.0];
 	
-	[self setURLAndParametersForRequest:request];
+	[self _setURLAndParametersForRequest:request];
 	[self setUniqueApplicationIdentifiersForRequest:request];
 	
 	if ([self shouldUseBasicHTTPAuthentication])
@@ -147,8 +148,6 @@
 }
 
 - (void) _setBasicHTTPAuthorizationForRequest:(NSMutableURLRequest*)request {
-	NSLog(@"in here %@ %@", manager.username, manager.password);
-	
 	if (manager.username == nil || manager.password == nil)
 		return;
 	
@@ -159,13 +158,55 @@
 	[request setValue:authValue forHTTPHeaderField:@"Authorization"];
 }
 
+- (void) _setURLAndParametersForRequest:(NSMutableURLRequest*)request {
+	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+	
+	SDHTTPMethod method = [self methodBasedOnTaskType];
+	
+	NSString *URLString = [self URLStringBasedOnTaskType];
+	NSAssert(URLString != nil, @"URLString == nil; either `type` is invalid, or URL method is not complete");
+	
+	[self addParametersToDictionary:parameters];
+	
+	switch (method) {
+		case SDHTTPMethodGet: {
+			NSString *queryString = [self queryStringFromDictionary:parameters];
+			[request setHTTPMethod:@"GET"];
+			if ([queryString length] > 0)
+				URLString = [NSString stringWithFormat:@"%@?%@", URLString, queryString];
+			break;
+		}
+		case SDHTTPMethodPost:
+			[request setHTTPMethod:@"POST"];
+			if ([self isMultiPartDataBasedOnTaskType] == YES) {
+				NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", [SDSocialNetworkTask stringBoundary]];
+				[request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+				
+				[request setHTTPBody:[self postBodyDataFromDictionary:parameters]];
+			}
+			else {
+				NSString *queryString = [self queryStringFromDictionary:parameters];
+				[request setHTTPBody:[queryString dataUsingEncoding:NSUTF8StringEncoding]];
+			}
+			break;
+	}
+	
+	[request setURL:[NSURL URLWithString:URLString]];
+}
+
 // MARK: -
 // MARK: Subclassable Methods
 
 - (BOOL) validateType { return NO; }
 - (BOOL) shouldUseBasicHTTPAuthentication { return NO; }
-- (void) setURLAndParametersForRequest:(NSMutableURLRequest*)request {}
 - (void) setUniqueApplicationIdentifiersForRequest:(NSMutableURLRequest*)request {}
+- (void) handleHTTPResponse:(NSHTTPURLResponse*)response {}
+
+- (BOOL) isMultiPartDataBasedOnTaskType { return NO; }
+- (SDHTTPMethod) methodBasedOnTaskType { return SDHTTPMethodGet; }
+- (NSString*) URLStringBasedOnTaskType { return nil; }
+- (void) addParametersToDictionary:(NSMutableDictionary*)parameters {}
+
 - (Protocol*) delegateProtocol { return NULL; }
 - (void) sendResultsToDelegate {}
 - (void) sendErrorToDelegate {}

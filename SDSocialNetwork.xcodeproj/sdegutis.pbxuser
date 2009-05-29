@@ -7,11 +7,60 @@
 		addToTargets = (
 			8D1107260486CEB800E47090 /* SDSocialNetwork */,
 		);
+		breakpoints = (
+			94BFA6A70FD08F5D00806DA0 /* objc_exception_throw */,
+		);
 		codeSenseManager = 94BFA1080FCF222D00806DA0 /* Code sense */;
 		executables = (
 			94BFA0FF0FCF221100806DA0 /* SDSocialNetwork */,
 		);
 		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					315,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
 			PBXPerProjectTemplateStateSaveDate = 265232913;
 			PBXWorkspaceStateSaveDate = 265232913;
 		};
@@ -821,6 +870,50 @@
 			94BFA67C0FD08C8400806DA0 /* PBXTextBookmark */ = 94BFA67C0FD08C8400806DA0 /* PBXTextBookmark */;
 			94BFA67D0FD08C8400806DA0 /* PBXTextBookmark */ = 94BFA67D0FD08C8400806DA0 /* PBXTextBookmark */;
 			94BFA67E0FD08C8400806DA0 /* PBXTextBookmark */ = 94BFA67E0FD08C8400806DA0 /* PBXTextBookmark */;
+			94BFA6840FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA6840FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA6850FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA6850FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA6860FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA6860FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA6890FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA6890FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA68A0FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA68A0FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA68B0FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA68B0FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA68C0FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA68C0FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA68D0FD08ED400806DA0 /* PBXTextBookmark */ = 94BFA68D0FD08ED400806DA0 /* PBXTextBookmark */;
+			94BFA6900FD08EE500806DA0 /* PBXTextBookmark */ = 94BFA6900FD08EE500806DA0 /* PBXTextBookmark */;
+			94BFA6910FD08EE500806DA0 /* PBXTextBookmark */ = 94BFA6910FD08EE500806DA0 /* PBXTextBookmark */;
+			94BFA6920FD08EE500806DA0 /* PBXTextBookmark */ = 94BFA6920FD08EE500806DA0 /* PBXTextBookmark */;
+			94BFA6930FD08EE500806DA0 /* PBXTextBookmark */ = 94BFA6930FD08EE500806DA0 /* PBXTextBookmark */;
+			94BFA6940FD08EE500806DA0 /* PBXTextBookmark */ = 94BFA6940FD08EE500806DA0 /* PBXTextBookmark */;
+			94BFA6970FD08F0000806DA0 /* PBXTextBookmark */ = 94BFA6970FD08F0000806DA0 /* PBXTextBookmark */;
+			94BFA6980FD08F0000806DA0 /* PBXTextBookmark */ = 94BFA6980FD08F0000806DA0 /* PBXTextBookmark */;
+			94BFA6990FD08F0000806DA0 /* PBXTextBookmark */ = 94BFA6990FD08F0000806DA0 /* PBXTextBookmark */;
+			94BFA69A0FD08F0000806DA0 /* PBXTextBookmark */ = 94BFA69A0FD08F0000806DA0 /* PBXTextBookmark */;
+			94BFA69B0FD08F0000806DA0 /* PBXTextBookmark */ = 94BFA69B0FD08F0000806DA0 /* PBXTextBookmark */;
+			94BFA69F0FD08F3700806DA0 /* PBXTextBookmark */ = 94BFA69F0FD08F3700806DA0 /* PBXTextBookmark */;
+			94BFA6A00FD08F3700806DA0 /* PBXTextBookmark */ = 94BFA6A00FD08F3700806DA0 /* PBXTextBookmark */;
+			94BFA6A10FD08F3700806DA0 /* PBXTextBookmark */ = 94BFA6A10FD08F3700806DA0 /* PBXTextBookmark */;
+			94BFA6A20FD08F3700806DA0 /* PBXTextBookmark */ = 94BFA6A20FD08F3700806DA0 /* PBXTextBookmark */;
+			94BFA6A30FD08F3700806DA0 /* PBXTextBookmark */ = 94BFA6A30FD08F3700806DA0 /* PBXTextBookmark */;
+			94BFA6A80FD08F5E00806DA0 /* PBXTextBookmark */ = 94BFA6A80FD08F5E00806DA0 /* PBXTextBookmark */;
+			94BFA6AC0FD08F6400806DA0 /* PBXTextBookmark */ = 94BFA6AC0FD08F6400806DA0 /* PBXTextBookmark */;
+			94BFA6AD0FD08F6400806DA0 /* PBXTextBookmark */ = 94BFA6AD0FD08F6400806DA0 /* PBXTextBookmark */;
+			94BFA6AE0FD08F6400806DA0 /* PBXTextBookmark */ = 94BFA6AE0FD08F6400806DA0 /* PBXTextBookmark */;
+			94BFA6AF0FD08F6400806DA0 /* PBXTextBookmark */ = 94BFA6AF0FD08F6400806DA0 /* PBXTextBookmark */;
+			94BFA6B00FD08F6400806DA0 /* PBXTextBookmark */ = 94BFA6B00FD08F6400806DA0 /* PBXTextBookmark */;
+			94BFA6B70FD08F8200806DA0 /* PBXTextBookmark */ = 94BFA6B70FD08F8200806DA0 /* PBXTextBookmark */;
+			94BFA6B80FD08F8200806DA0 /* PBXTextBookmark */ = 94BFA6B80FD08F8200806DA0 /* PBXTextBookmark */;
+			94BFA6B90FD08F8200806DA0 /* PBXTextBookmark */ = 94BFA6B90FD08F8200806DA0 /* PBXTextBookmark */;
+			94BFA6BA0FD08F8200806DA0 /* PBXTextBookmark */ = 94BFA6BA0FD08F8200806DA0 /* PBXTextBookmark */;
+			94BFA6BB0FD08F8200806DA0 /* PBXTextBookmark */ = 94BFA6BB0FD08F8200806DA0 /* PBXTextBookmark */;
+			94BFA6BD0FD08F8B00806DA0 /* PBXTextBookmark */ = 94BFA6BD0FD08F8B00806DA0 /* PBXTextBookmark */;
+			94BFA6BE0FD08F8B00806DA0 /* PBXTextBookmark */ = 94BFA6BE0FD08F8B00806DA0 /* PBXTextBookmark */;
+			94BFA6BF0FD08F8B00806DA0 /* PBXTextBookmark */ = 94BFA6BF0FD08F8B00806DA0 /* PBXTextBookmark */;
+			94BFA6C00FD08F8B00806DA0 /* PBXTextBookmark */ = 94BFA6C00FD08F8B00806DA0 /* PBXTextBookmark */;
+			94BFA6C10FD08F8B00806DA0 /* PBXTextBookmark */ = 94BFA6C10FD08F8B00806DA0 /* PBXTextBookmark */;
+			94BFA6C30FD08FAF00806DA0 /* PBXTextBookmark */ = 94BFA6C30FD08FAF00806DA0 /* PBXTextBookmark */;
+			94BFA6C40FD08FAF00806DA0 /* PBXTextBookmark */ = 94BFA6C40FD08FAF00806DA0 /* PBXTextBookmark */;
+			94BFA6C50FD08FAF00806DA0 /* PBXTextBookmark */ = 94BFA6C50FD08FAF00806DA0 /* PBXTextBookmark */;
+			94BFA6C60FD08FAF00806DA0 /* PBXTextBookmark */ = 94BFA6C60FD08FAF00806DA0 /* PBXTextBookmark */;
+			94BFA6C70FD08FAF00806DA0 /* PBXTextBookmark */ = 94BFA6C70FD08FAF00806DA0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 94BFA1070FCF222D00806DA0 /* Source Control */;
 		userBuildSettings = {
@@ -866,8 +959,12 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = SDSocialNetwork;
+		savedGlobals = {
+		};
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+		};
 	};
 	94BFA1070FCF222D00806DA0 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -883,7 +980,7 @@
 	94BFA1200FCF236800806DA0 /* AppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {678, 826}}";
-			sepNavSelRange = "{926, 0}";
+			sepNavSelRange = "{1141, 0}";
 			sepNavVisRange = "{261, 1396}";
 			sepNavWindowFrame = "{{1106, 237}, {737, 738}}";
 		};
@@ -924,7 +1021,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {678, 966}}";
 			sepNavSelRange = "{1187, 0}";
-			sepNavVisRange = "{411, 995}";
+			sepNavVisRange = "{411, 1000}";
 			sepNavWindowFrame = "{{663, 250}, {737, 738}}";
 		};
 	};
@@ -938,9 +1035,9 @@
 	};
 	94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {860, 4074}}";
-			sepNavSelRange = "{1850, 0}";
-			sepNavVisRange = "{1241, 1246}";
+			sepNavIntBoundsRect = "{{0, 0}, {864, 4312}}";
+			sepNavSelRange = "{4800, 0}";
+			sepNavVisRange = "{0, 1142}";
 			sepNavWindowFrame = "{{932, 192}, {919, 769}}";
 		};
 	};
@@ -1007,7 +1104,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 271";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1867;
 		vrLoc = 7082;
@@ -1017,7 +1114,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 230";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 6793;
@@ -1119,7 +1216,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 251";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2136;
 		vrLoc = 6793;
@@ -1169,7 +1266,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 252";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2371;
 		vrLoc = 6793;
@@ -1219,7 +1316,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 253";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2441;
 		vrLoc = 6931;
@@ -1289,7 +1386,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 254";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2441;
 		vrLoc = 6931;
@@ -1329,7 +1426,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 255";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2448;
 		vrLoc = 6931;
@@ -1379,7 +1476,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 256";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1439,7 +1536,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1489,7 +1586,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1539,7 +1636,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1589,7 +1686,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1639,7 +1736,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1689,7 +1786,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1739,7 +1836,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1789,7 +1886,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1839,7 +1936,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1889,7 +1986,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1939,7 +2036,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1989,7 +2086,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -2039,7 +2136,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -2089,7 +2186,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -2129,7 +2226,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 275";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2079;
 		vrLoc = 8340;
@@ -2139,7 +2236,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 258";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2828;
 		vrLoc = 6931;
@@ -2179,7 +2276,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 260";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2882;
 		vrLoc = 6931;
@@ -2219,7 +2316,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 260";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2935;
 		vrLoc = 6931;
@@ -2259,7 +2356,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 261";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2649;
 		vrLoc = 7833;
@@ -2299,7 +2396,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 263";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2695;
 		vrLoc = 7833;
@@ -2339,7 +2436,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 265";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2728;
 		vrLoc = 7833;
@@ -2379,7 +2476,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 266";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2771;
 		vrLoc = 7833;
@@ -2419,7 +2516,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 269";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2809;
 		vrLoc = 7833;
@@ -2459,7 +2556,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 269";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2855;
 		vrLoc = 7833;
@@ -2499,7 +2596,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 270";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2900;
 		vrLoc = 7833;
@@ -2539,7 +2636,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 272";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2939;
 		vrLoc = 7833;
@@ -2579,7 +2676,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 273";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2979;
 		vrLoc = 7833;
@@ -2619,7 +2716,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 274";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 3018;
 		vrLoc = 7833;
@@ -2659,7 +2756,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 276";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 3104;
 		vrLoc = 7833;
@@ -2699,7 +2796,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 279";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 3090;
 		vrLoc = 7833;
@@ -2749,7 +2846,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 277";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 3185;
 		vrLoc = 7475;
@@ -2789,7 +2886,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 277";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 3185;
 		vrLoc = 7475;
@@ -2829,7 +2926,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 277";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 2979;
 		vrLoc = 6806;
@@ -2859,7 +2956,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 215";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1761;
 		vrLoc = 5848;
@@ -2899,7 +2996,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 218";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1767;
 		vrLoc = 5848;
@@ -2939,7 +3036,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 222";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 5848;
@@ -2979,7 +3076,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 223";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1603;
 		vrLoc = 5848;
@@ -3019,7 +3116,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 224";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1535;
 		vrLoc = 5848;
@@ -3059,7 +3156,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 223";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1476;
 		vrLoc = 5848;
@@ -3099,7 +3196,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 225";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1515;
 		vrLoc = 5848;
@@ -3139,7 +3236,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 227";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1577;
 		vrLoc = 5848;
@@ -3179,7 +3276,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 230";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1689;
 		vrLoc = 5848;
@@ -3219,7 +3316,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 232";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1685;
 		vrLoc = 5848;
@@ -3259,7 +3356,7 @@
 		comments = "warning: control reaches end of non-void function";
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		rLen = 0;
-		rLoc = 172;
+		rLoc = 213;
 		rType = 1;
 	};
 	94BFA2C70FCF9DF600806DA0 /* PBXTextBookmark */ = {
@@ -3267,7 +3364,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 363";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1875;
 		vrLoc = 12680;
@@ -3317,7 +3414,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 354";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 12010;
@@ -3357,7 +3454,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 354";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 12010;
@@ -3397,7 +3494,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 354";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 12010;
@@ -3467,7 +3564,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 407";
 		rLen = 12;
-		rLoc = 5623;
+		rLoc = 7194;
 		rType = 0;
 		vrLen = 1899;
 		vrLoc = 13667;
@@ -3517,7 +3614,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 407";
 		rLen = 12;
-		rLoc = 5623;
+		rLoc = 7194;
 		rType = 0;
 		vrLen = 1722;
 		vrLoc = 13667;
@@ -3594,7 +3691,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 407";
 		rLen = 12;
-		rLoc = 5623;
+		rLoc = 7194;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 0;
@@ -3916,7 +4013,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		rLen = 0;
-		rLoc = 172;
+		rLoc = 213;
 		rType = 1;
 	};
 	94BFA3390FD02CE600806DA0 /* PBXTextBookmark */ = {
@@ -3924,7 +4021,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 285";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 10869;
@@ -3973,7 +4070,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		rLen = 0;
-		rLoc = 172;
+		rLoc = 213;
 		rType = 1;
 	};
 	94BFA3410FD02E3500806DA0 /* PBXTextBookmark */ = {
@@ -4051,7 +4148,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 144";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1622;
 		vrLoc = 3004;
@@ -4101,7 +4198,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 144";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1375;
 		vrLoc = 1568;
@@ -4151,7 +4248,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 144";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1375;
 		vrLoc = 1568;
@@ -4258,7 +4355,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 163";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1563;
 		vrLoc = 3984;
@@ -4474,7 +4571,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		rLen = 0;
-		rLoc = 172;
+		rLoc = 213;
 		rType = 1;
 	};
 	94BFA37A0FD039A700806DA0 /* PBXTextBookmark */ = {
@@ -4859,7 +4956,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 188";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1850;
 		vrLoc = 4912;
@@ -4899,7 +4996,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 12551;
@@ -4966,7 +5063,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 370";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 13390;
@@ -5016,7 +5113,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 370";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 13390;
@@ -5026,7 +5123,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 375";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 13617;
@@ -5076,7 +5173,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 379";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 13617;
@@ -5126,7 +5223,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 373";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 13617;
@@ -5176,7 +5273,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 373";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 13617;
@@ -5186,7 +5283,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 385";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1510;
 		vrLoc = 13617;
@@ -5296,7 +5393,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5346,7 +5443,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5396,7 +5493,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5446,7 +5543,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5486,7 +5583,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5496,7 +5593,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 382";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1565;
 		vrLoc = 14170;
@@ -5546,7 +5643,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 384";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1517;
 		vrLoc = 14170;
@@ -5596,7 +5693,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 393";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1437;
 		vrLoc = 14170;
@@ -5646,7 +5743,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 394";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 14170;
@@ -5706,7 +5803,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 394";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 14170;
@@ -5746,7 +5843,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 394";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 14170;
@@ -5756,7 +5853,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 413";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1570;
 		vrLoc = 14344;
@@ -5816,7 +5913,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 422";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1613;
 		vrLoc = 14344;
@@ -5886,7 +5983,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 423";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 14647;
@@ -6272,9 +6369,9 @@
 	};
 	94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {860, 4984}}";
-			sepNavSelRange = "{2262, 12}";
-			sepNavVisRange = "{1661, 1235}";
+			sepNavIntBoundsRect = "{{0, 0}, {860, 4060}}";
+			sepNavSelRange = "{260, 0}";
+			sepNavVisRange = "{8661, 1616}";
 			sepNavWindowFrame = "{{926, 284}, {919, 769}}";
 		};
 	};
@@ -6319,7 +6416,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		rLen = 0;
-		rLoc = 2147495347;
+		rLoc = 2147493702;
 		rType = 0;
 	};
 	94BFA4AC0FD0708C00806DA0 /* PBXTextBookmark */ = {
@@ -6444,7 +6541,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 41";
 		rLen = 0;
-		rLoc = 11917;
+		rLoc = 10272;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 0;
@@ -6578,7 +6675,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 41";
 		rLen = 0;
-		rLoc = 11917;
+		rLoc = 10272;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 0;
@@ -6628,7 +6725,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 41";
 		rLen = 0;
-		rLoc = 11917;
+		rLoc = 10272;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 0;
@@ -6638,7 +6735,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 304";
 		rLen = 0;
-		rLoc = 11917;
+		rLoc = 10272;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 10071;
@@ -6648,7 +6745,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 52";
 		rLen = 0;
-		rLoc = 1648;
+		rLoc = 1327;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 625;
@@ -6675,7 +6772,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		rLen = 0;
-		rLoc = 180;
+		rLoc = 221;
 		rType = 1;
 	};
 	94BFA4FF0FD076CC00806DA0 /* PBXTextBookmark */ = {
@@ -6744,7 +6841,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 50";
 		rLen = 0;
-		rLoc = 1523;
+		rLoc = 1202;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 625;
@@ -6836,7 +6933,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 50";
 		rLen = 0;
-		rLoc = 1523;
+		rLoc = 1202;
 		rType = 0;
 		vrLen = 1152;
 		vrLoc = 625;
@@ -6993,7 +7090,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 17";
 		rLen = 0;
-		rLoc = 620;
+		rLoc = 299;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -7063,7 +7160,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 17";
 		rLen = 0;
-		rLoc = 620;
+		rLoc = 299;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -7123,7 +7220,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 17";
 		rLen = 0;
-		rLoc = 620;
+		rLoc = 299;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -7183,7 +7280,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 17";
 		rLen = 0;
-		rLoc = 620;
+		rLoc = 299;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -7243,7 +7340,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 17";
 		rLen = 0;
-		rLoc = 620;
+		rLoc = 299;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -7253,7 +7350,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 73";
 		rLen = 0;
-		rLoc = 2208;
+		rLoc = 1887;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 923;
@@ -7263,7 +7360,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 53";
 		rLen = 0;
-		rLoc = 1520;
+		rLoc = 1199;
 		rType = 0;
 		vrLen = 1170;
 		vrLoc = 468;
@@ -7310,7 +7407,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 158";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 1830;
 		vrLoc = 4096;
@@ -7320,7 +7417,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 158";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 1123;
@@ -7390,7 +7487,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 222";
 		rLen = 0;
-		rLoc = 6512;
+		rLoc = 8083;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 6463;
@@ -7400,7 +7497,7 @@
 		comments = "warning: 'SDTwitterTask' may not respond to '-_errorString'";
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		rLen = 0;
-		rLoc = 93;
+		rLoc = 84;
 		rType = 1;
 	};
 	94BFA5710FD07C6100806DA0 /* PBXTextBookmark */ = {
@@ -7418,7 +7515,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 265";
 		rLen = 0;
-		rLoc = 10375;
+		rLoc = 8730;
 		rType = 0;
 		vrLen = 297;
 		vrLoc = 9653;
@@ -7458,7 +7555,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 222";
 		rLen = 0;
-		rLoc = 6512;
+		rLoc = 8083;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 6463;
@@ -7468,7 +7565,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 84";
 		rLen = 0;
-		rLoc = 2208;
+		rLoc = 1887;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 1922;
@@ -7498,7 +7595,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 51";
 		rLen = 52;
-		rLoc = 1385;
+		rLoc = 1064;
 		rType = 0;
 		vrLen = 1356;
 		vrLoc = 656;
@@ -7528,7 +7625,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 158";
 		rLen = 0;
-		rLoc = 5160;
+		rLoc = 6731;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 1123;
@@ -7576,7 +7673,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 98";
 		rLen = 0;
-		rLoc = 2701;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 2004;
@@ -7602,7 +7699,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		rLen = 0;
-		rLoc = 24;
+		rLoc = 15;
 		rType = 1;
 	};
 	94BFA59C0FD07EB900806DA0 /* PBXTextBookmark */ = {
@@ -7610,7 +7707,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 110";
 		rLen = 0;
-		rLoc = 2842;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1092;
 		vrLoc = 2847;
@@ -7640,7 +7737,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 243";
 		rLen = 0;
-		rLoc = 9026;
+		rLoc = 10597;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 2132;
@@ -7706,17 +7803,18 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 111";
-		rLen = 12;
-		rLoc = 2844;
+		rLen = 0;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1171;
 		vrLoc = 2559;
 	};
 	94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {860, 630}}";
-			sepNavSelRange = "{542, 12}";
-			sepNavVisRange = "{0, 1208}";
+			sepNavIntBoundsRect = "{{0, 0}, {860, 686}}";
+			sepNavSelRange = "{532, 0}";
+			sepNavVisRange = "{61, 1268}";
+			sepNavWindowFrame = "{{38, 383}, {919, 769}}";
 		};
 	};
 	94BFA5B90FD0825C00806DA0 /* PBXTextBookmark */ = {
@@ -7726,7 +7824,7 @@
 		rLen = 0;
 		rLoc = 533;
 		rType = 0;
-		vrLen = 1299;
+		vrLen = 1208;
 		vrLoc = 0;
 	};
 	94BFA5BA0FD0825C00806DA0 /* PBXTextBookmark */ = {
@@ -7736,7 +7834,7 @@
 		rLen = 0;
 		rLoc = 232;
 		rType = 0;
-		vrLen = 1332;
+		vrLen = 1208;
 		vrLoc = 0;
 	};
 	94BFA5BB0FD0825C00806DA0 /* PBXTextBookmark */ = {
@@ -7744,7 +7842,7 @@
 		comments = "warning: 'SDTwitterTask' may not respond to '-_errorString'";
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		rLen = 0;
-		rLoc = 93;
+		rLoc = 84;
 		rType = 1;
 	};
 	94BFA5BC0FD0825C00806DA0 /* PBXTextBookmark */ = {
@@ -7752,7 +7850,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 84";
 		rLen = 0;
-		rLoc = 2208;
+		rLoc = 1887;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 1415;
@@ -7792,7 +7890,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 90";
 		rLen = 0;
-		rLoc = 2208;
+		rLoc = 1887;
 		rType = 0;
 		vrLen = 1906;
 		vrLoc = 1474;
@@ -7804,7 +7902,7 @@
 		rLen = 0;
 		rLoc = 310;
 		rType = 0;
-		vrLen = 1356;
+		vrLen = 1208;
 		vrLoc = 0;
 	};
 	94BFA5C80FD082E500806DA0 /* PBXTextBookmark */ = {
@@ -7831,7 +7929,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		rLen = 0;
-		rLoc = 109;
+		rLoc = 97;
 		rType = 1;
 	};
 	94BFA5D30FD0834100806DA0 /* PBXTextBookmark */ = {
@@ -7839,7 +7937,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 164";
 		rLen = 0;
-		rLoc = 2927;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1962;
 		vrLoc = 3140;
@@ -7851,7 +7949,7 @@
 		rLen = 0;
 		rLoc = 310;
 		rType = 0;
-		vrLen = 1356;
+		vrLen = 1208;
 		vrLoc = 0;
 	};
 	94BFA5D50FD0834100806DA0 /* PBXTextBookmark */ = {
@@ -7861,7 +7959,7 @@
 		rLen = 0;
 		rLoc = 532;
 		rType = 0;
-		vrLen = 1362;
+		vrLen = 1208;
 		vrLoc = 0;
 	};
 	94BFA5D60FD0834100806DA0 /* PBXTextBookmark */ = {
@@ -7889,9 +7987,9 @@
 		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
 		name = "SDSocialNetworkTask+Subclassing.h: 33";
 		rLen = 0;
-		rLoc = 905;
+		rLoc = 1026;
 		rType = 0;
-		vrLen = 1291;
+		vrLen = 1147;
 		vrLoc = 61;
 	};
 	94BFA5E00FD0840000806DA0 /* PBXTextBookmark */ = {
@@ -7899,7 +7997,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 345";
 		rLen = 0;
-		rLoc = 11922;
+		rLoc = 10277;
 		rType = 0;
 		vrLen = 1749;
 		vrLoc = 3828;
@@ -7909,7 +8007,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 223";
 		rLen = 0;
-		rLoc = 9026;
+		rLoc = 10597;
 		rType = 0;
 		vrLen = 939;
 		vrLoc = 0;
@@ -7929,7 +8027,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 163";
 		rLen = 0;
-		rLoc = 2927;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 320;
 		vrLoc = 5104;
@@ -7947,7 +8045,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 163";
 		rLen = 0;
-		rLoc = 2927;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 320;
 		vrLoc = 5104;
@@ -7995,7 +8093,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 345";
 		rLen = 0;
-		rLoc = 11922;
+		rLoc = 10277;
 		rType = 0;
 		vrLen = 1749;
 		vrLoc = 3828;
@@ -8005,9 +8103,9 @@
 		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
 		name = "SDSocialNetworkTask+Subclassing.h: 33";
 		rLen = 0;
-		rLoc = 905;
+		rLoc = 1026;
 		rType = 0;
-		vrLen = 1291;
+		vrLen = 1147;
 		vrLoc = 61;
 	};
 	94BFA5F00FD0851700806DA0 /* PBXTextBookmark */ = {
@@ -8025,7 +8123,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 105";
 		rLen = 95;
-		rLoc = 2253;
+		rLoc = 1932;
 		rType = 0;
 		vrLen = 1900;
 		vrLoc = 1825;
@@ -8035,7 +8133,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 79";
 		rLen = 21;
-		rLoc = 1897;
+		rLoc = 1576;
 		rType = 0;
 		vrLen = 1400;
 		vrLoc = 1601;
@@ -8044,7 +8142,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
 		rLen = 1;
-		rLoc = 42;
+		rLoc = 46;
 		rType = 1;
 	};
 	94BFA6010FD088CA00806DA0 /* PBXTextBookmark */ = {
@@ -8052,9 +8150,9 @@
 		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
 		name = "SDSocialNetworkTask+Subclassing.h: 31";
 		rLen = 0;
-		rLoc = 809;
+		rLoc = 739;
 		rType = 0;
-		vrLen = 1215;
+		vrLen = 1208;
 		vrLoc = 0;
 	};
 	94BFA6020FD088CA00806DA0 /* PBXTextBookmark */ = {
@@ -8089,7 +8187,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 153";
 		rLen = 8;
-		rLoc = 5048;
+		rLoc = 6619;
 		rType = 0;
 		vrLen = 1798;
 		vrLoc = 3158;
@@ -8099,9 +8197,9 @@
 		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
 		name = "SDSocialNetworkTask+Subclassing.h: 31";
 		rLen = 0;
-		rLoc = 809;
+		rLoc = 739;
 		rType = 0;
-		vrLen = 1215;
+		vrLen = 1208;
 		vrLoc = 0;
 	};
 	94BFA60E0FD0890F00806DA0 /* PBXTextBookmark */ = {
@@ -8109,7 +8207,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 79";
 		rLen = 21;
-		rLoc = 1897;
+		rLoc = 1576;
 		rType = 0;
 		vrLen = 1400;
 		vrLoc = 1601;
@@ -8129,7 +8227,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 159";
 		rLen = 0;
-		rLoc = 4795;
+		rLoc = 6128;
 		rType = 0;
 		vrLen = 1974;
 		vrLoc = 3268;
@@ -8139,7 +8237,7 @@
 		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
 		name = "SDSocialNetworkTask+Subclassing.h: 29";
 		rLen = 0;
-		rLoc = 751;
+		rLoc = 681;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 0;
@@ -8149,7 +8247,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 138";
 		rLen = 0;
-		rLoc = 4024;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 3236;
@@ -8168,7 +8266,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		rLen = 1;
-		rLoc = 164;
+		rLoc = 199;
 		rType = 1;
 	};
 	94BFA6190FD08A5500806DA0 /* PBXTextBookmark */ = {
@@ -8176,7 +8274,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 105";
 		rLen = 0;
-		rLoc = 2491;
+		rLoc = 2563;
 		rType = 0;
 		vrLen = 1407;
 		vrLoc = 1618;
@@ -8196,7 +8294,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 138";
 		rLen = 0;
-		rLoc = 4024;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 3236;
@@ -8216,7 +8314,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 112";
 		rLen = 0;
-		rLoc = 3110;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1560;
 		vrLoc = 2640;
@@ -8236,7 +8334,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 115";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2871;
 		rType = 0;
 		vrLen = 1477;
 		vrLoc = 1929;
@@ -8260,7 +8358,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 115";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2871;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 1121;
@@ -8280,7 +8378,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 112";
 		rLen = 0;
-		rLoc = 3110;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1537;
 		vrLoc = 2640;
@@ -8290,7 +8388,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 75";
 		rLen = 0;
-		rLoc = 1539;
+		rLoc = 1610;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 1121;
@@ -8320,7 +8418,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 112";
 		rLen = 0;
-		rLoc = 3110;
+		rLoc = 2380;
 		rType = 0;
 		vrLen = 1537;
 		vrLoc = 2640;
@@ -8330,7 +8428,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 68";
 		rLen = 0;
-		rLoc = 1322;
+		rLoc = 1393;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 1121;
@@ -8340,7 +8438,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 10246;
@@ -8370,7 +8468,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 59";
 		rLen = 0;
-		rLoc = 1214;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 894;
 		vrLoc = 977;
@@ -8380,7 +8478,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 10246;
@@ -8427,7 +8525,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 59";
 		rLen = 7;
-		rLoc = 1224;
+		rLoc = 1295;
 		rType = 0;
 		vrLen = 894;
 		vrLoc = 977;
@@ -8437,7 +8535,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 10246;
@@ -8467,7 +8565,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 57";
 		rLen = 0;
-		rLoc = 1214;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 906;
 		vrLoc = 977;
@@ -8487,7 +8585,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 10246;
@@ -8517,7 +8615,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 39";
 		rLen = 0;
-		rLoc = 953;
+		rLoc = 1024;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 162;
@@ -8537,7 +8635,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 10246;
@@ -8567,7 +8665,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 33";
 		rLen = 0;
-		rLoc = 821;
+		rLoc = 892;
 		rType = 0;
 		vrLen = 980;
 		vrLoc = 162;
@@ -8577,7 +8675,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 758;
@@ -8617,7 +8715,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 33";
 		rLen = 0;
-		rLoc = 821;
+		rLoc = 892;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 195;
@@ -8627,7 +8725,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 758;
@@ -8677,7 +8775,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 758;
@@ -8687,7 +8785,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 33";
 		rLen = 0;
-		rLoc = 821;
+		rLoc = 892;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 195;
@@ -8737,7 +8835,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 758;
@@ -8747,7 +8845,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 33";
 		rLen = 0;
-		rLoc = 821;
+		rLoc = 892;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 195;
@@ -8767,7 +8865,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 150";
 		rLen = 0;
-		rLoc = 4222;
+		rLoc = 4235;
 		rType = 0;
 		vrLen = 2046;
 		vrLoc = 3047;
@@ -8797,7 +8895,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 322";
 		rLen = 4;
-		rLoc = 11599;
+		rLoc = 9954;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 758;
@@ -8817,7 +8915,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 97";
 		rLen = 12;
-		rLoc = 2262;
+		rLoc = 1941;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 1661;
@@ -8861,7 +8959,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 81";
 		rLen = 32;
-		rLoc = 1759;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 1241;
@@ -8891,7 +8989,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 83";
 		rLen = 0;
-		rLoc = 1850;
+		rLoc = 1922;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 1241;
@@ -8901,7 +8999,7 @@
 		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
 		name = "SDTwitterTask.m: 97";
 		rLen = 12;
-		rLoc = 2262;
+		rLoc = 1941;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 1661;
@@ -8924,6 +9022,452 @@
 		rLoc = 1187;
 		rType = 0;
 		vrLen = 995;
+		vrLoc = 411;
+	};
+	94BFA6840FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 35";
+		rLen = 0;
+		rLoc = 926;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6850FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		rLen = 1;
+		rLoc = 201;
+		rType = 1;
+	};
+	94BFA6860FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 81";
+		rLen = 0;
+		rLoc = 1819;
+		rType = 0;
+		vrLen = 2063;
+		vrLoc = 8596;
+	};
+	94BFA6890FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		rLen = 1;
+		rLoc = 27;
+		rType = 1;
+	};
+	94BFA68A0FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA68B0FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		rLen = 1;
+		rLoc = 97;
+		rType = 1;
+	};
+	94BFA68C0FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 19";
+		rLen = 0;
+		rLoc = 295;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 0;
+	};
+	94BFA68D0FD08ED400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 411;
+	};
+	94BFA6900FD08EE500806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 163";
+		rLen = 0;
+		rLoc = 4771;
+		rType = 0;
+		vrLen = 1988;
+		vrLoc = 3771;
+	};
+	94BFA6910FD08EE500806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 35";
+		rLen = 0;
+		rLoc = 926;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6920FD08EE500806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA6930FD08EE500806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 19";
+		rLen = 0;
+		rLoc = 295;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 0;
+	};
+	94BFA6940FD08EE500806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 411;
+	};
+	94BFA6970FD08F0000806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 35";
+		rLen = 0;
+		rLoc = 926;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6980FD08F0000806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 162";
+		rLen = 0;
+		rLoc = 4760;
+		rType = 0;
+		vrLen = 1825;
+		vrLoc = 4365;
+	};
+	94BFA6990FD08F0000806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA69A0FD08F0000806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 19";
+		rLen = 0;
+		rLoc = 295;
+		rType = 0;
+		vrLen = 1051;
+		vrLoc = 0;
+	};
+	94BFA69B0FD08F0000806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 1000;
+		vrLoc = 411;
+	};
+	94BFA69F0FD08F3700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 163";
+		rLen = 0;
+		rLoc = 4800;
+		rType = 0;
+		vrLen = 1988;
+		vrLoc = 3771;
+	};
+	94BFA6A00FD08F3700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6A10FD08F3700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA6A20FD08F3700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 19";
+		rLen = 0;
+		rLoc = 295;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 0;
+	};
+	94BFA6A30FD08F3700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 411;
+	};
+	94BFA6A70FD08F5D00806DA0 /* objc_exception_throw */ = {
+		isa = PBXSymbolicBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 1;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		hitCount = 1;
+		ignoreCount = 0;
+		location = libobjc.A.dylib;
+		modificationTime = 265326437.221278;
+		state = 1;
+		symbolName = objc_exception_throw;
+	};
+	94BFA6A80FD08F5E00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 310";
+		rLen = 0;
+		rLoc = 10597;
+		rType = 0;
+		vrLen = 466;
+		vrLoc = 1526;
+	};
+	94BFA6AC0FD08F6400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 163";
+		rLen = 0;
+		rLoc = 4800;
+		rType = 0;
+		vrLen = 1988;
+		vrLoc = 3771;
+	};
+	94BFA6AD0FD08F6400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6AE0FD08F6400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA6AF0FD08F6400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 19";
+		rLen = 0;
+		rLoc = 295;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 0;
+	};
+	94BFA6B00FD08F6400806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 411;
+	};
+	94BFA6B70FD08F8200806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 163";
+		rLen = 0;
+		rLoc = 4800;
+		rType = 0;
+		vrLen = 1989;
+		vrLoc = 3771;
+	};
+	94BFA6B80FD08F8200806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6B90FD08F8200806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA6BA0FD08F8200806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 19";
+		rLen = 0;
+		rLoc = 295;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 0;
+	};
+	94BFA6BB0FD08F8200806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 411;
+	};
+	94BFA6BD0FD08F8B00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 161";
+		rLen = 0;
+		rLoc = 4800;
+		rType = 0;
+		vrLen = 2001;
+		vrLoc = 3771;
+	};
+	94BFA6BE0FD08F8B00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6BF0FD08F8B00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA6C00FD08F8B00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 19";
+		rLen = 0;
+		rLoc = 295;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 0;
+	};
+	94BFA6C10FD08F8B00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 411;
+	};
+	94BFA6C30FD08FAF00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */;
+		name = "SDTwitterTask.m: 15";
+		rLen = 0;
+		rLoc = 260;
+		rType = 0;
+		vrLen = 1616;
+		vrLoc = 8661;
+	};
+	94BFA6C40FD08FAF00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 161";
+		rLen = 0;
+		rLoc = 4800;
+		rType = 0;
+		vrLen = 1142;
+		vrLoc = 0;
+	};
+	94BFA6C50FD08FAF00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 261;
+	};
+	94BFA6C60FD08FAF00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */;
+		name = "SDSocialNetworkTask+Subclassing.h: 25";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 61;
+	};
+	94BFA6C70FD08FAF00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */;
+		name = "SDSocialNetworkManager.m: 57";
+		rLen = 0;
+		rLoc = 1187;
+		rType = 0;
+		vrLen = 1000;
 		vrLoc = 411;
 	};
 }

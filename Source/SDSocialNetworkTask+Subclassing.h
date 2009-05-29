@@ -25,9 +25,13 @@ typedef enum _SDHTTPMethod {
 
 - (BOOL) validateType;
 - (BOOL) shouldUseBasicHTTPAuthentication;
-- (void) setURLAndParametersForRequest:(NSMutableURLRequest*)request;
 - (void) setUniqueApplicationIdentifiersForRequest:(NSMutableURLRequest*)request;
 - (void) handleHTTPResponse:(NSHTTPURLResponse*)response;
+
+- (BOOL) isMultiPartDataBasedOnTaskType;
+- (SDHTTPMethod) methodBasedOnTaskType;
+- (NSString*) URLStringBasedOnTaskType;
+- (void) addParametersToDictionary:(NSMutableDictionary*)parameters;
 
 + (Protocol*) delegateProtocol;
 - (void) sendResultsToDelegate;

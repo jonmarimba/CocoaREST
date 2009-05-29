@@ -13,15 +13,6 @@
 #import "SDSocialNetworkTask+Subclassing.h"
 
 @interface SDTwitterTask (Private)
-
-// these may be shared by sibling subclasses in the future
-// if so, maybe they should be put in +Subclassing.h (or maybe not?)
-
-- (BOOL) isMultiPartDataBasedOnTaskType;
-- (SDHTTPMethod) methodBasedOnTaskType;
-- (NSString*) URLStringBasedOnTaskType;
-- (void) addParametersToDictionary:(NSMutableDictionary*)parameters;
-
 @end
 
 
@@ -102,42 +93,6 @@
 	[request setValue:twitterManager.appName forHTTPHeaderField:@"X-Twitter-Client"];
 	[request setValue:twitterManager.appVersion forHTTPHeaderField:@"X-Twitter-Client-Version"];
 	[request setValue:twitterManager.appWebsite forHTTPHeaderField:@"X-Twitter-Client-URL"];
-}
-
-- (void) setURLAndParametersForRequest:(NSMutableURLRequest*)request {
-	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-	
-	SDHTTPMethod method = [self methodBasedOnTaskType];
-	
-	NSString *URLString = [self URLStringBasedOnTaskType];
-	NSAssert(URLString != nil, @"URLString == nil; either `type` is invalid, or URL method is not complete");
-	
-	[self addParametersToDictionary:parameters];
-	
-	switch (method) {
-		case SDHTTPMethodGet: {
-			NSString *queryString = [self queryStringFromDictionary:parameters];
-			[request setHTTPMethod:@"GET"];
-			if ([queryString length] > 0)
-				URLString = [NSString stringWithFormat:@"%@?%@", URLString, queryString];
-			break;
-		}
-		case SDHTTPMethodPost:
-			[request setHTTPMethod:@"POST"];
-			if ([self isMultiPartDataBasedOnTaskType] == YES) {
-				NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", [SDSocialNetworkTask stringBoundary]];
-				[request addValue:contentType forHTTPHeaderField:@"Content-Type"];
-				
-				[request setHTTPBody:[self postBodyDataFromDictionary:parameters]];
-			}
-			else {
-				NSString *queryString = [self queryStringFromDictionary:parameters];
-				[request setHTTPBody:[queryString dataUsingEncoding:NSUTF8StringEncoding]];
-			}
-			break;
-	}
-	
-	[request setURL:[NSURL URLWithString:URLString]];
 }
 
 - (BOOL) isMultiPartDataBasedOnTaskType {
