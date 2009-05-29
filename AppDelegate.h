@@ -8,10 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDSocialNetworkTaskDelegateProtocol.h"
-#import "SDSocialNetworkManager.h"
+#import "SDTwitterManager.h"
 
-@interface AppDelegate : NSObject <SDSocialNetworkTaskDelegate> {
+@interface AppDelegate : NSObject <SDTwitterTaskDelegate> {
 	
 }
 

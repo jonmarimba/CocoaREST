@@ -18,6 +18,8 @@
 		94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */; };
 		94BFA4550FD05F3800806DA0 /* libyajl_s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BFA4540FD05F3800806DA0 /* libyajl_s.a */; };
 		94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */; };
+		94BFA48D0FD06D9600806DA0 /* SDTwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */; };
+		94BFA49E0FD06FCC00806DA0 /* SDTwitterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,6 @@
 		94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDSocialNetworkManager.m; path = Source/SDSocialNetworkManager.m; sourceTree = "<group>"; };
 		94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDSocialNetworkTask.h; path = Source/SDSocialNetworkTask.h; sourceTree = "<group>"; };
 		94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDSocialNetworkTask.m; path = Source/SDSocialNetworkTask.m; sourceTree = "<group>"; };
-		94BFA12C0FCF237F00806DA0 /* SDSocialNetworkTaskDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDSocialNetworkTaskDelegateProtocol.h; path = Source/SDSocialNetworkTaskDelegateProtocol.h; sourceTree = "<group>"; };
 		94BFA42D0FD0437F00806DA0 /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+Hex.h"; path = "Source/NSColor+Hex.h"; sourceTree = "<group>"; };
 		94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+Hex.m"; path = "Source/NSColor+Hex.m"; sourceTree = "<group>"; };
 		94BFA4540FD05F3800806DA0 /* libyajl_s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyajl_s.a; path = Source/libyajl_s.a; sourceTree = "<group>"; };
@@ -48,6 +49,11 @@
 		94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAJLDecoder.m; path = Source/YAJLDecoder.m; sourceTree = "<group>"; };
 		94BFA4790FD0602B00806DA0 /* yajl_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parse.h; path = Source/yajl_parse.h; sourceTree = "<group>"; };
 		94BFA47B0FD0603900806DA0 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_common.h; path = Source/yajl_common.h; sourceTree = "<group>"; };
+		94BFA48B0FD06D9600806DA0 /* SDTwitterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterManager.h; path = Source/SDTwitterManager.h; sourceTree = "<group>"; };
+		94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterManager.m; path = Source/SDTwitterManager.m; sourceTree = "<group>"; };
+		94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterTask.h; path = Source/SDTwitterTask.h; sourceTree = "<group>"; };
+		94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterTask.m; path = Source/SDTwitterTask.m; sourceTree = "<group>"; };
+		94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SDSocialNetworkTask+Subclassing.h"; path = "Source/SDSocialNetworkTask+Subclassing.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +152,17 @@
 				94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */,
 				94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */,
 				94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */,
-				94BFA12C0FCF237F00806DA0 /* SDSocialNetworkTaskDelegateProtocol.h */,
-				94BFA4790FD0602B00806DA0 /* yajl_parse.h */,
-				94BFA47B0FD0603900806DA0 /* yajl_common.h */,
-				94BFA4560FD05F5A00806DA0 /* YAJLDecoder.h */,
-				94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */,
+				94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */,
+				94BFA48A0FD06D8500806DA0 /* Twitter */,
+				94BFA4860FD065E500806DA0 /* Categories */,
+				94BFA4870FD065F600806DA0 /* JSON Parsing */,
+			);
+			name = SDSocialNetwork;
+			sourceTree = "<group>";
+		};
+		94BFA4860FD065E500806DA0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
 				94BFA1240FCF237F00806DA0 /* NSData+Base64.h */,
 				94BFA1250FCF237F00806DA0 /* NSData+Base64.m */,
 				94BFA1260FCF237F00806DA0 /* NSString+UUID.h */,
@@ -158,7 +170,29 @@
 				94BFA42D0FD0437F00806DA0 /* NSColor+Hex.h */,
 				94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */,
 			);
-			name = SDSocialNetwork;
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		94BFA4870FD065F600806DA0 /* JSON Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				94BFA4790FD0602B00806DA0 /* yajl_parse.h */,
+				94BFA47B0FD0603900806DA0 /* yajl_common.h */,
+				94BFA4560FD05F5A00806DA0 /* YAJLDecoder.h */,
+				94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */,
+			);
+			name = "JSON Parsing";
+			sourceTree = "<group>";
+		};
+		94BFA48A0FD06D8500806DA0 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				94BFA48B0FD06D9600806DA0 /* SDTwitterManager.h */,
+				94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */,
+				94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */,
+				94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */,
+			);
+			name = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +257,8 @@
 				94BFA1300FCF237F00806DA0 /* SDSocialNetworkTask.m in Sources */,
 				94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */,
 				94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */,
+				94BFA48D0FD06D9600806DA0 /* SDTwitterManager.m in Sources */,
+				94BFA49E0FD06FCC00806DA0 /* SDTwitterTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

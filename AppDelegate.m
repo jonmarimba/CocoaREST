@@ -8,16 +8,16 @@
 
 #import "AppDelegate.h"
 
-#import "SDSocialNetworkTask.h"
+#import "SDTwitterTask.h"
 
 @implementation AppDelegate
 
 - (void) awakeFromNib {
 	// inside a header file, declare manager as an instance variable
-	SDSocialNetworkManager *manager;
+	SDTwitterManager *manager;
 	
 	// create out manager, retaining it as we want it to stick around
-	manager = [[SDSocialNetworkManager manager] retain];
+	manager = [[SDTwitterManager manager] retain];
 	manager.delegate = self;
 	
 	// change this info to match your app
@@ -34,24 +34,24 @@
 	manager.maxConcurrentTasks = 3;
 	
 	// create a basic task
-	SDSocialNetworkTask *mentionsTask = [SDSocialNetworkTask task];
-	mentionsTask.type = SDSocialNetworkTaskGetMentions;
+	SDTwitterTask *mentionsTask = [SDTwitterTask taskWithManager:manager];
+	mentionsTask.type = SDTwitterTaskGetMentions;
 	mentionsTask.count = 4;
 	mentionsTask.page = 2;
-	[manager runTask:mentionsTask];
+	[mentionsTask run];
 	
 	// post a simple message on twitter
-	SDSocialNetworkTask *updateTask = [SDSocialNetworkTask task];
-	updateTask.type = SDSocialNetworkTaskCreateStatus;
+	SDTwitterTask *updateTask = [SDTwitterTask taskWithManager:manager];
+	updateTask.type = SDTwitterTaskCreateStatus;
 	updateTask.text = @"Experimenting with the brand new SDSocialNetwork library for Cocoa!";
-	[manager runTask:updateTask];
+	[updateTask run];
 }
 
-- (void) socialNetworkManager:(SDSocialNetworkManager*)manager resultsReadyForTask:(SDSocialNetworkTask*)task {
+- (void) twitterManager:(SDTwitterManager*)manager resultsReadyForTask:(SDTwitterTask*)task {
 	NSLog(@"%@", task.results);
 }
 
-- (void) socialNetworkManager:(SDSocialNetworkManager*)manager failedForTask:(SDSocialNetworkTask*)task {
+- (void) twitterManager:(SDTwitterManager*)manager failedForTask:(SDTwitterTask*)task {
 	NSLog(@"%@", task.error);
 }
 
