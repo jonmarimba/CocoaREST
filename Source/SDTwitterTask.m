@@ -9,6 +9,7 @@
 #import "SDTwitterTask.h"
 
 #import "SDTwitterManager.h"
+#import "SDTwitterTaskDelegate.h"
 
 #import "SDSocialNetworkTask+Subclassing.h"
 

@@ -39,6 +39,7 @@ typedef enum _SDSocialNetworkTaskError {
 - (id) initWithManager:(SDSocialNetworkManager*)newManager;
 
 - (void) run;
+- (void) cancel;
 
 // readable properties: use after task is complete
 

@@ -10,7 +10,8 @@
 
 #import "SDSocialNetworkManager.h"
 
-@class SDTwitterTask;
+#import "SDTwitterTask.h"
+#import "SDTwitterTaskDelegate.h"
 
 @interface SDTwitterManager : SDSocialNetworkManager {
 	NSString *appName;
@@ -32,14 +33,5 @@
 @property int limitMaxAmount;
 @property int limitRemainingAmount;
 @property NSTimeInterval limitResetEpochDate;
-
-@end
-
-@protocol SDTwitterTaskDelegate
-
-@required
-
-- (void) twitterManager:(SDTwitterManager*)manager resultsReadyForTask:(SDTwitterTask*)task;
-- (void) twitterManager:(SDTwitterManager*)manager failedForTask:(SDTwitterTask*)task;
 
 @end
