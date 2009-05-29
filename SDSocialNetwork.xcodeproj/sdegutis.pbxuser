@@ -284,6 +284,19 @@
 			94BFA3000FCFA45600806DA0 /* PBXTextBookmark */ = 94BFA3000FCFA45600806DA0 /* PBXTextBookmark */;
 			94BFA3010FCFA45600806DA0 /* PBXTextBookmark */ = 94BFA3010FCFA45600806DA0 /* PBXTextBookmark */;
 			94BFA3020FCFA45600806DA0 /* PBXTextBookmark */ = 94BFA3020FCFA45600806DA0 /* PBXTextBookmark */;
+			94BFA3030FD0083200806DA0 /* PBXTextBookmark */ = 94BFA3030FD0083200806DA0 /* PBXTextBookmark */;
+			94BFA3040FD0083200806DA0 /* PBXTextBookmark */ = 94BFA3040FD0083200806DA0 /* PBXTextBookmark */;
+			94BFA3050FD0086800806DA0 /* PBXBookmark */ = 94BFA3050FD0086800806DA0 /* PBXBookmark */;
+			94BFA30E0FD00B8300806DA0 /* PBXTextBookmark */ = 94BFA30E0FD00B8300806DA0 /* PBXTextBookmark */;
+			94BFA30F0FD00B8300806DA0 /* PBXTextBookmark */ = 94BFA30F0FD00B8300806DA0 /* PBXTextBookmark */;
+			94BFA3120FD00BE100806DA0 /* PBXTextBookmark */ = 94BFA3120FD00BE100806DA0 /* PBXTextBookmark */;
+			94BFA3130FD00BE100806DA0 /* PBXTextBookmark */ = 94BFA3130FD00BE100806DA0 /* PBXTextBookmark */;
+			94BFA3160FD0106800806DA0 /* PBXBookmark */ = 94BFA3160FD0106800806DA0 /* PBXBookmark */;
+			94BFA31A0FD010B600806DA0 /* PBXTextBookmark */ = 94BFA31A0FD010B600806DA0 /* PBXTextBookmark */;
+			94BFA31B0FD010B600806DA0 /* PBXTextBookmark */ = 94BFA31B0FD010B600806DA0 /* PBXTextBookmark */;
+			94BFA31C0FD010B600806DA0 /* PBXTextBookmark */ = 94BFA31C0FD010B600806DA0 /* PBXTextBookmark */;
+			94BFA31D0FD0110F00806DA0 /* PBXTextBookmark */ = 94BFA31D0FD0110F00806DA0 /* PBXTextBookmark */;
+			94BFA31E0FD0110F00806DA0 /* PBXTextBookmark */ = 94BFA31E0FD0110F00806DA0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 94BFA1070FCF222D00806DA0 /* Source Control */;
 		userBuildSettings = {
@@ -340,9 +353,10 @@
 	};
 	94BFA1200FCF236800806DA0 /* AppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {678, 686}}";
-			sepNavSelRange = "{649, 0}";
-			sepNavVisRange = "{0, 1198}";
+			sepNavIntBoundsRect = "{{0, 0}, {678, 714}}";
+			sepNavSelRange = "{699, 19}";
+			sepNavVisRange = "{0, 1133}";
+			sepNavWindowFrame = "{{180, 322}, {737, 738}}";
 		};
 	};
 	94BFA1210FCF236800806DA0 /* AppDelegate.h */ = {
@@ -371,17 +385,17 @@
 	};
 	94BFA1280FCF237F00806DA0 /* SDSocialNetworkManager.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {860, 896}}";
-			sepNavSelRange = "{925, 0}";
-			sepNavVisRange = "{265, 1151}";
-			sepNavWindowFrame = "{{15, 404}, {919, 769}}";
+			sepNavIntBoundsRect = "{{0, 0}, {860, 840}}";
+			sepNavSelRange = "{1265, 7}";
+			sepNavVisRange = "{313, 1081}";
+			sepNavWindowFrame = "{{318, 375}, {919, 769}}";
 		};
 	};
 	94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {720, 1190}}";
-			sepNavSelRange = "{44, 0}";
-			sepNavVisRange = "{0, 268}";
+			sepNavIntBoundsRect = "{{0, 0}, {678, 1148}}";
+			sepNavSelRange = "{1728, 0}";
+			sepNavVisRange = "{768, 960}";
 			sepNavWindowFrame = "{{245, 225}, {737, 738}}";
 		};
 	};
@@ -395,10 +409,18 @@
 	};
 	94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {864, 5852}}";
-			sepNavSelRange = "{13988, 8}";
-			sepNavVisRange = "{14178, 1593}";
+			sepNavIntBoundsRect = "{{0, 0}, {864, 6300}}";
+			sepNavSelRange = "{1011, 36}";
+			sepNavVisRange = "{278, 1189}";
 			sepNavWindowFrame = "{{955, 149}, {919, 769}}";
+		};
+	};
+	94BFA12C0FCF237F00806DA0 /* SDSocialNetworkTaskDelegateProtocol.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {860, 641}}";
+			sepNavSelRange = "{319, 111}";
+			sepNavVisRange = "{0, 436}";
+			sepNavWindowFrame = "{{84, 341}, {919, 769}}";
 		};
 	};
 	94BFA1CB0FCF804000806DA0 /* PBXTextBookmark */ = {
@@ -416,7 +438,7 @@
 		comments = "error: 'SDSocialNetworkTaskTypeUpdateProfileBackgroundImage' undeclared (first use in this function)";
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		rLen = 1;
-		rLoc = 37;
+		rLoc = 39;
 		rType = 1;
 	};
 	94BFA1CD0FCF804000806DA0 /* PBXTextBookmark */ = {
@@ -434,7 +456,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 927;
+		rLoc = 975;
 		rType = 0;
 		vrLen = 278;
 		vrLoc = 720;
@@ -484,7 +506,7 @@
 		comments = "error: 'SDSocialNetworkTaskTypeUpdateProfileBackgroundImage' undeclared (first use in this function)";
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		rLen = 1;
-		rLoc = 37;
+		rLoc = 39;
 		rType = 1;
 	};
 	94BFA1DC0FCF809400806DA0 /* PBXTextBookmark */ = {
@@ -492,7 +514,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -528,7 +550,7 @@
 		path = "/Users/sdegutis/Developer/Major/Twitter App/Current Version/Soapbox/External/MGTwitterEngine/MGTwitterEngine.m";
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {860, 24948}}";
+			sepNavIntBoundsRect = "{{0, 0}, {860, 24108}}";
 			sepNavSelRange = "{12912, 13}";
 			sepNavVisRange = "{12313, 1659}";
 		};
@@ -559,13 +581,15 @@
 	};
 	94BFA1E80FCF809400806DA0 /* SDTwitpicProxy.m */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
 		name = SDTwitpicProxy.m;
 		path = /Users/sdegutis/Desktop/SDTwitpicProxy.m;
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1056, 1036}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{75, 2572}";
+			sepNavVisRange = "{141, 2602}";
+			sepNavWindowFrame = "{{39, 298}, {919, 769}}";
 		};
 	};
 	94BFA1E90FCF816100806DA0 /* PBXTextBookmark */ = {
@@ -593,7 +617,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -643,7 +667,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -693,7 +717,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -753,7 +777,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -803,7 +827,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -853,7 +877,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -903,7 +927,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -953,7 +977,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1003,7 +1027,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1053,7 +1077,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1103,7 +1127,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1153,7 +1177,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1203,7 +1227,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1253,7 +1277,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1303,7 +1327,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1353,7 +1377,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1403,7 +1427,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1453,7 +1477,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1503,7 +1527,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1553,7 +1577,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1603,7 +1627,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1643,7 +1667,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1683,7 +1707,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1723,7 +1747,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1763,7 +1787,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1803,7 +1827,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1843,7 +1867,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1883,7 +1907,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1923,7 +1947,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -1963,7 +1987,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -2003,7 +2027,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -2043,7 +2067,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -2083,7 +2107,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -2123,7 +2147,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -2163,7 +2187,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 925;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -2193,7 +2217,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 838;
+		rLoc = 886;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 44;
@@ -2233,7 +2257,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 838;
+		rLoc = 886;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 44;
@@ -2273,7 +2297,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2323,7 +2347,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2363,7 +2387,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2403,7 +2427,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2443,7 +2467,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2483,7 +2507,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2523,7 +2547,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2563,7 +2587,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2603,7 +2627,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2643,7 +2667,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2683,7 +2707,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2731,7 +2755,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 6;
-		rLoc = 832;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 44;
@@ -2761,7 +2785,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 843;
+		rLoc = 891;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 44;
@@ -2801,7 +2825,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 843;
+		rLoc = 891;
 		rType = 0;
 		vrLen = 1275;
 		vrLoc = 44;
@@ -2841,7 +2865,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 842;
+		rLoc = 890;
 		rType = 0;
 		vrLen = 1282;
 		vrLoc = 44;
@@ -2891,7 +2915,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 842;
+		rLoc = 890;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 44;
@@ -2931,7 +2955,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 760;
+		rLoc = 808;
 		rType = 0;
 		vrLen = 1311;
 		vrLoc = 158;
@@ -2961,7 +2985,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 761;
+		rLoc = 809;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 44;
@@ -3001,7 +3025,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 927;
+		rLoc = 975;
 		rType = 0;
 		vrLen = 275;
 		vrLoc = 378;
@@ -3011,7 +3035,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 927;
+		rLoc = 975;
 		rType = 0;
 		vrLen = 275;
 		vrLoc = 375;
@@ -3038,7 +3062,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 45";
 		rLen = 0;
-		rLoc = 1207;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 0;
@@ -3078,7 +3102,7 @@
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 649;
+		rLoc = 697;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 0;
@@ -3094,6 +3118,124 @@
 		vrLoc = 75;
 	};
 	94BFA3020FCFA45600806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1E20FCF809400806DA0 /* MGTwitterEngine.m */;
+		name = "MGTwitterEngine.m: 502";
+		rLen = 13;
+		rLoc = 12912;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 12313;
+	};
+	94BFA3030FD0083200806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1E80FCF809400806DA0 /* SDTwitpicProxy.m */;
+		name = "SDTwitpicProxy.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2572;
+		vrLoc = 75;
+	};
+	94BFA3040FD0083200806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1E20FCF809400806DA0 /* MGTwitterEngine.m */;
+		name = "MGTwitterEngine.m: 502";
+		rLen = 13;
+		rLoc = 12912;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 12313;
+	};
+	94BFA3050FD0086800806DA0 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+	};
+	94BFA30E0FD00B8300806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 30";
+		rLen = 19;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 1133;
+		vrLoc = 0;
+	};
+	94BFA30F0FD00B8300806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1E20FCF809400806DA0 /* MGTwitterEngine.m */;
+		name = "MGTwitterEngine.m: 502";
+		rLen = 13;
+		rLoc = 12912;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 12313;
+	};
+	94BFA3120FD00BE100806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 30";
+		rLen = 19;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 1133;
+		vrLoc = 0;
+	};
+	94BFA3130FD00BE100806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1E20FCF809400806DA0 /* MGTwitterEngine.m */;
+		name = "MGTwitterEngine.m: 502";
+		rLen = 13;
+		rLoc = 12912;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 12313;
+	};
+	94BFA3160FD0106800806DA0 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 94BFA1280FCF237F00806DA0 /* SDSocialNetworkManager.h */;
+	};
+	94BFA31A0FD010B600806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1280FCF237F00806DA0 /* SDSocialNetworkManager.h */;
+		name = "SDSocialNetworkManager.h: 54";
+		rLen = 7;
+		rLoc = 1265;
+		rType = 0;
+		vrLen = 1081;
+		vrLoc = 313;
+	};
+	94BFA31B0FD010B600806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 30";
+		rLen = 19;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 1133;
+		vrLoc = 0;
+	};
+	94BFA31C0FD010B600806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1E20FCF809400806DA0 /* MGTwitterEngine.m */;
+		name = "MGTwitterEngine.m: 502";
+		rLen = 13;
+		rLoc = 12912;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 12313;
+	};
+	94BFA31D0FD0110F00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 30";
+		rLen = 19;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 1133;
+		vrLoc = 0;
+	};
+	94BFA31E0FD0110F00806DA0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 94BFA1E20FCF809400806DA0 /* MGTwitterEngine.m */;
 		name = "MGTwitterEngine.m: 502";
