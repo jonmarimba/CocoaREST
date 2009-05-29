@@ -2,9 +2,28 @@ SDSocialNetworkManager
 by Steven Degutis - http://degutis.org
 
 
+Why use SDSocialNetworkManager (instead of MGTwitterEngine)
+===========================================================
+
+In its day, `MGTwitterEngine` was a prime example of a very good Cocoa interface to a RESTful API like Twitter.com maintains. Unfortunately, that day was pretty long ago (two years and 10 days, or something like that). A lot has changed with Twitter's API, and Mac OS X Leopard has added many features which MGTwitterEngine hasn't been updated to include. For anyone still supporting Tiger, MGTE is probably still a good bet. But for anyone supporting Leopard or higher, I recommend SDSocialNetwork, because it
+
+* Uses modern, up-to-date APIs on Twitter.com, such as "statuses/mentions" versus the archaic "statuses/replies"
+
+* Was designed from the ground up to be easily maintainable and extendable by any developer, to make use of future APIs
+
+* Is built to support multiple services, not just Twitter
+
+* Has huge, automatic performance boosts, due to taking advantage of the modern technologies available in Mac OS X 10.5 Leopard such as multi-threading (via NSOperation/Queue) and synthesized, atomic, thread-safe @properties
+	* `SDSocialNetworkTasks` runs smoothly in background threads, and can even run simultaneously with other `SDSocialNetworkTasks`
+	* Uses an optimized JSON parser to handle returned values stunningly quickly
+	* User experience is greatly improved, since the user will never see a spinning wheel due to a running Task
+
+* Requests returned values in an ubiquitous format for easy parson across multiple platforms (both Mac and iPhone)
+
+If you are planning on developing a new Social Networking application, or are already in the process, and plan to only support Leopard or higher, I strongly urge you to take a look at the sample code below, and see how flexible and easy to use SDSocialNetworkManager is. You, the developer, decide which variables to set in your API call, without having to deal with complex and ever-changing methods like `-[MGTwitterEngine getRepliesStartingAtPage:]` (which is now deprecated by Twitter's own API).
 
 How to use SDSocialNetworkManager
-==========================
+=================================
 
 `SDSocialNetworkManager` is an Objective-C/Cocoa class which, along with its companion class `SDSocialNetworkTask`, makes it easy to add social network integration to your own Cocoa apps. It communicates with services such as Twitter via their public REST APIs. You can read about the specific supported APIs at the following links:
 
