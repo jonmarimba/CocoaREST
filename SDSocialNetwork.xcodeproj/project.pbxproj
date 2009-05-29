@@ -20,6 +20,8 @@
 		94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */; };
 		94BFA48D0FD06D9600806DA0 /* SDTwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */; };
 		94BFA49E0FD06FCC00806DA0 /* SDTwitterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */; };
+		94BFA6CB0FD090DC00806DA0 /* SDIdenticaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */; };
+		94BFA6CF0FD0911400806DA0 /* SDIdenticaTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,12 @@
 		94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterTask.h; path = Source/SDTwitterTask.h; sourceTree = "<group>"; };
 		94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterTask.m; path = Source/SDTwitterTask.m; sourceTree = "<group>"; };
 		94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SDSocialNetworkTask+Subclassing.h"; path = "Source/SDSocialNetworkTask+Subclassing.h"; sourceTree = "<group>"; };
+		94BFA6C90FD090DC00806DA0 /* SDIdenticaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaManager.h; path = Source/SDIdenticaManager.h; sourceTree = "<group>"; };
+		94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaManager.m; path = Source/SDIdenticaManager.m; sourceTree = "<group>"; };
+		94BFA6CD0FD0911400806DA0 /* SDIdenticaTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaTask.h; path = Source/SDIdenticaTask.h; sourceTree = "<group>"; };
+		94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaTask.m; path = Source/SDIdenticaTask.m; sourceTree = "<group>"; };
+		94BFA6F80FD0942300806DA0 /* SDTwitterTaskDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterTaskDelegate.h; path = Source/SDTwitterTaskDelegate.h; sourceTree = "<group>"; };
+		94BFA7120FD095CD00806DA0 /* SDIdenticaTaskDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaTaskDelegate.h; path = Source/SDIdenticaTaskDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +160,9 @@
 				94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */,
 				94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */,
 				94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */,
-				94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */,
 				94BFA48A0FD06D8500806DA0 /* Twitter */,
+				94BFA6C80FD090B800806DA0 /* identi.ca */,
+				94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */,
 				94BFA4860FD065E500806DA0 /* Categories */,
 				94BFA4870FD065F600806DA0 /* JSON Parsing */,
 			);
@@ -191,8 +200,21 @@
 				94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */,
 				94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */,
 				94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */,
+				94BFA6F80FD0942300806DA0 /* SDTwitterTaskDelegate.h */,
 			);
 			name = Twitter;
+			sourceTree = "<group>";
+		};
+		94BFA6C80FD090B800806DA0 /* identi.ca */ = {
+			isa = PBXGroup;
+			children = (
+				94BFA6C90FD090DC00806DA0 /* SDIdenticaManager.h */,
+				94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */,
+				94BFA6CD0FD0911400806DA0 /* SDIdenticaTask.h */,
+				94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */,
+				94BFA7120FD095CD00806DA0 /* SDIdenticaTaskDelegate.h */,
+			);
+			name = identi.ca;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +281,8 @@
 				94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */,
 				94BFA48D0FD06D9600806DA0 /* SDTwitterManager.m in Sources */,
 				94BFA49E0FD06FCC00806DA0 /* SDTwitterTask.m in Sources */,
+				94BFA6CB0FD090DC00806DA0 /* SDIdenticaManager.m in Sources */,
+				94BFA6CF0FD0911400806DA0 /* SDIdenticaTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
