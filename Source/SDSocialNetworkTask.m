@@ -12,6 +12,7 @@
 
 #import "NSData+Base64.h"
 #import "NSString+UUID.h"
+#import "NSColor+Hex.h"
 
 #import "SDSocialNetworkManager.h"
 
@@ -50,9 +51,24 @@ typedef enum _SDHTTPMethod {
 @synthesize olderThanStatusID;
 @synthesize newerThanStatusID;
 @synthesize inReplyToStatusID;
+@synthesize firstUsersID;
+@synthesize secondUsersID;
 @synthesize statusID;
 @synthesize userID;
 @synthesize screenName;
+@synthesize enableDeviceNotificationsAlso;
+@synthesize deviceType;
+@synthesize profileName;
+@synthesize profileEmail;
+@synthesize profileWebsite;
+@synthesize profileLocation;
+@synthesize profileDescription;
+@synthesize profileBackgroundColor;
+@synthesize profileTextColor;
+@synthesize profileLinkColor;
+@synthesize profileSidebarFillColor;
+@synthesize profileSidebarBorderColor;
+@synthesize shouldTileBackgroundImage;
 @synthesize imageToUpload;
 
 @synthesize results;
@@ -84,6 +100,7 @@ typedef enum _SDHTTPMethod {
 		service = SDSocialNetworkServiceTwitter;
 		type = SDSocialNetworkTaskDoNothing;
 		errorCode = SDSocialNetworkTaskErrorNone;
+		deviceType = SDSocialNetworkDeviceTypeNotYetSet;
 		
 		page = 1;
 		count = 0;
@@ -356,6 +373,57 @@ typedef enum _SDHTTPMethod {
 	
 	if (imageToUpload)
 		[parameters setObject:imageToUpload forKey:@"image"];
+	
+	if (enableDeviceNotificationsAlso)
+		[parameters setObject:@"true" forKey:@"follow"];
+	
+	if (firstUsersID)
+		[parameters setObject:firstUsersID forKey:@"user_a"];
+	
+	if (secondUsersID)
+		[parameters setObject:secondUsersID forKey:@"user_b"];
+	
+	if (profileName)
+		[parameters setObject:profileName forKey:@"name"];
+	
+	if (profileEmail)
+		[parameters setObject:profileEmail forKey:@"email"];
+	
+	if (profileWebsite)
+		[parameters setObject:profileWebsite forKey:@"url"];
+	
+	if (profileLocation)
+		[parameters setObject:profileLocation forKey:@"location"];
+	
+	if (profileDescription)
+		[parameters setObject:profileDescription forKey:@"description"];
+	
+	if (deviceType != SDSocialNetworkDeviceTypeNotYetSet) {
+		NSString *deviceTypeString = @"none";
+		if (deviceType == SDSocialNetworkDeviceTypeInstantMessage)
+			deviceTypeString = @"im";
+		else if (deviceType == SDSocialNetworkDeviceTypeSMS)
+			deviceTypeString = @"sms";
+		[parameters setObject:deviceTypeString forKey:@"device"];
+	}
+	
+	if (profileBackgroundColor)
+		[parameters setObject:[profileBackgroundColor hexValue] forKey:@"profile_background_color"];
+	
+	if (profileTextColor)
+		[parameters setObject:[profileTextColor hexValue] forKey:@"profile_text_color"];
+	
+	if (profileLinkColor)
+		[parameters setObject:[profileLinkColor hexValue] forKey:@"profile_link_color"];
+	
+	if (profileSidebarFillColor)
+		[parameters setObject:[profileSidebarFillColor hexValue] forKey:@"profile_sidebar_fill_color"];
+	
+	if (profileSidebarBorderColor)
+		[parameters setObject:[profileSidebarBorderColor hexValue] forKey:@"profile_sidebar_border_color"];
+	
+	if (shouldTileBackgroundImage)
+		[parameters setObject:@"true" forKey:@"tile"];
 	
 	if (type == SDSocialNetworkTaskCreateStatus)
 		[parameters setObject:manager.appName forKey:@"source"];

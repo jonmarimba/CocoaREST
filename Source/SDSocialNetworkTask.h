@@ -40,17 +40,17 @@ typedef enum _SDSocialNetworkTaskType {
 	
 	SDSocialNetworkTaskFollowUser,
 	SDSocialNetworkTaskUnfollowUser,
-	SDSocialNetworkTaskCheckIfUserFollowsUser, // has no param ivars yet
+	SDSocialNetworkTaskCheckIfUserFollowsUser,
 	
 	SDSocialNetworkTaskGetIDsOfFriends,
 	SDSocialNetworkTaskGetIDsOfFollowers,
 	
 	SDSocialNetworkTaskVerifyCredentials,
-	SDSocialNetworkTaskUpdateDeliveryDevice, // has no param ivars yet
-	SDSocialNetworkTaskUpdateProfileColors, // has no param ivars yet
+	SDSocialNetworkTaskUpdateDeliveryDevice,
+	SDSocialNetworkTaskUpdateProfileColors,
 	SDSocialNetworkTaskUpdateProfileImage, // broken for the moment
 	SDSocialNetworkTaskUpdateProfileBackgroundImage, // broken for the moment
-	SDSocialNetworkTaskUpdateProfile, // has no params ivars yet
+	SDSocialNetworkTaskUpdateProfile,
 	
 	SDSocialNetworkTaskGetFavoriteStatuses,
 	SDSocialNetworkTaskFavorStatus,
@@ -68,6 +68,13 @@ typedef enum _SDSocialNetworkTaskType {
 	SDSocialNetworkTaskMAX // NEVER use this value (srsly... kthxbye)
 	
 } SDSocialNetworkTaskType;
+
+typedef enum _SDSocialNetworkDeviceType {
+	SDSocialNetworkDeviceTypeNotYetSet,
+	SDSocialNetworkDeviceTypeSMS,
+	SDSocialNetworkDeviceTypeInstantMessage,
+	SDSocialNetworkDeviceTypeNone
+} SDSocialNetworkDeviceType;
 
 typedef enum _SDSocialNetworkTaskError {
 	SDSocialNetworkTaskErrorNone,
@@ -103,10 +110,29 @@ typedef enum _SDSocialNetworkTaskError {
 	NSString *newerThanStatusID;
 	NSString *inReplyToStatusID;
 	
+	NSString *firstUsersID;
+	NSString *secondUsersID;
+	
 	NSString *statusID;
 	NSString *userID;
 	NSString *screenName;
 	
+	NSString *profileName;
+	NSString *profileEmail;
+	NSString *profileWebsite;
+	NSString *profileLocation;
+	NSString *profileDescription;
+	
+	NSColor *profileBackgroundColor;
+	NSColor *profileTextColor;
+	NSColor *profileLinkColor;
+	NSColor *profileSidebarFillColor;
+	NSColor *profileSidebarBorderColor;
+	
+	BOOL enableDeviceNotificationsAlso;
+	SDSocialNetworkDeviceType deviceType;
+	
+	BOOL shouldTileBackgroundImage;
 	NSImage *imageToUpload;
 }
 
@@ -131,10 +157,29 @@ typedef enum _SDSocialNetworkTaskError {
 @property (copy) NSString *newerThanStatusID;
 @property (copy) NSString *inReplyToStatusID;
 
+@property (copy) NSString *firstUsersID;
+@property (copy) NSString *secondUsersID;
+
 @property (copy) NSString *statusID;
 @property (copy) NSString *userID;
 @property (copy) NSString *screenName;
 
+@property (copy) NSString *profileName;
+@property (copy) NSString *profileEmail;
+@property (copy) NSString *profileWebsite;
+@property (copy) NSString *profileLocation;
+@property (copy) NSString *profileDescription;
+
+@property (copy) NSColor *profileBackgroundColor;
+@property (copy) NSColor *profileTextColor;
+@property (copy) NSColor *profileLinkColor;
+@property (copy) NSColor *profileSidebarFillColor;
+@property (copy) NSColor *profileSidebarBorderColor;
+
+@property BOOL enableDeviceNotificationsAlso;
+@property SDSocialNetworkDeviceType deviceType;
+
+@property BOOL shouldTileBackgroundImage;
 @property (copy) NSImage *imageToUpload;
 
 
