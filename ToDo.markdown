@@ -1,4 +1,4 @@
-** Short term (tomorrow morning)
+## Short term (tomorrow morning)
 
 - Wade through SDSocialNetworkTask.m and add/fix error handling where necessary
 - Fix the multipart/form data section of said file, to allow for image uploading
@@ -10,7 +10,7 @@
 	- Figure out a good way to explain the license, similarly to how Matt did
 - See if any names need standardizing
 
-** Long term (this weekend)
+## Long term (this weekend)
 
 - Add support for other services:
 	- identi.ca
