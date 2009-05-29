@@ -15,15 +15,7 @@
 @synthesize username;
 @synthesize password;
 
-@synthesize appName;
-@synthesize appVersion;
-@synthesize appWebsite;
-
 @dynamic maxConcurrentTasks;
-
-@synthesize limitMaxAmount;
-@synthesize limitRemainingAmount;
-@synthesize limitResetEpochDate;
 
 + (id) manager {
 	return [[[self alloc] init] autorelease];
@@ -45,10 +37,6 @@
 	[username release], username = nil;
 	[password release], password = nil;
 	
-	[appName release], appName = nil;
-	[appVersion release], appVersion = nil;
-	[appWebsite release], appWebsite = nil;
-	
 	[queue release], queue = nil;
 	[super dealloc];
 }
@@ -62,11 +50,10 @@
 	// we let the task run its course, but since it uses .manager for
 	// most of its work, and for its delegation, it will do nothing
 	
-	taskToCancel.manager = nil;
+	[taskToCancel cancel];
 }
 
 - (void) runTask:(SDSocialNetworkTask*)taskToRun {
-	taskToRun.manager = self;
 	[queue addOperation:taskToRun];
 }
 

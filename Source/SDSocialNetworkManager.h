@@ -8,45 +8,25 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDSocialNetworkTaskDelegateProtocol.h"
 #import "SDSocialNetworkTask.h"
 
 @interface SDSocialNetworkManager : NSObject {
 	NSOperationQueue *queue;
 	
-	id <SDSocialNetworkTaskDelegate, NSObject> delegate;
+	id <NSObject> delegate;
 	
 	NSString *username;
 	NSString *password;
-	
-	NSString *appName;
-	NSString *appVersion;
-	NSString *appWebsite;
-	
-	int limitMaxAmount;
-	int limitRemainingAmount;
-	NSTimeInterval limitResetEpochDate;
 }
 
 // set these properties
 
-@property (assign) id <SDSocialNetworkTaskDelegate, NSObject> delegate;
+@property (assign) id <NSObject> delegate;
 
 @property (copy) NSString *username;
 @property (copy) NSString *password;
 
-@property (copy) NSString *appName;
-@property (copy) NSString *appVersion;
-@property (copy) NSString *appWebsite;
-
 @property NSInteger maxConcurrentTasks;
-
-// the following properties are set during every task
-// while they are read-write, don't set them; it defeats the point.
-
-@property int limitMaxAmount;
-@property int limitRemainingAmount;
-@property NSTimeInterval limitResetEpochDate;
 
 + (id) manager; // designated convenience initializer
 - (id) init; // designated initializer
