@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA7210FD0965200806DA0</string>
+						<string>94BFA7230FD0972900806DA0</string>
 						<key>history</key>
 						<array>
 							<string>94BFA7200FD0965200806DA0</string>
@@ -316,7 +316,6 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>14</integer>
 											<integer>9</integer>
 											<integer>4</integer>
 											<integer>1</integer>
@@ -324,7 +323,7 @@
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 0}, {403, 578}}</string>
+									<string>{{0, 51}, {403, 578}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -525,7 +524,6 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>94BFA7220FD0965200806DA0</string>
 		<string>94BFA6A90FD08F5E00806DA0</string>
 		<string>94BFA6B20FD08F6400806DA0</string>
 		<string>94BFA6B30FD08F6400806DA0</string>
@@ -533,9 +531,9 @@
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>/Users/sdegutis/Desktop/SDSocialNetwork/SDSocialNetwork.xcodeproj</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>94BFA71E0FD0965200806DA0</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>/Users/sdegutis/Desktop/SDSocialNetwork/SDSocialNetwork.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>78 450 420 664 0 0 1920 1178 </string>

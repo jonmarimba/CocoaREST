@@ -160,9 +160,9 @@
 				94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */,
 				94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */,
 				94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */,
+				94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */,
 				94BFA48A0FD06D8500806DA0 /* Twitter */,
 				94BFA6C80FD090B800806DA0 /* identi.ca */,
-				94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */,
 				94BFA4860FD065E500806DA0 /* Categories */,
 				94BFA4870FD065F600806DA0 /* JSON Parsing */,
 			);
