@@ -12,7 +12,7 @@
 #import "SDSocialNetworkManager.h"
 
 @interface AppDelegate : NSObject <SDSocialNetworkTaskDelegate> {
-	SDSocialNetworkManager *socialNetworkManager;
+	
 }
 
 @end

@@ -59,6 +59,57 @@ The bare basics that are required to request data from or send data to a social 
 	* Once a task has completed, it will deallocate. It should not be retained, and cannot be run a second time. Read the documentation on `NSOperation` for more information.
 
 
+
+Sample Code
+===========
+
+	- (void) awakeFromNib
+	{
+		// inside a header file, declare manager as an instance variable
+		SDSocialNetworkManager *manager;
+		
+		// create out manager, retaining it as we want it to stick around
+		manager = [[SDSocialNetworkManager manager] retain];
+		manager.delegate = self;
+		
+		// change this info to match your app
+		manager.appName = @"My Great App";
+		manager.appVersion = @"7.0";
+		manager.appWebsite = @"http://www.googlw.com/";
+		
+		// this is a must for certain API calls which require authentication
+		// change them to real login values or the tasks will fail
+		manager.username = @"USERNAME";
+		manager.password = @"PASSWORD";
+		
+		// 3 tasks can be run simultaneously
+		manager.maxConcurrentTasks = 3;
+		
+		// create a basic task
+		SDSocialNetworkTask *mentionsTask = [SDSocialNetworkTask task];
+		mentionsTask.type = SDSocialNetworkTaskGetMentions;
+		mentionsTask.count = 4;
+		mentionsTask.page = 2;
+		[manager runTask:mentionsTask];
+		
+		// post a simple message on twitter
+		SDSocialNetworkTask *updateTask = [SDSocialNetworkTask task];
+		updateTask.type = SDSocialNetworkTaskCreateStatus;
+		updateTask.text = @"Experimenting with the brand new SDSocialNetwork library for Cocoa!";
+		[manager runTask:updateTask];
+	}
+	
+	- (void) socialNetworkManager:(SDSocialNetworkManager*)manager resultsReadyForTask:(SDSocialNetworkTask*)task
+	{
+		NSLog(@"%@", task.results);
+	}
+	
+	- (void) socialNetworkManager:(SDSocialNetworkManager*)manager failedForTask:(SDSocialNetworkTask*)task
+	{
+		NSLog(@"%@", task.error);
+	}
+
+
 A note on threads and performance
 =================================
 

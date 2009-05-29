@@ -13,34 +13,38 @@
 @implementation AppDelegate
 
 - (void) awakeFromNib {
-	socialNetworkManager = [[SDSocialNetworkManager manager] retain];
-	socialNetworkManager.delegate = self;
+	// inside a header file, declare manager as an instance variable
+	SDSocialNetworkManager *manager;
 	
-	socialNetworkManager.appName = @"My Great App";
-	socialNetworkManager.appVersion = @"7.0";
-	socialNetworkManager.appWebsite = @"http://www.googlw.com/";
+	// create out manager, retaining it as we want it to stick around
+	manager = [[SDSocialNetworkManager manager] retain];
+	manager.delegate = self;
 	
-	socialNetworkManager.username = @"USERNAME";
-	socialNetworkManager.password = @"PASSWORD";
+	// change this info to match your app
+	manager.appName = @"My Great App";
+	manager.appVersion = @"7.0";
+	manager.appWebsite = @"http://www.googlw.com/";
 	
-	socialNetworkManager.maxConcurrentTasks = 1;
+	// this is a must for certain API calls which require authentication
+	// change them to real login values or the tasks will fail
+	manager.username = @"USERNAME";
+	manager.password = @"PASSWORD";
 	
-	// test tasks go here
+	// 3 tasks can be run simultaneously
+	manager.maxConcurrentTasks = 3;
 	
-	SDSocialNetworkTask *task = [SDSocialNetworkTask task];
+	// create a basic task
+	SDSocialNetworkTask *mentionsTask = [SDSocialNetworkTask task];
+	mentionsTask.type = SDSocialNetworkTaskGetMentions;
+	mentionsTask.count = 4;
+	mentionsTask.page = 2;
+	[manager runTask:mentionsTask];
 	
-	task.type = SDSocialNetworkTaskVerifyCredentials;
-	
-//	task.type = SDSocialNetworkTaskGetUserInfo;
-//	task.screenName = @"frumpa";
-	
-//	task.type = SDSocialNetworkTaskDeleteStatus;
-//	task.statusID = @"1415307804";
-	
-//	task.type = SDSocialNetworkTaskCreateStatus;
-//	task.text = @"oh golly, i wonder what this will say for client";
-	
-	[socialNetworkManager runTask:task];
+	// post a simple message on twitter
+	SDSocialNetworkTask *updateTask = [SDSocialNetworkTask task];
+	updateTask.type = SDSocialNetworkTaskCreateStatus;
+	updateTask.text = @"Experimenting with the brand new SDSocialNetwork library for Cocoa!";
+	[manager runTask:updateTask];
 }
 
 - (void) socialNetworkManager:(SDSocialNetworkManager*)manager resultsReadyForTask:(SDSocialNetworkTask*)task {
@@ -48,7 +52,7 @@
 }
 
 - (void) socialNetworkManager:(SDSocialNetworkManager*)manager failedForTask:(SDSocialNetworkTask*)task {
-	NSLog(@"%@", [task.error userInfo]);
+	NSLog(@"%@", task.error);
 }
 
 @end
