@@ -8,8 +8,6 @@
 
 #import "SDSocialNetworkManager.h"
 
-#import "SDSocialNetworkTask.h"
-
 @implementation SDSocialNetworkManager
 
 @synthesize delegate;

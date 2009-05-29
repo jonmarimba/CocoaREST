@@ -9,8 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "SDSocialNetworkTaskDelegateProtocol.h"
-
-@class SDSocialNetworkTask;
+#import "SDSocialNetworkTask.h"
 
 @interface SDSocialNetworkManager : NSObject {
 	NSOperationQueue *queue;
@@ -49,15 +48,12 @@
 @property int limitRemainingAmount;
 @property NSTimeInterval limitResetEpochDate;
 
-+ (id) manager; // convenience method
++ (id) manager; // designated convenience initializer
 - (id) init; // designated initializer
 
 - (void) runTask:(SDSocialNetworkTask*)taskToRun;
 
 - (void) cancelAllTasks;
 - (void) cancelTask:(SDSocialNetworkTask*)taskToCancel;
-
-- (void) setMaxConcurrentTasks:(int)count;
-- (void) setMaxConcurrentTasks:(int)count;
 
 @end
