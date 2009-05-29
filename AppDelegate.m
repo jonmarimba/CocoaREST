@@ -23,6 +23,8 @@
 	socialNetworkManager.username = @"USERNAME";
 	socialNetworkManager.password = @"PASSWORD";
 	
+	socialNetworkManager.maxConcurrentTasks = 1;
+	
 	// test tasks go here
 	
 	SDSocialNetworkTask *task = [SDSocialNetworkTask task];
