@@ -47,4 +47,8 @@
 	NSLog(@"%@", task.results);
 }
 
+- (void) socialNetworkManager:(SDSocialNetworkManager*)manager failedForTask:(SDSocialNetworkTask*)task {
+	NSLog(@"%@", [task.error userInfo]);
+}
+
 @end

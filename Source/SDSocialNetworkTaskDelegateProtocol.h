@@ -16,5 +16,6 @@
 @required
 
 - (void) socialNetworkManager:(SDSocialNetworkManager*)manager resultsReadyForTask:(SDSocialNetworkTask*)task;
+- (void) socialNetworkManager:(SDSocialNetworkManager*)manager failedForTask:(SDSocialNetworkTask*)task;
 
 @end

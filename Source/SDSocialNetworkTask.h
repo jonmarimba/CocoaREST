@@ -69,11 +69,27 @@ typedef enum _SDSocialNetworkTaskType {
 	
 } SDSocialNetworkTaskType;
 
+typedef enum _SDSocialNetworkTaskError {
+	SDSocialNetworkTaskErrorNone,
+	SDSocialNetworkTaskErrorInvalidType,
+	SDSocialNetworkTaskErrorManagerNotSet, // (must only use -runTask: to run a task!)
+	SDSocialNetworkTaskErrorConnectionDataIsNil,
+	SDSocialNetworkTaskErrorConnectionFailed,
+	SDSocialNetworkTaskErrorParserFailed,
+	SDSocialNetworkTaskErrorParserDataIsNil,
+	
+	SDSocialNetworkTaskErrorMAX // once again, don't touch.
+} SDSocialNetworkTaskError;
+
 @interface SDSocialNetworkTask : NSOperation {
 	SDSocialNetworkManager *manager;
 	
 	NSString *taskID;
 	id results;
+	
+	SDSocialNetworkTaskError errorCode;
+	NSError *error;
+	NSError *underlyingError;
 	
 	SDSocialNetworkService service;
 	SDSocialNetworkTaskType type;
@@ -94,9 +110,12 @@ typedef enum _SDSocialNetworkTaskType {
 	NSImage *imageToUpload;
 }
 
+
+
 // designated convenience initializer
 
 + (id) task;
+
 
 // writable properties: set up before running
 
@@ -118,12 +137,15 @@ typedef enum _SDSocialNetworkTaskType {
 
 @property (copy) NSImage *imageToUpload;
 
+
 // readable properties: use after task is complete
 
 @property (readonly) id results;
 
-// deprecated: use only for backwards-compatibility with MGTwitterEngine
-@property (readonly) NSString *taskID;
+@property (readonly) SDSocialNetworkTaskError errorCode;
+@property (readonly) NSError *error;
+
+@property (readonly) NSString *taskID; // DEPRECATED; do not use unless you REALLY want to.
 
 // leave alone: used inside -[SDSocialNetworkManager runSocialNetworkTask:] only
 @property (assign) SDSocialNetworkManager *manager;

@@ -50,6 +50,8 @@ typedef enum _SDHTTPMethod {
 @synthesize imageToUpload;
 
 @synthesize results;
+@synthesize errorCode;
+@synthesize error;
 @synthesize taskID;
 
 @synthesize manager;
@@ -58,12 +60,25 @@ typedef enum _SDHTTPMethod {
 	return [[[self alloc] init] autorelease];
 }
 
+- (NSString*) _errorString {
+	NSString *errorStrings[SDSocialNetworkTaskErrorMAX];
+	errorStrings[SDSocialNetworkTaskErrorInvalidType] = @"type property is invalid";
+	errorStrings[SDSocialNetworkTaskErrorManagerNotSet] = @"manager property is NULL; only use -runTask: to run a task!";
+	errorStrings[SDSocialNetworkTaskErrorConnectionDataIsNil] = @"Connection returned NULL data";
+	errorStrings[SDSocialNetworkTaskErrorConnectionFailed] = @"Connection failed with error";
+	errorStrings[SDSocialNetworkTaskErrorParserFailed] = @"Parser failed with error";
+	errorStrings[SDSocialNetworkTaskErrorParserDataIsNil] = @"Parser returned NULL data";
+	return errorStrings[errorCode];
+}
+
 - (id) init {
 	if (self = [super init]) {
 		taskID = [[NSString stringWithNewUUID] retain];
 		
 		service = SDSocialNetworkServiceTwitter;
 		type = SDSocialNetworkTaskDoNothing;
+		errorCode = SDSocialNetworkTaskErrorNone;
+		
 		page = 1;
 		count = 0;
 	}
@@ -80,21 +95,22 @@ typedef enum _SDHTTPMethod {
 }
 
 - (void) main {
-	// a few excessively self-explanatory conditional statements
 	if (type >= SDSocialNetworkTaskMAX || type <= SDSocialNetworkTaskDoNothing) {
-		// send error to delegate, something like "task's type invalid"
-		return;
-	}
-	else if (type == SDSocialNetworkTaskDoNothing) {
-		[self performSelectorOnMainThread:@selector(_sendResultsToDelegate) withObject:nil waitUntilDone:YES];
+		errorCode = SDSocialNetworkTaskErrorInvalidType;
+		[self _sendResultsToDelegate];
 		return;
 	}
 	if (manager == nil) {
-		// 
+		errorCode = SDSocialNetworkTaskErrorManagerNotSet;
+		[self _sendResultsToDelegate];
 		return;
 	}
 	
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
+	
+	NSHTTPURLResponse *response = nil;
+	NSError *connectionError = nil;
+	NSError *errorFromYAJL = nil;
 	
 	[request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
 	[request setTimeoutInterval:30.0];
@@ -107,108 +123,124 @@ typedef enum _SDHTTPMethod {
 	
 	[self _addAuthorizationToRequest:request];
 	
-	NSHTTPURLResponse *response = nil;
-	NSError *error = nil;
-	NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+	NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&connectionError];
+	
+	// commented out the next line because some APIs are using HTTP error codes as return values, which is super lame
+	
+//	if (connectionError) {
+//		errorCode = SDSocialNetworkTaskErrorConnectionFailed;
+//		underlyingError = connectionError;
+//		[self _sendResultsToDelegate];
+//		return;
+//	}
 	
 	if (data == nil) {
-		// something went wrong. we should probably notify our delegate... (maybe, if money is involved)
+		errorCode = SDSocialNetworkTaskErrorConnectionDataIsNil;
+		[self _sendResultsToDelegate];
 		return;
 	}
 	
-	NSError *errorFromYAJL = nil;
-	if (type == SDSocialNetworkTaskUpdateProfileBackgroundImage) {
-		NSLog(@"%@\n\n", [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]);
-	}
-	else {
-		YAJLDecoder *decoder = [[[YAJLDecoder alloc] init] autorelease];
-		results = [[decoder parse:data error:&errorFromYAJL] retain];
-	}
+	YAJLDecoder *decoder = [[[YAJLDecoder alloc] init] autorelease];
+	results = [[decoder parse:data error:&errorFromYAJL] retain];
 	
 	[self _setLimitValuesForManagerBasedOnResponse:response];
 	
 	if (errorFromYAJL) {
-		NSLog(@"error: %@", [errorFromYAJL localizedDescription]);
+		errorCode = SDSocialNetworkTaskErrorParserFailed;
+		underlyingError = errorFromYAJL;
 	}
-	else {
-		NSAssert1(results != nil, @"Results are nil for task %@", self);
-		
-		// we enter the main thread, waiting patiently til the delegate is done using us like a peice of meat
-		[self performSelectorOnMainThread:@selector(_sendResultsToDelegate) withObject:nil waitUntilDone:YES];
-	}
+	else if (results == nil)
+		errorCode = SDSocialNetworkTaskErrorParserDataIsNil;
+	
+	[self _sendResultsToDelegate];
 }
 
 // MARK: -
 // MARK: Main Thread Methods (for delegation)
 
 - (void) _sendResultsToDelegate {
-	NSObject <SDSocialNetworkTaskDelegate, NSObject> *delegate = manager.delegate;
+	[self performSelectorOnMainThread:@selector(_sendResultsToDelegateFromMainThread) withObject:nil waitUntilDone:YES];
+}
+
+- (void) _sendResultsToDelegateFromMainThread {
+	// we enter the main thread, waiting patiently til the delegate is done using us like a peice of meat
 	// delegate can safely access all of our properties now
-	[delegate socialNetworkManager:manager resultsReadyForTask:self];
-}
-
-// MARK: -
-// MARK: Helper Methods
-
-- (void) _appendToData:(NSMutableData*)data formatWithUTF8:(NSString*)format, ... {
-	va_list ap;
-	va_start(ap, format);
-	NSString *str = [[NSString alloc] initWithFormat:format arguments:ap];
-	va_end(ap);
 	
-	NSData *stringData = [str dataUsingEncoding:NSUTF8StringEncoding];
-	[data appendData:stringData];
-	
-	[str release];
-}
-
-+ (NSString*) stringBoundary {
-	return @"SDthisisnotatestokaymaybeitisSD";
-}
-
-- (NSData*) _postBodyDataFromDictionary:(NSDictionary*)dictionary {
-	// setting up string boundaries
-	NSString *stringBoundary = [SDSocialNetworkTask stringBoundary];
-	NSData *stringBoundaryData = [[NSString stringWithFormat:@"\r\n--%@\r\n",stringBoundary] dataUsingEncoding:NSUTF8StringEncoding];
-	NSData *stringBoundaryFinalData = [[NSString stringWithFormat:@"\r\n--%@--\r\n",stringBoundary] dataUsingEncoding:NSUTF8StringEncoding];
-	
-	NSMutableData *postBody = [NSMutableData data];
-	
-	// necessary??
-	[self _appendToData:postBody formatWithUTF8:@"\r\n"];
-	
-	for (NSString *key in dictionary) {
-		[postBody appendData:stringBoundaryData];
-		
-		id object = [dictionary objectForKey:key];
-		
-		if ([object isKindOfClass:[NSString class]]) {
-			[self _appendToData:postBody formatWithUTF8:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", key];
-			[self _appendToData:postBody formatWithUTF8:@"%@", object];
-		}
-//		else if ([object isKindOfClass:[NSData class]]) {
-			// normally we would just append this data, but i dont know what content-type to give it.
-			// if we can safely skip Content-Type, then we can just copy the above method and simply
-			// call -appendData:. also, when would we even have only NSData? come to think of it,
-			// we might as well just delete this whole block, comments and all.
-//		}
-		else if ([object isKindOfClass:[NSImage class]]) {
-			NSBitmapImageRep *rep = [[[NSBitmapImageRep alloc] initWithData:[imageToUpload TIFFRepresentation]] autorelease];
-			NSData *imageData = [rep representationUsingType:NSPNGFileType properties:nil];
-			
-			[self _appendToData:postBody formatWithUTF8:@"Content-Disposition: form-data; name=\"%@\"; filename=\"astyle.png\"\r\n", key];
-			[self _appendToData:postBody formatWithUTF8:@"Content-Type: image/png\r\n\r\n"];
-			[postBody appendData:imageData];
-		}
+	if (errorCode == SDSocialNetworkTaskErrorNone) {
+		[manager.delegate socialNetworkManager:manager resultsReadyForTask:self];
 	}
-	
-	[postBody appendData:stringBoundaryFinalData];
-	
-	return postBody;
+	else {
+		// we'll create our error manually and let the delegate get all touchy-feely with it all they want
+		
+		NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+		[userInfo setObject:[self _errorString] forKey:NSLocalizedDescriptionKey];
+		if (underlyingError)
+			[userInfo setObject:underlyingError forKey:NSUnderlyingErrorKey];
+		
+		// we don't retain the error object, because the pool won't drain until the delegate is done anyway
+		error = [NSError errorWithDomain:@"SDSocialNetworkDomain" code:errorCode userInfo:userInfo];
+		
+		[manager.delegate socialNetworkManager:manager failedForTask:self];
+	}
 }
 
 // MARK: -
 // MARK: Before-response Methods
+
+- (void) _setURLAndParametersForRequest:(NSMutableURLRequest*)request {
+	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+	
+	SDHTTPMethod method = [self _methodBasedOnTaskType];
+	
+	NSString *URLString = [self _URLStringBasedOnTaskType];
+	NSAssert(URLString != nil, @"URLString == nil; either `type` is invalid, or URL method is not complete");
+	
+	[self _addParametersToDictionary:parameters];
+	
+	switch (method) {
+		case SDHTTPMethodGet: {
+			NSString *queryString = [self _queryStringFromDictionary:parameters];
+			[request setHTTPMethod:@"GET"];
+			if ([queryString length] > 0)
+				URLString = [NSString stringWithFormat:@"%@?%@", URLString, queryString];
+			break;
+		}
+		case SDHTTPMethodPost:
+			[request setHTTPMethod:@"POST"];
+			if ([self _isMultiPartDataBasedOnTaskType] == YES) {
+				NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", [SDSocialNetworkTask _stringBoundary]];
+				[request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+				
+				[request setHTTPBody:[self _postBodyDataFromDictionary:parameters]];
+			}
+			else {
+				NSString *queryString = [self _queryStringFromDictionary:parameters];
+				[request setHTTPBody:[queryString dataUsingEncoding:NSUTF8StringEncoding]];
+			}
+			break;
+	}
+	
+	[request setURL:[NSURL URLWithString:URLString]];
+}
+
+- (void) _addAuthorizationToRequest:(NSMutableURLRequest*)request {
+	// Set header for HTTP Basic authentication explicitly, to avoid problems with proxies and other intermediaries
+	NSString *authStr = [NSString stringWithFormat:@"%@:%@", manager.username, manager.password];
+	NSData *authData = [authStr dataUsingEncoding:NSASCIIStringEncoding];
+	NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodingWithLineLength:80]];
+	[request setValue:authValue forHTTPHeaderField:@"Authorization"];
+}
+
+- (BOOL) _isMultiPartDataBasedOnTaskType {
+	BOOL multiPartData = NO;
+	switch (type) {
+		case SDSocialNetworkTaskUpdateProfileImage:
+		case SDSocialNetworkTaskUpdateProfileBackgroundImage:
+			multiPartData = YES;
+			break;
+	}
+	return multiPartData;
+}
 
 - (SDHTTPMethod) _methodBasedOnTaskType {
 	SDHTTPMethod method = SDHTTPMethodGet;
