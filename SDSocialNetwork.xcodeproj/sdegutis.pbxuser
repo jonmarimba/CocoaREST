@@ -535,6 +535,13 @@
 			94BFA4470FD04C0E00806DA0 /* PBXTextBookmark */ = 94BFA4470FD04C0E00806DA0 /* PBXTextBookmark */;
 			94BFA4480FD04C3400806DA0 /* PBXTextBookmark */ = 94BFA4480FD04C3400806DA0 /* PBXTextBookmark */;
 			94BFA44A0FD04C4C00806DA0 /* PBXTextBookmark */ = 94BFA44A0FD04C4C00806DA0 /* PBXTextBookmark */;
+			94BFA45D0FD05F7800806DA0 /* PBXTextBookmark */ = 94BFA45D0FD05F7800806DA0 /* PBXTextBookmark */;
+			94BFA4620FD05F9700806DA0 /* PBXTextBookmark */ = 94BFA4620FD05F9700806DA0 /* PBXTextBookmark */;
+			94BFA4630FD05F9700806DA0 /* PBXTextBookmark */ = 94BFA4630FD05F9700806DA0 /* PBXTextBookmark */;
+			94BFA4640FD05F9700806DA0 /* PBXTextBookmark */ = 94BFA4640FD05F9700806DA0 /* PBXTextBookmark */;
+			94BFA4780FD0601F00806DA0 /* PBXTextBookmark */ = 94BFA4780FD0601F00806DA0 /* PBXTextBookmark */;
+			94BFA4800FD060DA00806DA0 /* PBXTextBookmark */ = 94BFA4800FD060DA00806DA0 /* PBXTextBookmark */;
+			94BFA4830FD060FE00806DA0 /* PBXTextBookmark */ = 94BFA4830FD060FE00806DA0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 94BFA1070FCF222D00806DA0 /* Source Control */;
 		userBuildSettings = {
@@ -553,6 +560,11 @@
 		executables = (
 			94BFA0FF0FCF221100806DA0 /* SDSocialNetwork */,
 		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{291, 152}, {919, 769}}";
+		};
 	};
 	94BFA0FF0FCF221100806DA0 /* SDSocialNetwork */ = {
 		isa = PBXExecutable;
@@ -647,9 +659,9 @@
 	};
 	94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {870, 7434}}";
-			sepNavSelRange = "{13321, 0}";
-			sepNavVisRange = "{11970, 2181}";
+			sepNavIntBoundsRect = "{{0, 0}, {860, 7714}}";
+			sepNavSelRange = "{219, 0}";
+			sepNavVisRange = "{0, 1339}";
 			sepNavWindowFrame = "{{955, 149}, {919, 769}}";
 		};
 	};
@@ -666,7 +678,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 21";
 		rLen = 0;
-		rLoc = 404;
+		rLoc = 399;
 		rType = 0;
 		vrLen = 160;
 		vrLoc = 282;
@@ -684,7 +696,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 21";
 		rLen = 0;
-		rLoc = 404;
+		rLoc = 399;
 		rType = 0;
 		vrLen = 160;
 		vrLoc = 282;
@@ -724,7 +736,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 271";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1867;
 		vrLoc = 7082;
@@ -734,7 +746,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 230";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 6793;
@@ -836,7 +848,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 251";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2136;
 		vrLoc = 6793;
@@ -886,7 +898,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 252";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2371;
 		vrLoc = 6793;
@@ -936,7 +948,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 253";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2441;
 		vrLoc = 6931;
@@ -1006,7 +1018,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 254";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2441;
 		vrLoc = 6931;
@@ -1046,7 +1058,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 255";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2448;
 		vrLoc = 6931;
@@ -1096,7 +1108,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 256";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1156,7 +1168,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1206,7 +1218,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1256,7 +1268,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1306,7 +1318,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1356,7 +1368,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1406,7 +1418,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1456,7 +1468,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1506,7 +1518,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1556,7 +1568,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1606,7 +1618,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1656,7 +1668,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1706,7 +1718,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1756,7 +1768,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1806,7 +1818,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 257";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2518;
 		vrLoc = 6931;
@@ -1846,7 +1858,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 275";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2079;
 		vrLoc = 8340;
@@ -1856,7 +1868,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 258";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2828;
 		vrLoc = 6931;
@@ -1896,7 +1908,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 260";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2882;
 		vrLoc = 6931;
@@ -1936,7 +1948,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 260";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2935;
 		vrLoc = 6931;
@@ -1976,7 +1988,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 261";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2649;
 		vrLoc = 7833;
@@ -2016,7 +2028,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 263";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2695;
 		vrLoc = 7833;
@@ -2056,7 +2068,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 265";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2728;
 		vrLoc = 7833;
@@ -2096,7 +2108,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 266";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2771;
 		vrLoc = 7833;
@@ -2136,7 +2148,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 269";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2809;
 		vrLoc = 7833;
@@ -2176,7 +2188,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 269";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2855;
 		vrLoc = 7833;
@@ -2216,7 +2228,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 270";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2900;
 		vrLoc = 7833;
@@ -2256,7 +2268,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 272";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2939;
 		vrLoc = 7833;
@@ -2296,7 +2308,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 273";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2979;
 		vrLoc = 7833;
@@ -2336,7 +2348,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 274";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 3018;
 		vrLoc = 7833;
@@ -2376,7 +2388,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 276";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 3104;
 		vrLoc = 7833;
@@ -2416,7 +2428,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 279";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 3090;
 		vrLoc = 7833;
@@ -2466,7 +2478,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 277";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 3185;
 		vrLoc = 7475;
@@ -2506,7 +2518,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 277";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 3185;
 		vrLoc = 7475;
@@ -2546,7 +2558,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 277";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 2979;
 		vrLoc = 6806;
@@ -2576,7 +2588,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 215";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1761;
 		vrLoc = 5848;
@@ -2616,7 +2628,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 218";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1767;
 		vrLoc = 5848;
@@ -2656,7 +2668,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 222";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 5848;
@@ -2696,7 +2708,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 223";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1603;
 		vrLoc = 5848;
@@ -2736,7 +2748,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 224";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1535;
 		vrLoc = 5848;
@@ -2776,7 +2788,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 223";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1476;
 		vrLoc = 5848;
@@ -2816,7 +2828,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 225";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1515;
 		vrLoc = 5848;
@@ -2856,7 +2868,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 227";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1577;
 		vrLoc = 5848;
@@ -2896,7 +2908,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 230";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1689;
 		vrLoc = 5848;
@@ -2936,7 +2948,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 232";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1685;
 		vrLoc = 5848;
@@ -2984,7 +2996,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 363";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1875;
 		vrLoc = 12680;
@@ -3034,7 +3046,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 354";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 12010;
@@ -3074,7 +3086,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 354";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 12010;
@@ -3114,7 +3126,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 354";
 		rLen = 0;
-		rLoc = 16066;
+		rLoc = 16061;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 12010;
@@ -3144,7 +3156,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 90";
 		rLen = 0;
-		rLoc = 3649;
+		rLoc = 3644;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 1456;
@@ -3184,7 +3196,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 407";
 		rLen = 13;
-		rLoc = 17170;
+		rLoc = 17165;
 		rType = 0;
 		vrLen = 1899;
 		vrLoc = 13667;
@@ -3234,7 +3246,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 407";
 		rLen = 13;
-		rLoc = 17170;
+		rLoc = 17165;
 		rType = 0;
 		vrLen = 1722;
 		vrLoc = 13667;
@@ -3311,7 +3323,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 407";
 		rLen = 13;
-		rLoc = 17170;
+		rLoc = 17165;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 0;
@@ -3564,7 +3576,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 37";
 		rLen = 36;
-		rLoc = 1286;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 0;
@@ -3574,7 +3586,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 37";
 		rLen = 36;
-		rLoc = 1286;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 0;
@@ -3584,7 +3596,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 122";
 		rLen = 0;
-		rLoc = 5074;
+		rLoc = 5069;
 		rType = 0;
 		vrLen = 1731;
 		vrLoc = 2343;
@@ -3641,7 +3653,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 285";
 		rLen = 71;
-		rLoc = 13322;
+		rLoc = 13317;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 10869;
@@ -3698,7 +3710,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 35";
 		rLen = 0;
-		rLoc = 1231;
+		rLoc = 1226;
 		rType = 0;
 		vrLen = 2007;
 		vrLoc = 13815;
@@ -3768,7 +3780,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 144";
 		rLen = 0;
-		rLoc = 6470;
+		rLoc = 6465;
 		rType = 0;
 		vrLen = 1622;
 		vrLoc = 3004;
@@ -3818,7 +3830,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 144";
 		rLen = 0;
-		rLoc = 6470;
+		rLoc = 6465;
 		rType = 0;
 		vrLen = 1375;
 		vrLoc = 1568;
@@ -3868,7 +3880,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 144";
 		rLen = 0;
-		rLoc = 6470;
+		rLoc = 6465;
 		rType = 0;
 		vrLen = 1375;
 		vrLoc = 1568;
@@ -3908,7 +3920,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 59";
 		rLen = 0;
-		rLoc = 2158;
+		rLoc = 2153;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 438;
@@ -3975,7 +3987,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 163";
 		rLen = 0;
-		rLoc = 6546;
+		rLoc = 6541;
 		rType = 0;
 		vrLen = 1563;
 		vrLoc = 3984;
@@ -4025,7 +4037,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 149";
 		rLen = 0;
-		rLoc = 5212;
+		rLoc = 5207;
 		rType = 0;
 		vrLen = 1587;
 		vrLoc = 4305;
@@ -4085,7 +4097,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 164";
 		rLen = 0;
-		rLoc = 5212;
+		rLoc = 5207;
 		rType = 0;
 		vrLen = 1565;
 		vrLoc = 4328;
@@ -4142,7 +4154,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 149";
 		rLen = 11;
-		rLoc = 4971;
+		rLoc = 4966;
 		rType = 0;
 		vrLen = 1530;
 		vrLoc = 3658;
@@ -4199,7 +4211,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 31";
 		rLen = 0;
-		rLoc = 932;
+		rLoc = 927;
 		rType = 0;
 		vrLen = 1735;
 		vrLoc = 6274;
@@ -4249,7 +4261,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 31";
 		rLen = 0;
-		rLoc = 932;
+		rLoc = 927;
 		rType = 0;
 		vrLen = 1735;
 		vrLoc = 6274;
@@ -4289,7 +4301,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 133";
 		rLen = 0;
-		rLoc = 4639;
+		rLoc = 4634;
 		rType = 0;
 		vrLen = 1448;
 		vrLoc = 3006;
@@ -4319,7 +4331,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 132";
 		rLen = 0;
-		rLoc = 4404;
+		rLoc = 4399;
 		rType = 0;
 		vrLen = 1413;
 		vrLoc = 3006;
@@ -4359,7 +4371,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 132";
 		rLen = 0;
-		rLoc = 4404;
+		rLoc = 4399;
 		rType = 0;
 		vrLen = 1424;
 		vrLoc = 3006;
@@ -4399,7 +4411,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 134";
 		rLen = 0;
-		rLoc = 4639;
+		rLoc = 4634;
 		rType = 0;
 		vrLen = 1414;
 		vrLoc = 3006;
@@ -4439,7 +4451,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 133";
 		rLen = 0;
-		rLoc = 4521;
+		rLoc = 4516;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 3006;
@@ -4479,7 +4491,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 133";
 		rLen = 0;
-		rLoc = 4521;
+		rLoc = 4516;
 		rType = 0;
 		vrLen = 1424;
 		vrLoc = 3006;
@@ -4536,7 +4548,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 179";
 		rLen = 0;
-		rLoc = 5212;
+		rLoc = 5207;
 		rType = 0;
 		vrLen = 1527;
 		vrLoc = 4393;
@@ -4576,7 +4588,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 188";
 		rLen = 0;
-		rLoc = 6469;
+		rLoc = 6464;
 		rType = 0;
 		vrLen = 1850;
 		vrLoc = 4912;
@@ -4616,7 +4628,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 14444;
+		rLoc = 14439;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 12551;
@@ -4626,7 +4638,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 56";
 		rLen = 0;
-		rLoc = 2046;
+		rLoc = 2041;
 		rType = 0;
 		vrLen = 1367;
 		vrLoc = 362;
@@ -4683,7 +4695,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 370";
 		rLen = 0;
-		rLoc = 14518;
+		rLoc = 14513;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 13390;
@@ -4733,7 +4745,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 370";
 		rLen = 0;
-		rLoc = 14518;
+		rLoc = 14513;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 13390;
@@ -4743,7 +4755,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 375";
 		rLen = 0;
-		rLoc = 15955;
+		rLoc = 15950;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 13617;
@@ -4793,7 +4805,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 379";
 		rLen = 0;
-		rLoc = 15201;
+		rLoc = 15196;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 13617;
@@ -4843,7 +4855,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 373";
 		rLen = 0;
-		rLoc = 14596;
+		rLoc = 14591;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 13617;
@@ -4893,7 +4905,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 373";
 		rLen = 0;
-		rLoc = 14596;
+		rLoc = 14591;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 13617;
@@ -4903,7 +4915,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 385";
 		rLen = 0;
-		rLoc = 15957;
+		rLoc = 15952;
 		rType = 0;
 		vrLen = 1510;
 		vrLoc = 13617;
@@ -4963,7 +4975,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 69";
 		rLen = 0;
-		rLoc = 2180;
+		rLoc = 2175;
 		rType = 0;
 		vrLen = 1459;
 		vrLoc = 1299;
@@ -5013,7 +5025,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 14200;
+		rLoc = 14195;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5063,7 +5075,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 14200;
+		rLoc = 14195;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5113,7 +5125,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 14200;
+		rLoc = 14195;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5163,7 +5175,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 14200;
+		rLoc = 14195;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5203,7 +5215,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 362";
 		rLen = 0;
-		rLoc = 14200;
+		rLoc = 14195;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 12761;
@@ -5213,7 +5225,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 382";
 		rLen = 0;
-		rLoc = 14596;
+		rLoc = 14591;
 		rType = 0;
 		vrLen = 1565;
 		vrLoc = 14170;
@@ -5263,7 +5275,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 384";
 		rLen = 0;
-		rLoc = 14667;
+		rLoc = 14662;
 		rType = 0;
 		vrLen = 1517;
 		vrLoc = 14170;
@@ -5313,7 +5325,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 393";
 		rLen = 0;
-		rLoc = 14924;
+		rLoc = 14919;
 		rType = 0;
 		vrLen = 1437;
 		vrLoc = 14170;
@@ -5363,7 +5375,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 394";
 		rLen = 0;
-		rLoc = 14929;
+		rLoc = 14924;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 14170;
@@ -5423,7 +5435,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 394";
 		rLen = 0;
-		rLoc = 14929;
+		rLoc = 14924;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 14170;
@@ -5463,7 +5475,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 394";
 		rLen = 0;
-		rLoc = 14929;
+		rLoc = 14924;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 14170;
@@ -5473,7 +5485,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 413";
 		rLen = 0;
-		rLoc = 15489;
+		rLoc = 15484;
 		rType = 0;
 		vrLen = 1570;
 		vrLoc = 14344;
@@ -5533,7 +5545,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 422";
 		rLen = 0;
-		rLoc = 15863;
+		rLoc = 15858;
 		rType = 0;
 		vrLen = 1613;
 		vrLoc = 14344;
@@ -5603,7 +5615,7 @@
 		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
 		name = "SDSocialNetworkTask.m: 423";
 		rLen = 0;
-		rLoc = 15874;
+		rLoc = 15869;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 14647;
@@ -5833,6 +5845,90 @@
 		vrLoc = 155;
 	};
 	94BFA44A0FD04C4C00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1170;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 267;
+	};
+	94BFA4560FD05F5A00806DA0 /* YAJLDecoder.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {860, 641}}";
+			sepNavSelRange = "{141, 0}";
+			sepNavVisRange = "{0, 842}";
+			sepNavWindowFrame = "{{245, 194}, {919, 769}}";
+		};
+	};
+	94BFA45D0FD05F7800806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 49";
+		rLen = 0;
+		rLoc = 1447;
+		rType = 0;
+		vrLen = 326;
+		vrLoc = 267;
+	};
+	94BFA4620FD05F9700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: YAJL/YAJLDecoder.h: No such file or directory";
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		rLen = 1;
+		rLoc = 10;
+		rType = 1;
+	};
+	94BFA4630FD05F9700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */;
+		name = "SDSocialNetworkTask.m: 11";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 1339;
+		vrLoc = 0;
+	};
+	94BFA4640FD05F9700806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1170;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 267;
+	};
+	94BFA4780FD0601F00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1170;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 267;
+	};
+	94BFA4790FD0602B00806DA0 /* yajl_parse.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {860, 2590}}";
+			sepNavSelRange = "{1603, 25}";
+			sepNavVisRange = "{0, 1775}";
+			sepNavWindowFrame = "{{268, 173}, {919, 769}}";
+		};
+	};
+	94BFA4800FD060DA00806DA0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
+		name = "AppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1170;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 267;
+	};
+	94BFA4830FD060FE00806DA0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */;
 		name = "AppDelegate.m: 42";

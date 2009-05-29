@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA44A0FD04C4C00806DA0</string>
+						<string>94BFA4830FD060FE00806DA0</string>
 						<key>history</key>
 						<array>
 							<string>94BFA3290FD0297300806DA0</string>
@@ -314,9 +314,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>15</integer>
-											<integer>4</integer>
-											<integer>1</integer>
+											<integer>24</integer>
+											<integer>23</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -367,7 +366,7 @@
 								<dict>
 									<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 									<array>
-										<real>333</real>
+										<real>399</real>
 									</array>
 									<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 									<array>
@@ -380,16 +379,16 @@
 									<array>
 										<string>1C37FBAC04509CD000000102</string>
 										<string>94BFA11B0FCF235C00806DA0</string>
-										<string>94BFA1170FCF234500806DA0</string>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
+											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 0}, {333, 334}}</string>
+									<string>{{0, 0}, {399, 511}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -399,11 +398,11 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{10, 27}, {350, 352}}</string>
+								<string>{{10, 27}, {416, 529}}</string>
 								<key>GroupTreeTableConfiguration</key>
 								<array>
 									<string>MainColumn</string>
-									<real>333</real>
+									<real>399</real>
 								</array>
 							</dict>
 							<key>Module</key>
@@ -519,13 +518,14 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>94BFA4840FD060FE00806DA0</string>
 		<string>94BFA3AA0FD03B2700806DA0</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>/Users/sdegutis/Desktop/SDSocialNetwork/SDSocialNetwork.xcodeproj</string>
 		<string>94BFA30C0FD00B8300806DA0</string>
+		<string>/Users/sdegutis/Desktop/SDSocialNetwork/SDSocialNetwork.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>78 517 416 597 0 0 1920 1178 </string>

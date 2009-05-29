@@ -10,28 +10,15 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		94BFA1060FCF222D00806DA0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58150DA1D0A300B32029 /* MainMenu.xib */; };
-		94BFA1150FCF233900806DA0 /* YAJL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BFA1140FCF233900806DA0 /* YAJL.framework */; };
-		94BFA11A0FCF234F00806DA0 /* YAJL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94BFA1140FCF233900806DA0 /* YAJL.framework */; };
 		94BFA1220FCF236800806DA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */; };
 		94BFA12D0FCF237F00806DA0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1250FCF237F00806DA0 /* NSData+Base64.m */; };
 		94BFA12E0FCF237F00806DA0 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1270FCF237F00806DA0 /* NSString+UUID.m */; };
 		94BFA12F0FCF237F00806DA0 /* SDSocialNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */; };
 		94BFA1300FCF237F00806DA0 /* SDSocialNetworkTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */; };
 		94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */; };
+		94BFA4550FD05F3800806DA0 /* libyajl_s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BFA4540FD05F3800806DA0 /* libyajl_s.a */; };
+		94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		94BFA11F0FCF235C00806DA0 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				94BFA11A0FCF234F00806DA0 /* YAJL.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -43,7 +30,6 @@
 		32CA4F630368D1EE00C91783 /* SDSocialNetwork_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSocialNetwork_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SDSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94BFA1140FCF233900806DA0 /* YAJL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJL.framework; sourceTree = "<group>"; };
 		94BFA1200FCF236800806DA0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		94BFA1210FCF236800806DA0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94BFA1240FCF237F00806DA0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Source/NSData+Base64.h"; sourceTree = "<group>"; };
@@ -57,6 +43,11 @@
 		94BFA12C0FCF237F00806DA0 /* SDSocialNetworkTaskDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDSocialNetworkTaskDelegateProtocol.h; path = Source/SDSocialNetworkTaskDelegateProtocol.h; sourceTree = "<group>"; };
 		94BFA42D0FD0437F00806DA0 /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+Hex.h"; path = "Source/NSColor+Hex.h"; sourceTree = "<group>"; };
 		94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+Hex.m"; path = "Source/NSColor+Hex.m"; sourceTree = "<group>"; };
+		94BFA4540FD05F3800806DA0 /* libyajl_s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyajl_s.a; path = Source/libyajl_s.a; sourceTree = "<group>"; };
+		94BFA4560FD05F5A00806DA0 /* YAJLDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAJLDecoder.h; path = Source/YAJLDecoder.h; sourceTree = "<group>"; };
+		94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAJLDecoder.m; path = Source/YAJLDecoder.m; sourceTree = "<group>"; };
+		94BFA4790FD0602B00806DA0 /* yajl_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parse.h; path = Source/yajl_parse.h; sourceTree = "<group>"; };
+		94BFA47B0FD0603900806DA0 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_common.h; path = Source/yajl_common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				94BFA1150FCF233900806DA0 /* YAJL.framework in Frameworks */,
+				94BFA4550FD05F3800806DA0 /* libyajl_s.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +76,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94BFA1140FCF233900806DA0 /* YAJL.framework */,
+				94BFA4540FD05F3800806DA0 /* libyajl_s.a */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -151,17 +142,21 @@
 		94BFA1230FCF236E00806DA0 /* SDSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				94BFA1280FCF237F00806DA0 /* SDSocialNetworkManager.h */,
+				94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */,
+				94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */,
+				94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */,
+				94BFA12C0FCF237F00806DA0 /* SDSocialNetworkTaskDelegateProtocol.h */,
+				94BFA4790FD0602B00806DA0 /* yajl_parse.h */,
+				94BFA47B0FD0603900806DA0 /* yajl_common.h */,
+				94BFA4560FD05F5A00806DA0 /* YAJLDecoder.h */,
+				94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */,
 				94BFA1240FCF237F00806DA0 /* NSData+Base64.h */,
 				94BFA1250FCF237F00806DA0 /* NSData+Base64.m */,
 				94BFA1260FCF237F00806DA0 /* NSString+UUID.h */,
 				94BFA1270FCF237F00806DA0 /* NSString+UUID.m */,
 				94BFA42D0FD0437F00806DA0 /* NSColor+Hex.h */,
 				94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */,
-				94BFA1280FCF237F00806DA0 /* SDSocialNetworkManager.h */,
-				94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */,
-				94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */,
-				94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */,
-				94BFA12C0FCF237F00806DA0 /* SDSocialNetworkTaskDelegateProtocol.h */,
 			);
 			name = SDSocialNetwork;
 			sourceTree = "<group>";
@@ -176,7 +171,6 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				94BFA11F0FCF235C00806DA0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -228,6 +222,7 @@
 				94BFA12F0FCF237F00806DA0 /* SDSocialNetworkManager.m in Sources */,
 				94BFA1300FCF237F00806DA0 /* SDSocialNetworkTask.m in Sources */,
 				94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */,
+				94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +246,10 @@
 				GCC_PREFIX_HEADER = SDSocialNetwork_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Source\"",
+				);
 				PRODUCT_NAME = SDSocialNetwork;
 			};
 			name = Debug;
@@ -269,6 +268,10 @@
 				GCC_PREFIX_HEADER = SDSocialNetwork_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Source\"",
+				);
 				PRODUCT_NAME = SDSocialNetwork;
 			};
 			name = Release;
