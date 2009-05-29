@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA3B50FD03BAE00806DA0</string>
+						<string>94BFA4270FD0434F00806DA0</string>
 						<key>history</key>
 						<array>
-							<string>94BFA3790FD039A700806DA0</string>
+							<string>94BFA4120FD041D300806DA0</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -242,6 +242,46 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>94BFA3BC0FD03DEF00806DA0</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>SDSocialNetworkTask.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>94BFA3BD0FD03DEF00806DA0</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>SDSocialNetworkTask.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>94BFA4290FD0434F00806DA0</string>
+						<key>history</key>
+						<array>
+							<string>94BFA4280FD0434F00806DA0</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {737, 641}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>262 314 737 682 0 0 1920 1178 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>94BFA30C0FD00B8300806DA0</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>AppDelegate.m</string>
@@ -256,7 +296,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA3B60FD03BAE00806DA0</string>
+						<string>94BFA42A0FD0434F00806DA0</string>
 						<key>history</key>
 						<array>
 							<string>94BFA3290FD0297300806DA0</string>
@@ -296,7 +336,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA3B70FD03BAE00806DA0</string>
+						<string>94BFA42B0FD0434F00806DA0</string>
 						<key>history</key>
 						<array>
 							<string>94BFA3270FD0297300806DA0</string>
@@ -336,7 +376,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA3B80FD03BAE00806DA0</string>
+						<string>94BFA42C0FD0434F00806DA0</string>
 						<key>history</key>
 						<array>
 							<string>94BFA3210FD011F300806DA0</string>
@@ -646,8 +686,9 @@
 		<string>/Users/sdegutis/Desktop/SDSocialNetwork/SDSocialNetwork.xcodeproj</string>
 		<string>94BFA32B0FD0297300806DA0</string>
 		<string>94BFA1DD0FCF809400806DA0</string>
-		<string>94BFA30C0FD00B8300806DA0</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>94BFA30C0FD00B8300806DA0</string>
+		<string>94BFA3BC0FD03DEF00806DA0</string>
 		<string>94BFA32E0FD0297300806DA0</string>
 	</array>
 	<key>WindowString</key>
