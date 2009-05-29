@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SDSocialNetwork' target in the 'SDSocialNetwork' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
