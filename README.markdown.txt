@@ -1,120 +1,128 @@
-MGTwitterEngine
-by Matt Legend Gemmell - http://mattgemmell.com
+SDSocialNetworkManager
+by Steven Degutis - http://degutis.org
 
 
 
-How to use MGTwitterEngine
+How to use SDSocialNetworkManager
 ==========================
 
-MGTwitterEngine is an Objective-C/Cocoa class which makes it easy to add Twitter integration to your own Cocoa apps. It communicates with Twitter via the public Twitter API, which you can read about here:
+SDSocialNetworkManager is an Objective-C/Cocoa class which, along with its companion class SDSocialNetworkTask, makes it easy to add social network integration to your own Cocoa apps. It communicates with services such as Twitter via their public REST APIs. You can read about the specific supported APIs at the following links:
+
 http://apiwiki.twitter.com/REST+API+Documentation
 
-Using MGTwitterEngine is easy. The basic steps are:
+Using SDSocialNetworkManager is easy. The basic steps are:
 
 
-1. Copy all the relevant source files into your own project. You need everything that starts with "MGTwitter", and also the NSString+UUID and NSData+Base64 category files.
+1. Copy all the relevant source files into your own project. You need everything that starts with "SDSocialNetwork", and also the NSString+UUID and NSData+Base64 category files. For your convenience, they are all in the Source folder of this project, ready for a nice Cmd-A + Cmd-C.
 
 
-2. In whatever class you're going to use MGTwitterEngine from, obviously make sure you #import the MGTwitterEngine.h header file. You should also declare that your class implements the MGTwitterEngineDelegate protocol. The AppController.h header file in the demo project is an example you can use.
+2. Copy YAJL.framework into your project, making sure to add it in a Copy Files phase which points to your Frameworks folder in your application bundle.
 
 
-3. Implement the MGTwitterEngineDelegate methods, just as the AppController in the demo project does. These are the methods you'll need to implement:
-
-- (void)requestSucceeded:(NSString *)requestIdentifier;
-- (void)requestFailed:(NSString *)requestIdentifier withError:(NSError *)error;
-- (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)identifier;
-- (void)directMessagesReceived:(NSArray *)messages forRequest:(NSString *)identifier;
-- (void)userInfoReceived:(NSArray *)userInfo forRequest:(NSString *)identifier;
+2. In whatever class you're going to use SDSocialNetworkManager from, obviously make sure you #import the SDSocialNetworkManager.h header file. You should also declare that your class implements the SDSocialNetworkDelegate protocol. The AppDelegate.h header file in the demo project is an example you can use.
 
 
-4. Go ahead and use MGTwitterEngine! Just instantiate the object and set the relevant username and password (as AppController does in the demo project), and then go ahead and call some of the Twitter API methods - you can see a full list of them in the MGTwitterEngine.h header file, which also includes a link to the Twitter API documentation online.
+3. Implement the SDSocialNetworkDelegate methods, just as the AppDelegate in the demo project does. These are the methods you'll need to implement:
+
+- (void) socialNetworkManager:(SDSocialNetworkManager*)manager resultsReadyForTask:(SDSocialNetworkTask*)task;
 
 
-A note about XML parsing
-========================
-
-You may wish to use the LibXML parser rather than the NSXMLParser, since LibXML can be faster and has a smaller memory footprint.
-
-In this case, you make need to make the following changes to your project:
-
-1. Set USE_LIBXML to 1, near the top of the MGTwitterEngine.m file.
-
-2. Add libxml2.dylib in Other Frameworks. You'll find the library in:
-
-	/usr/lib/libxml2.dylib
-	
-3. Add "/usr/include/libxml2" as a Header Search Path in your Project Settings.
+4. Go ahead and use SDSocialNetworkManager! The Header files are very self-explanatory and well-documented. However, it is recommended that you take a look at the section below as well.
 
 
 
-A note about using MGTwitterEngine on the iPhone
-================================================
+More in-depth explanation of usage
+==================================
 
-MGTwitterEngine can also be used on the iPhone (with the official iPhone SDK). Simply add it to your iPhone application project as usual.
+The bare basics that are required to request data from or send data to a social network, are as follows:
 
-It's recommended that you use the LibXML parser rather than the NSXMLParser on the iPhone. The native parser is faster and has a smaller memory footprint, and every little bit counts on the device. If you configure USE_LIBXML to 1 in MGTwitterEngine.m, you'll need to make a couple of additions to your project.
+(1) Create an SDSocialNetworkManager (usually with +manager)
 
-1. Add libxml2.dylib in Other Frameworks. You'll find the library in:
+	(a) Set its delegate
+	(b) Set its username and password, if your task requires authentication
+	(c) Optionally, you can set your application's information
+	(d) For more control, you can set the maximum tasks that can be run simultaneously
 
-	/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.0.sdk/usr/lib/libxml2.dylib
-	
-2. Add "$SDKROOT/usr/include/libxml2" as a Header Search Path in your Project Settings.
+	NOTE: All of these are @properties listed inside SDSocialNetworkManager.h
+
+(2) Create an SDSocialNetworkTask (usually with +task)
+
+	(a) Set its service if necessary (defaults to Twitter.com for now)
+	(b) Set the task type it should use
+	(c) Set any required properties for the specified task (ie. screenName, text, or statusID)
+
+	NOTE: Check SDSocialNetworkTask.h for a list of writable properties, and service/task types
+
+(3) Run the task via [manager runTask:task]
+
+	(a) Implement delegate methods to deal with any returned data
+	(b) After every task, SDSocialNetworkManager object will have new rate-limiting information set on it. You can reliably et this data from the SDSocialNetworkManager @properties limitMaxAmount, limitRemainingAmount, and limitResetEpochDate, whenever necessary. They will always reflect the real-time limiting information
+	(c) The `results` @property of the Task object will contain returned information from the social networking service.
+	(d) Once a task has completed, it will deallocate. It should not be retained, and cannot be run a second time. Read the documentation on NSOperation for more information on this.
+
+	NOTE: For backwards-compatibility with MGTwitterEngine, each Task object contains a unique string identifier, created inside -init. These unique string identifiers are compatible with MGTwitterEngine's and may be used as keys in dictionaries if you so desire. However, they are deprecated. If anything, the task itself should be stored in a collection, but usually this is not necessary, as each task encapsulates sufficient information inside it for determining any contextual information needed to understand the returned data.
+
+
+A note on threads and performance
+=================================
+
+SDSocialNetworkTasks are run in separate threads in the background, to increase performance and user experience. However, the vast majority of use-cases should not worry about thread-safety, as all delegate methods are called on the main thread, and the task waits until the delegate is finished before continuing execution in the background thread. Thus, it is perfectly safe to access any @properties on the task from the main thread, after the task has completed.
 
 
 
-A note about the data returned from Twitter
+A note about the format of returned values
+==========================================
+
+You may get any kind of ObjC type in the `results` property, anything from NSArray to NSDictionary, NSString to NSNumber, etc. Because of the JSON parser, these results (or the objects in a collection) may not always be of the classes you might expect. So be sure to ask for a value's -class when testing the services.
+
+
+
+Other people's Source Code used in this project
+===============================================
+
+This code requires the aforementioned NSString and NSData files, which are borrowed directly from MGTwitterEngine. Similarly, this README file and the Source Code license borrowed heavily from their MGTwitterEngine counterparts.
+
+The class SDSocialNetworkTask uses JSON parsing, and does not ask for, or parse, XML data at all. The JSON library YAJL.framework is an ObjC framework (wrapper) around a C library, both having been written by Lloyd Hilaiel.
+
+For more information about `yajl` and YAJL.framework, visit the following website:
+
+http://lloyd.github.com/yajl/
+
+
+
+A note about using SDSocialNetworkManager on the iPhone
+=======================================================
+
+Most of the classes used in this project should be available on the iPhone SDK as well as Leopard. Similarly, YAJL.framework should work just fine when compiled against the iPhone SDK. Thus, it should be perfectly suitable for using on the iPhone SDK.
+
+Note: I have not tested this against the iPhone SDK as of the date of writing (5-29-09) so if anyone tests it and finds that it either works or fails, please let me know!
+
+
+
+
+
+
+
+That's about it. If you have trouble with the code, or want to make a feature request or report a bug (or even contribute some improvements), you can get in touch with me using the info below. I hope you enjoy using SDSocialNetworkManager!
+
+
+Metabolically,
+-Steven Degutis
+
+
+Web:      http://degutis.org
+AIM:      stevendegutis
+MSN:      steven.degutis@hotmail.com
+Twitter:  sdegutis
+
+P.S. Special Thanks to Matt Gemmell for providing the initial structure of this README and the Source Code License file!
+
+
+
+===========================================
+|                                         |
+|    Mac and iPhone Developer for Hire    |
+|                                         |
 ===========================================
 
-Each Twitter API method returns an NSString which is a unique identifier for that connection. Those identifiers are passed to all the delegate methods, so you can keep track of what's happening.
-
-Whenever a request is successful, you will receive a call to your implementation of requestSucceeded: so you'll know that everything went OK. For most of the API methods, you will then receive a call to the appropriate method for the type of data you requested (statusesReceived:... or directMessagesReceived:... or userInfoReceived:...). The values sent to these methods are all NSArrays containing an NSDictionary for each status or user or direct message, with sub-dictionaries if necessary (for example, the timeline methods usually return statuses, each of which has a sub-dictionary giving information about the user who posted that status).
-
-Just try calling some of the methods and use NSLog() to see what data you get back; you should find the format very easy to integrate into your applications.
-
-Sometimes, of course, requests will fail - that's just how life is. In the unlikely event that the initial connection for a request can't be made, you will simply get nil back instead of a connection identifier, and then receive no further calls relating to that request. If you get nil back instead of an NSString, the connection has failed entirely. That's a good time to check that the computer is connected to the internet, and so on.
-
-It's far more common however that the connection itself will go ahead just fine, but there will be an error on Twitter's side, either due to technical difficulties, or because there was something wrong with your request (e.g. you entered the wrong username and password, or you tried to get info on a user that doesn't exist, or some such thing). The specific error conditions are mostly documented in the Twitter API documentation online.
-
-In these cases you'll receive a call to requestFailed:withError: which will include an NSError object detailing the error. Twitter usually returns meaningful HTTP error codes (like 404 for 'user not found', etc), and in that case the -domain of the NSError will be "HTTP" and the -code will be the relevant HTTP status code. This makes it really, really easy to know what's happening with your connections.
-
-
-
-About twitter.com cookies
-=========================
-
-Like most web sites/services, twitter.com sets cookies on your computer when you authenticate with their server. These cookies (stored in NSHTTPCookieStorage) are shared amongst all applications which use NSURLConnection (including Safari and many more).
-
-MGTwitterEngine does not use those cookies, since it does its own direct authentication in the URLs of the requests it makes to the twitter servers. For this reason, as of version 1.0.4 (11th April 2008), it does not attempt to clear any saved cookies for twitter.com when you set a username and password for MGTwitterEngine to use. However, previous versions of MGTwitterEngine did indeed clear twitter's cookies whenever you called the -setUsername:password: method, in order to avoid an old and now fixed possibility of using the wrong credentials for the next request. There are two outcomes from this:
-
-1. MGTwitterEngine no longer clears your twitter.com cookies, so for example you will now no longer have to re-login to Twitter in Safari after using an app which includes MGTwitterEngine. You would usually only have had to re-login with Safari once, but it was still an annoyance if you regularly used Twitter both on the web and with an MGTwitterEngine-using client. This should be fixed now.
-
-2. In the unlikely event that you have any authentication problems when your MGTwitterEngine-using app switches from one Twitter account to another (for example, after switching accounts you still get data back from the old account, at least for the very first new request), you can easily re-enable the old cookie-clearing behaviour. Simply call the method -setClearsCookies: passing YES as the argument, and then call -setUsername:password: again, and all should be well.
-
-
-
-About supplying a custom name and other information for your Twitter client
-===========================================================================
-
-The client name, url and version information supplied to -setClientName:version:URL:token: is used only for tracking purposes at Twitter; it is not displayed on the website. In order to have a custom name shown for your client when it sends updates to Twitter (e.g. "from MyCoolApp"), you must first contact Twitter and agree on a special identifier which you will send whenever you post an update - this is the 'token' parameter to the previously mentioned method.
-
-You can request such a token using this form at twitter.com:
-
-http://twitter.com/help/request_source
-
-When you receive your token, you can then set that token value using the aforementioned method, and MGTwitterEngine will do the right thing.
-
-
-
-That's about it. If you have trouble with the code, or want to make a feature request or report a bug (or even contribute some improvements), you can get in touch with me using the info below. I hope you enjoy using MGTwitterEngine!
-
-
-Cheers,
--Matt Legend Gemmell
-
-
-Web:      http://mattgemmell.com
-AIM:      MadMcProgrammer
-MSN:      mulderuk@hotmail.com
-Twitter:  mattgemmell
-
-P.S. If you'd like to hire me for your own Mac OS X (Cocoa) or iPhone / iPod Touch development project, take a look at my consulting site at http://instinctivecode.com :)
+If you'd like to hire me for your own Mac OS X (Cocoa) or iPhone / iPod Touch development project, take a look at my consulting site at http://hire.degutis.org
