@@ -22,10 +22,10 @@ Using `SDSocialNetworkManager` is easy. The basic steps are:
 2. In whatever class from which you're going to use `SDSocialNetworkManager`, make sure you `#import` the `SDSocialNetworkManager.h` header file. You should also declare that your class implements the `SDSocialNetworkDelegate` protocol. The `AppDelegate.h` header file in the demo project is an example you can use.
 
 
-3. Implement the `SDSocialNetworkDelegate` methods, just as the AppDelegate in the demo project does. These are the methods you'll need to implement:
+3. Implement the `SDSocialNetworkDelegate` methods, just as the AppDelegate in the demo project does. Inside your delegate methods, you can access the Manager and Task objects to fully see the context surrounding `task.results`. These are the methods you'll need to implement:
 
-`- (void) socialNetworkManager:(SDSocialNetworkManager*)manager resultsReadyForTask:(SDSocialNetworkTask*)task;`
-
+	- (void) socialNetworkManager:(SDSocialNetworkManager*)manager resultsReadyForTask:(SDSocialNetworkTask*)task;
+	- (void) socialNetworkManager:(SDSocialNetworkManager*)manager failedForTask:(SDSocialNetworkTask*)task;
 
 4. Go ahead and use `SDSocialNetworkManager`! The Header files are very self-explanatory and well-documented. However, it is recommended that you take a look at the section below as well.
 
