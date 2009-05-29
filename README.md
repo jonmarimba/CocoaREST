@@ -119,10 +119,7 @@ P.S. Special Thanks to Matt Gemmell for providing the initial structure of this 
 
 
 
-===========================================
-|                                         |
-|    Mac and iPhone Developer for Hire    |
-|                                         |
-===========================================
+Mac and iPhone Developer for Hire
+=================================
 
 If you'd like to hire me for your own Mac OS X (Cocoa) or iPhone / iPod Touch development project, take a look at my consulting site at http://hire.degutis.org
