@@ -202,6 +202,46 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>94BFA32E0FD0297300806DA0</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>SDSocialNetworkTask.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>94BFA32F0FD0297300806DA0</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>SDSocialNetworkTask.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>94BFA3B50FD03BAE00806DA0</string>
+						<key>history</key>
+						<array>
+							<string>94BFA3790FD039A700806DA0</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {919, 672}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>955 205 919 713 0 0 1920 1178 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>94BFA30C0FD00B8300806DA0</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>AppDelegate.m</string>
@@ -216,10 +256,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA31D0FD0110F00806DA0</string>
+						<string>94BFA3B60FD03BAE00806DA0</string>
 						<key>history</key>
 						<array>
-							<string>94BFA3050FD0086800806DA0</string>
+							<string>94BFA3290FD0297300806DA0</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -256,10 +296,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>94BFA31E0FD0110F00806DA0</string>
+						<string>94BFA3B70FD03BAE00806DA0</string>
 						<key>history</key>
 						<array>
-							<string>94BFA1DF0FCF809400806DA0</string>
+							<string>94BFA3270FD0297300806DA0</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -276,6 +316,46 @@
 				<false/>
 				<key>RubberWindowFrame</key>
 				<string>360 145 919 713 0 0 1920 1178 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>94BFA32B0FD0297300806DA0</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>SDSocialNetworkManager.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>94BFA32C0FD0297300806DA0</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>SDSocialNetworkManager.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>94BFA3B80FD03BAE00806DA0</string>
+						<key>history</key>
+						<array>
+							<string>94BFA3210FD011F300806DA0</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {919, 672}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>513 362 919 713 0 0 1920 1178 </string>
 			</dict>
 		</dict>
 	</array>
@@ -559,13 +639,16 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>94BFA3180FD010B600806DA0</string>
+		<string>94BFA3AA0FD03B2700806DA0</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>94BFA30C0FD00B8300806DA0</string>
 		<string>/Users/sdegutis/Desktop/SDSocialNetwork/SDSocialNetwork.xcodeproj</string>
+		<string>94BFA32B0FD0297300806DA0</string>
+		<string>94BFA1DD0FCF809400806DA0</string>
+		<string>94BFA30C0FD00B8300806DA0</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>94BFA32E0FD0297300806DA0</string>
 	</array>
 	<key>WindowString</key>
 	<string>78 517 416 597 0 0 1920 1178 </string>
@@ -1518,33 +1601,40 @@
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>FirstTimeWindowDisplayed</key>
+			<false/>
 			<key>Identifier</key>
 			<string>windowTool.refactoring</string>
 			<key>IncludeInToolsMenu</key>
 			<integer>0</integer>
+			<key>IsVertical</key>
+			<true/>
 			<key>Layout</key>
 			<array>
 				<dict>
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<integer>1</integer>
+							<key>ContentConfiguration</key>
+							<dict>
+								<key>PBXProjectModuleGUID</key>
+								<string>94BFA3A90FD03B2700806DA0</string>
+							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{0, 0}, {500, 335}</string>
+								<string>{{0, 0}, {500, 315}}</string>
 								<key>RubberWindowFrame</key>
-								<string>{0, 0}, {500, 335}</string>
+								<string>283 617 500 356 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCRefactoringModule</string>
 							<key>Proportion</key>
-							<string>100%</string>
+							<string>315pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>100%</string>
+					<string>315pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -1553,8 +1643,20 @@
 			<array>
 				<string>XCRefactoringModule</string>
 			</array>
+			<key>StatusbarIsVisible</key>
+			<true/>
+			<key>TableOfContents</key>
+			<array>
+				<string>94BFA3AA0FD03B2700806DA0</string>
+				<string>94BFA3AB0FD03B2700806DA0</string>
+				<string>94BFA3A90FD03B2700806DA0</string>
+			</array>
 			<key>WindowString</key>
-			<string>200 200 500 356 0 0 1920 1200 </string>
+			<string>283 617 500 356 0 0 1920 1178 </string>
+			<key>WindowToolGUID</key>
+			<string>94BFA3AA0FD03B2700806DA0</string>
+			<key>WindowToolIsVisible</key>
+			<false/>
 		</dict>
 	</array>
 </dict>
