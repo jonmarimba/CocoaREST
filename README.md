@@ -36,27 +36,27 @@ More in-depth explanation of usage
 
 The bare basics that are required to request data from or send data to a social network, are as follows:
 
-(1) Create an SDSocialNetworkManager (usually with +manager)
+* Create an SDSocialNetworkManager (usually with +manager)
 
-	(a) Set its delegate
-	(b) Set its username and password, if your task requires authentication
-	(c) Optionally, you can set your application's information
-	(d) For more control, you can set the maximum tasks that can be run simultaneously
-	(e) All of these are @properties listed inside SDSocialNetworkManager.h
+	* Set its delegate
+	* Set its username and password, if your task requires authentication
+	* Optionally, you can set your application's information
+	* For more control, you can set the maximum tasks that can be run simultaneously
+	* All of these are @properties listed inside SDSocialNetworkManager.h
 
-(2) Create an SDSocialNetworkTask (usually with +task)
+* Create an SDSocialNetworkTask (usually with +task)
 
-	(a) Set its service if necessary (defaults to Twitter.com for now)
-	(b) Set the task type it should use
-	(c) Set any required properties for the specified task (ie. screenName, text, or statusID)
-	(d) Check SDSocialNetworkTask.h for a list of writable properties, and service/task types
+	* Set its service if necessary (defaults to Twitter.com for now)
+	* Set the task type it should use
+	* Set any required properties for the specified task (ie. screenName, text, or statusID)
+	* Check SDSocialNetworkTask.h for a list of writable properties, and service/task types
 
-(3) Run the task via [manager runTask:task]
+* Run the task via [manager runTask:task]
 
-	(a) Implement delegate methods to deal with any returned data
-	(b) After every task, SDSocialNetworkManager object will have new rate-limiting information set on it. You can reliably et this data from the SDSocialNetworkManager @properties limitMaxAmount, limitRemainingAmount, and limitResetEpochDate, whenever necessary. They will always reflect the real-time limiting information
-	(c) The `results` @property of the Task object will contain returned information from the social networking service.
-	(d) Once a task has completed, it will deallocate. It should not be retained, and cannot be run a second time. Read the documentation on NSOperation for more information on this.
+	* Implement delegate methods to deal with any returned data
+	* After every task, SDSocialNetworkManager object will have new rate-limiting information set on it. You can reliably et this data from the SDSocialNetworkManager @properties limitMaxAmount, limitRemainingAmount, and limitResetEpochDate, whenever necessary. They will always reflect the real-time limiting information
+	* The `results` @property of the Task object will contain returned information from the social networking service.
+	* Once a task has completed, it will deallocate. It should not be retained, and cannot be run a second time. Read the documentation on NSOperation for more information on this.
 
 
 A note on threads and performance
@@ -103,10 +103,10 @@ That's about it. If you have trouble with the code, or want to make a feature re
 -Steven Degutis
 
 
-Web:      http://degutis.org
-AIM:      stevendegutis
-MSN:      steven.degutis@hotmail.com
-Twitter:  sdegutis
+Web: <http://degutis.org>
+AIM: stevendegutis
+MSN: steven.degutis@hotmail.com
+Twitter: sdegutis
 
 P.S. Special Thanks to Matt Gemmell for providing the initial structure of this README and the Source Code License file! Thanks also to Matt for the idea of a twitter engine Cocoa class, and thanks to @chockenberry for finding `yajl`
 
