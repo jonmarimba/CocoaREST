@@ -28,9 +28,15 @@ typedef enum _SDHTTPMethod {
 - (void) _addAuthorizationToRequest:(NSMutableURLRequest*)request;
 - (void) _setLimitValuesForManagerBasedOnResponse:(NSHTTPURLResponse*)response;
 - (void) _setURLAndParametersForRequest:(NSMutableURLRequest*)request;
+- (void) _addParametersToDictionary:(NSMutableDictionary*)parameters;
 - (void) _appendToData:(NSMutableData*)data formatWithUTF8:(NSString*)format, ...;
 - (SDHTTPMethod) _methodBasedOnTaskType;
+- (BOOL) _isMultiPartDataBasedOnTaskType;
 - (NSString*) _URLStringBasedOnTaskType;
++ (NSString*) _stringBoundary;
+- (NSString*) _errorString;
+- (void) _sendResultsToDelegate;
+- (void) _sendResultsToDelegateFromMainThread;
 
 @end
 
@@ -355,56 +361,6 @@ typedef enum _SDHTTPMethod {
 		[parameters setObject:manager.appName forKey:@"source"];
 }
 
-- (void) _setURLAndParametersForRequest:(NSMutableURLRequest*)request {
-	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-	
-	SDHTTPMethod method = [self _methodBasedOnTaskType];
-	NSString *URLString = [self _URLStringBasedOnTaskType];
-	
-	[self _addParametersToDictionary:parameters];
-	
-	BOOL multiPartData = NO;
-	switch (type) {
-		case SDSocialNetworkTaskUpdateProfileImage:
-		case SDSocialNetworkTaskUpdateProfileBackgroundImage:
-			multiPartData = YES;
-			break;
-	}
-	
-	switch (method) {
-		case SDHTTPMethodGet: {
-			NSString *queryString = [self _queryStringFromDictionary:parameters];
-			[request setHTTPMethod:@"GET"];
-			if ([queryString length] > 0)
-				URLString = [NSString stringWithFormat:@"%@?%@", URLString, queryString];
-			break;
-		}
-		case SDHTTPMethodPost:
-			[request setHTTPMethod:@"POST"];
-			if (multiPartData == YES) {
-				NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", [SDSocialNetworkTask stringBoundary]];
-				[request addValue:contentType forHTTPHeaderField:@"Content-Type"];
-				
-				[request setHTTPBody:[self _postBodyDataFromDictionary:parameters]];
-			}
-			else {
-				NSString *queryString = [self _queryStringFromDictionary:parameters];
-				[request setHTTPBody:[queryString dataUsingEncoding:NSUTF8StringEncoding]];
-			}
-			break;
-	}
-	
-	[request setURL:[NSURL URLWithString:URLString]];
-}
-
-- (void) _addAuthorizationToRequest:(NSMutableURLRequest*)request {
-	// Set header for HTTP Basic authentication explicitly, to avoid problems with proxies and other intermediaries
-	NSString *authStr = [NSString stringWithFormat:@"%@:%@", manager.username, manager.password];
-	NSData *authData = [authStr dataUsingEncoding:NSASCIIStringEncoding];
-	NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodingWithLineLength:80]];
-	[request setValue:authValue forHTTPHeaderField:@"Authorization"];
-}
-
 // MARK: -
 // MARK: After-response Methods
 
@@ -444,6 +400,63 @@ typedef enum _SDHTTPMethod {
 																		   (CFStringRef)@";/?:@&=$+{}<>,",
 																		   kCFStringEncodingUTF8);
     return [result autorelease];
+}
+
+- (void) _appendToData:(NSMutableData*)data formatWithUTF8:(NSString*)format, ... {
+	va_list ap;
+	va_start(ap, format);
+	NSString *str = [[NSString alloc] initWithFormat:format arguments:ap];
+	va_end(ap);
+	
+	NSData *stringData = [str dataUsingEncoding:NSUTF8StringEncoding];
+	[data appendData:stringData];
+	
+	[str release];
+}
+
+- (NSData*) _postBodyDataFromDictionary:(NSDictionary*)dictionary {
+	// setting up string boundaries
+	NSString *stringBoundary = [SDSocialNetworkTask _stringBoundary];
+	NSData *stringBoundaryData = [[NSString stringWithFormat:@"\r\n--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding];
+	NSData *stringBoundaryFinalData = [[NSString stringWithFormat:@"\r\n--%@--\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding];
+	
+	NSMutableData *postBody = [NSMutableData data];
+	
+	// necessary??
+	[self _appendToData:postBody formatWithUTF8:@"\r\n"];
+	
+	for (NSString *key in dictionary) {
+		[postBody appendData:stringBoundaryData];
+		
+		id object = [dictionary objectForKey:key];
+		
+		if ([object isKindOfClass:[NSString class]]) {
+			[self _appendToData:postBody formatWithUTF8:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", key];
+			[self _appendToData:postBody formatWithUTF8:@"%@", object];
+		}
+		//		else if ([object isKindOfClass:[NSData class]]) {
+		// normally we would just append this data, but i dont know what content-type to give it.
+		// if we can safely skip Content-Type, then we can just copy the above method and simply
+		// call -appendData:. also, when would we even have only NSData? come to think of it,
+		// we might as well just delete this whole block, comments and all.
+		//		}
+		else if ([object isKindOfClass:[NSImage class]]) {
+			NSBitmapImageRep *rep = [[[NSBitmapImageRep alloc] initWithData:[imageToUpload TIFFRepresentation]] autorelease];
+			NSData *imageData = [rep representationUsingType:NSPNGFileType properties:nil];
+			
+			[self _appendToData:postBody formatWithUTF8:@"Content-Disposition: form-data; name=\"%@\"; filename=\"astyle.png\"\r\n", key];
+			[self _appendToData:postBody formatWithUTF8:@"Content-Type: image/png\r\n\r\n"];
+			[postBody appendData:imageData];
+		}
+	}
+	
+	[postBody appendData:stringBoundaryFinalData];
+	
+	return postBody;
+}
+
++ (NSString*) _stringBoundary {
+	return @"SDthisisnotatestokaymaybeitisSD";
 }
 
 @end
