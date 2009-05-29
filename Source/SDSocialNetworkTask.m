@@ -8,7 +8,7 @@
 
 #import "SDSocialNetworkTask.h"
 
-#import <YAJL/YAJLDecoder.h>
+#import "YAJLDecoder.h"
 
 #import "NSData+Base64.h"
 #import "NSString+UUID.h"

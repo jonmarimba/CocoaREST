@@ -32,10 +32,7 @@ How to use SDSocialNetworkManager
 Using `SDSocialNetworkManager` is easy. The basic steps are:
 
 
-1. Copy all the relevant source files into your own project. You need everything that starts with "SDSocialNetwork", and also the four `NSString+UUID` and `NSData+Base64` files. For your convenience, they are all in the `Source` folder of this project, ready for a nice Cmd-A + Cmd-C.
-
-
-2. Copy `YAJL.framework` into your project, making sure to add it in a Copy Files phase which points to your Frameworks folder in your application bundle.
+1. Copy all the files from the Source directory, into your own project. Make sure that `libyajl_s.a` is in your "Link Binary With Libraries" build phase of your project's relevant target(s).
 
 
 2. In whatever class from which you're going to use `SDSocialNetworkManager`, make sure you `#import` the `SDSocialNetworkManager.h` header file. You should also declare that your class implements the `SDSocialNetworkDelegate` protocol. The `AppDelegate.h` header file in the demo project is an example you can use.
@@ -149,9 +146,7 @@ Other people's Source Code used in this project
 
 This code requires the aforementioned `NSString` and `NSData` files, which are borrowed directly from `MGTwitterEngine`. Similarly, this README file and the Source Code license borrowed heavily from their `MGTwitterEngine` counterparts.
 
-The class `SDSocialNetworkTask` uses JSON parsing, and does not ask for, or parse, XML data at all. The JSON library `YAJL.framework` is an ObjC framework (wrapper) around a C library, both having been written by Lloyd Hilaiel.
-
-For more information about `yajl` and `YAJL.framework`, visit <http://lloyd.github.com/yajl/>
+The class `SDSocialNetworkTask` uses JSON parsing, and does not ask for, or parse, XML data at all. The JSON library used is `yajl` (written in C), and was written by Lloyd Hilaiel. For more information about `yajl`, visit <http://lloyd.github.com/yajl/>
 
 
 
