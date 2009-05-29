@@ -100,13 +100,12 @@ That's about it. If you have trouble with the code, or want to make a feature re
 
 `Steven Degutis`
 
+* Web: <http://degutis.org>
+* AIM: `stevendegutis`
+* MSN: `steven.degutis@hotmail.com`
+* Twitter: `sdegutis`
 
-Web: <http://degutis.org>
-AIM: `stevendegutis`
-MSN: `steven.degutis@hotmail.com`
-Twitter: `sdegutis`
-
-P.S. Special Thanks to Matt Gemmell for providing the initial structure of this README and the Source Code License file! Thanks also to Matt for the idea of a twitter engine Cocoa class, and thanks to `@chockenberry` for finding `yajl`
+P.S. Special thanks to Matt Gemmell for providing the initial structure of this README and the Source Code License file! Thanks also to Matt for the idea of a twitter engine Cocoa class, and thanks to `@chockenberry` for finding `yajl`
 
 
 
