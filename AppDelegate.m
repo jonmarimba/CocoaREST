@@ -12,10 +12,10 @@
 
 - (void) awakeFromNib {
 	// inside a header file, declare manager as an instance variable
-	SDIdenticaManager *manager;
+	SDTwitterManager *manager;
 	
 	// create out manager, retaining it as we want it to stick around
-	manager = [[SDIdenticaManager manager] retain];
+	manager = [[SDTwitterManager manager] retain];
 	manager.delegate = self;
 	
 	// this is a must for certain API calls which require authentication
@@ -27,16 +27,18 @@
 	manager.maxConcurrentTasks = 3;
 	
 	// create a basic task
-	SDIdenticaTask *mentionsTask = [SDIdenticaTask taskWithManager:manager];
-	mentionsTask.type = SDIdenticaTaskGetPublicTimeline;
+	SDTwitterTask *mentionsTask = [SDTwitterTask taskWithManager:manager];
+	mentionsTask.type = SDTwitterTaskGetMentions;
+	mentionsTask.count = 3;
+	mentionsTask.page = 10;
 	[mentionsTask run];
 }
 
-- (void) identicaManager:(SDIdenticaManager*)manager resultsReadyForTask:(SDIdenticaTask*)task {
+- (void) twitterManager:(SDTwitterManager*)manager resultsReadyForTask:(SDTwitterTask*)task {
 	NSLog(@"%@", task.results);
 }
 
-- (void) identicaManager:(SDIdenticaManager*)manager failedForTask:(SDIdenticaTask*)task {
+- (void) twitterManager:(SDTwitterManager*)manager failedForTask:(SDTwitterTask*)task {
 	NSLog(@"%@", task.error);
 }
 
