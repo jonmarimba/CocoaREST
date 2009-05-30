@@ -70,6 +70,9 @@ The same 3 methods can easily be accomplished with one very customizable SDTwitt
 	task.userID = userID;
 	task.newerThanStatusID = statusID;
 	task.olderThanStatusID = statusID;
+	
+	// run the task, and wait for delegate methods to get called (asynchronously)
+	[task run];
 
 
 How to use SDSocialNetworking
