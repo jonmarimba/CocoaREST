@@ -8,9 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDSocialNetworkTask.h"
+#import "SDNetTask.h"
 
-@interface SDSocialNetworkManager : NSObject {
+@interface SDNetTaskManager : NSObject {
 	NSOperationQueue *queue;
 	
 	id <NSObject> delegate;
@@ -31,9 +31,9 @@
 + (id) manager; // designated convenience initializer
 - (id) init; // designated initializer
 
-- (void) runTask:(SDSocialNetworkTask*)taskToRun;
+- (void) runTask:(SDNetTask*)taskToRun;
 
 - (void) cancelAllTasks;
-- (void) cancelTask:(SDSocialNetworkTask*)taskToCancel;
+- (void) cancelTask:(SDNetTask*)taskToCancel;
 
 @end

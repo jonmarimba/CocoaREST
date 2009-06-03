@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SDSocialNetworkManager;
+@class SDNetTaskManager;
 
 typedef enum _SDSocialNetworkTaskError {
 	SDSocialNetworkTaskErrorNone,
@@ -22,8 +22,10 @@ typedef enum _SDSocialNetworkTaskError {
 	SDSocialNetworkTaskErrorMAX // once again, don't touch.
 } SDSocialNetworkTaskError;
 
-@interface SDSocialNetworkTask : NSOperation {
-	SDSocialNetworkManager *manager;
+@interface SDNetTask : NSOperation <NSCopying> {
+	SDNetTaskManager *manager;
+	
+	int type;
 	
 	NSString *taskID;
 	id results;
@@ -35,13 +37,15 @@ typedef enum _SDSocialNetworkTaskError {
 
 // designated convenience initializer
 
-+ (id) taskWithManager:(SDSocialNetworkManager*)newManager;
-- (id) initWithManager:(SDSocialNetworkManager*)newManager;
++ (id) taskWithManager:(SDNetTaskManager*)newManager;
+- (id) initWithManager:(SDNetTaskManager*)newManager;
 
 - (void) run;
 - (void) cancel;
 
 // readable properties: use after task is complete
+
+@property int type;
 
 @property (readonly) id results;
 

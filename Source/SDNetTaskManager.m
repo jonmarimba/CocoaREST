@@ -6,9 +6,9 @@
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
 //
 
-#import "SDSocialNetworkManager.h"
+#import "SDNetTaskManager.h"
 
-@implementation SDSocialNetworkManager
+@implementation SDNetTaskManager
 
 @synthesize delegate;
 
@@ -42,18 +42,18 @@
 }
 
 - (void) cancelAllTasks {
-	for (SDSocialNetworkTask *taskToCancel in [queue operations])
+	for (SDNetTask *taskToCancel in [queue operations])
 		[self cancelTask:taskToCancel];
 }
 
-- (void) cancelTask:(SDSocialNetworkTask*)taskToCancel {
+- (void) cancelTask:(SDNetTask*)taskToCancel {
 	// we let the task run its course, but since it uses .manager for
 	// most of its work, and for its delegation, it will do nothing
 	
 	[taskToCancel cancel];
 }
 
-- (void) runTask:(SDSocialNetworkTask*)taskToRun {
+- (void) runTask:(SDNetTask*)taskToRun {
 	[queue addOperation:taskToRun];
 }
 

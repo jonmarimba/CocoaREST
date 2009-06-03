@@ -6,14 +6,14 @@
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
 //
 
-#import "SDSocialNetworkTask.h"
-#import "SDSocialNetworkManager.h"
+#import "SDNetTask.h"
+#import "SDNetTaskManager.h"
 
-#import "SDSocialNetworkTask+Subclassing.h"
+#import "SDNetTask+Subclassing.h"
 
 #import "YAJLDecoder.h"
 
-@interface SDSocialNetworkTask (Private)
+@interface SDNetTask (Private)
 
 - (void) _appendToData:(NSMutableData*)data formatWithUTF8:(NSString*)format, ...;
 - (void) _sendResultsToDelegate;
@@ -23,20 +23,22 @@
 
 @end
 
-@implementation SDSocialNetworkTask
+@implementation SDNetTask
+
+@synthesize type;
 
 @synthesize results;
 @synthesize errorCode;
 @synthesize error;
 @synthesize taskID;
 
-+ (id) taskWithManager:(SDSocialNetworkManager*)newManager {
++ (id) taskWithManager:(SDNetTaskManager*)newManager {
 	return [[[self alloc] initWithManager:newManager] autorelease];
 }
 
-- (id) initWithManager:(SDSocialNetworkManager*)newManager {
+- (id) initWithManager:(SDNetTaskManager*)newManager {
 	if (self = [super init]) {
-		manager = newManager;
+		manager = [newManager retain];
 		
 		if (manager == nil) {
 			[self release];
@@ -51,8 +53,21 @@
 - (void) dealloc {
 	[taskID release], taskID = nil;
 	[results release], results = nil;
+	[manager release], manager = nil;
 	[super dealloc];
 }
+
+- (id) copyWithZone:(NSZone*)zone {
+	SDNetTask *task = [[[self class] alloc] initWithManager:manager];
+	
+	// we only copy the pre-run settings, as we want the rest of the new object to be unique
+	task.type = self.type;
+	
+	return task;
+}
+
+// MARK: -
+// MARK: Main methods
 
 - (void) run {
 	[manager runTask:self];
@@ -84,7 +99,7 @@
 	
 	NSHTTPURLResponse *response = nil;
 	NSError *connectionError = nil;
-	NSError *errorFromYAJL = nil;
+	NSError *errorFromParser = nil;
 	
 	NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&connectionError];
 	
@@ -104,14 +119,26 @@
 		return;
 	}
 	
-	YAJLDecoder *decoder = [[[YAJLDecoder alloc] init] autorelease];
-	results = [[decoder parse:data error:&errorFromYAJL] retain];
+	switch ([self parseFormatBasedOnTaskType]) {
+		case SDParseFormatJSON: {
+			YAJLDecoder *decoder = [[[YAJLDecoder alloc] init] autorelease];
+			results = [[decoder parse:data error:&errorFromParser] retain];
+			
+			break;
+		}
+		case SDParseFormatImage:
+			results = [[[NSImage alloc] initWithData:data] autorelease];
+			break;
+		case SDParseFormatNone:
+			results = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+			break;
+	}
 	
 	[self handleHTTPResponse:response];
 	
-	if (errorFromYAJL) {
+	if (errorFromParser) {
 		errorCode = SDSocialNetworkTaskErrorParserFailed;
-		underlyingError = errorFromYAJL;
+		underlyingError = errorFromParser;
 	}
 	else if (results == nil)
 		errorCode = SDSocialNetworkTaskErrorParserDataIsNil;
@@ -179,7 +206,7 @@
 		case SDHTTPMethodPost:
 			[request setHTTPMethod:@"POST"];
 			if ([self isMultiPartDataBasedOnTaskType] == YES) {
-				NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", [SDSocialNetworkTask stringBoundary]];
+				NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", [SDNetTask stringBoundary]];
 				[request addValue:contentType forHTTPHeaderField:@"Content-Type"];
 				
 				[request setHTTPBody:[self postBodyDataFromDictionary:parameters]];
@@ -205,6 +232,7 @@
 - (BOOL) isMultiPartDataBasedOnTaskType { return NO; }
 - (SDHTTPMethod) methodBasedOnTaskType { return SDHTTPMethodGet; }
 - (NSString*) URLStringBasedOnTaskType { return nil; }
+- (SDParseFormat) parseFormatBasedOnTaskType { return SDParseFormatJSON; }
 - (void) addParametersToDictionary:(NSMutableDictionary*)parameters {}
 
 - (Protocol*) delegateProtocol { return NULL; }
@@ -250,7 +278,7 @@
 
 - (NSData*) postBodyDataFromDictionary:(NSDictionary*)dictionary {
 	// setting up string boundaries
-	NSString *stringBoundary = [SDSocialNetworkTask stringBoundary];
+	NSString *stringBoundary = [SDNetTask stringBoundary];
 	NSData *stringBoundaryData = [[NSString stringWithFormat:@"\r\n--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding];
 	NSData *stringBoundaryFinalData = [[NSString stringWithFormat:@"\r\n--%@--\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding];
 	
