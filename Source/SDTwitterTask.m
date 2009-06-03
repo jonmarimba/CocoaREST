@@ -19,7 +19,6 @@
 
 @implementation SDTwitterTask
 
-@synthesize type;
 @synthesize count;
 @synthesize page;
 @synthesize text;
@@ -31,6 +30,7 @@
 @synthesize statusID;
 @synthesize userID;
 @synthesize screenName;
+@synthesize screenNameOrUserID;
 @synthesize enableDeviceNotificationsAlso;
 @synthesize deviceType;
 @synthesize profileName;
@@ -61,10 +61,73 @@
 }
 
 - (void) dealloc {
+	[text release], text = nil;
+	
 	[olderThanStatusID release], olderThanStatusID = nil;
 	[newerThanStatusID release], newerThanStatusID = nil;
+	[inReplyToStatusID release], inReplyToStatusID = nil;
+	
+	[firstUsersID release], firstUsersID = nil;
+	[secondUsersID release], secondUsersID = nil;
+	
+	[statusID release], statusID = nil;
+	[userID release], userID = nil;
+	[screenName release], screenName = nil;
+	[screenNameOrUserID release], screenNameOrUserID = nil;
+	
+	[profileName release], profileName = nil;
+	[profileEmail release], profileEmail = nil;
+	[profileWebsite release], profileWebsite = nil;
+	[profileLocation release], profileLocation = nil;
+	[profileDescription release], profileDescription = nil;
+	
+	[profileBackgroundColor release], profileBackgroundColor = nil;
+	[profileTextColor release], profileTextColor = nil;
+	[profileLinkColor release], profileLinkColor = nil;
+	[profileSidebarFillColor release], profileSidebarFillColor = nil;
+	[profileSidebarBorderColor release], profileSidebarBorderColor = nil;
+	
+	[imageToUpload release], imageToUpload = nil;
 	
 	[super dealloc];
+}
+
+- (id) copyWithZone:(NSZone*)zone {
+	SDTwitterTask *task = [super copyWithZone:zone];
+	
+	task.count = self.count;
+	task.page = self.page;
+	task.text = self.text;
+	task.olderThanStatusID = self.olderThanStatusID;
+	task.newerThanStatusID = self.newerThanStatusID;
+	task.inReplyToStatusID = self.inReplyToStatusID;
+	task.firstUsersID = self.firstUsersID;
+	task.secondUsersID = self.secondUsersID;
+	task.statusID = self.statusID;
+	task.userID = self.userID;
+	task.screenName = self.screenName;
+	task.profileName = self.profileName;
+	task.profileEmail = self.profileEmail;
+	task.profileWebsite = self.profileWebsite;
+	task.profileLocation = self.profileLocation;
+	task.profileDescription = self.profileDescription;
+	task.profileBackgroundColor = self.profileBackgroundColor;
+	task.profileTextColor = self.profileTextColor;
+	task.profileLinkColor = self.profileLinkColor;
+	task.profileSidebarFillColor = self.profileSidebarFillColor;
+	task.profileSidebarBorderColor = self.profileSidebarBorderColor;
+	task.enableDeviceNotificationsAlso = self.enableDeviceNotificationsAlso;
+	task.deviceType = self.deviceType;
+	task.shouldTileBackgroundImage = self.shouldTileBackgroundImage;
+	task.imageToUpload = self.imageToUpload;
+	
+	return task;
+}
+
+- (id) copyWithNextPage {
+	SDTwitterTask *task = [self copy];
+	task.page++;
+	return task;
 }
 
 + (Protocol*) delegateProtocol {
@@ -184,6 +247,12 @@
 	return URLStrings[type];
 }
 
+- (SDParseFormat) parseFormatBasedOnTaskType {
+	// there may be some calls which return just a single string, without JSON formatting
+	// if so, then we need to make this method conditional
+	return SDParseFormatJSON;
+}
+
 - (void) addParametersToDictionary:(NSMutableDictionary*)parameters {
 	if (count > 0)
 		[parameters setObject:[NSString stringWithFormat:@"%d", (count)] forKey:@"count"];
@@ -209,6 +278,9 @@
 	
 	if (screenName)
 		[parameters setObject:screenName forKey:@"screen_name"];
+	
+	if (screenNameOrUserID)
+		[parameters setObject:screenNameOrUserID forKey:@"id"];
 	
 	if (statusID)
 		[parameters setObject:statusID forKey:@"id"];

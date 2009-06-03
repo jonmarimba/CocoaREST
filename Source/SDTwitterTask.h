@@ -88,6 +88,7 @@ typedef enum _SDTwitterDeviceType {
 	NSString *statusID;
 	NSString *userID;
 	NSString *screenName;
+	NSString *screenNameOrUserID;
 	
 	NSString *profileName;
 	NSString *profileEmail;
@@ -108,9 +109,9 @@ typedef enum _SDTwitterDeviceType {
 	NSImage *imageToUpload;
 }
 
-// writable properties: set up before running
+- (id) copyWithNextPage;
 
-@property SDTwitterTaskType type;
+// writable properties: set up before running
 
 @property int count;
 @property int page;
@@ -127,6 +128,7 @@ typedef enum _SDTwitterDeviceType {
 @property (copy) NSString *statusID;
 @property (copy) NSString *userID;
 @property (copy) NSString *screenName;
+@property (copy) NSString *screenNameOrUserID;
 
 @property (copy) NSString *profileName;
 @property (copy) NSString *profileEmail;
