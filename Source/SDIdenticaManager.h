@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDSocialNetworkManager.h"
+#import "SDNetTaskManager.h"
 
 #import "SDIdenticaTask.h"
 #import "SDIdenticaTaskDelegate.h"
 
-@interface SDIdenticaManager : SDSocialNetworkManager {
+@interface SDIdenticaManager : SDNetTaskManager {
 
 }
 

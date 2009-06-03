@@ -11,7 +11,7 @@
 #import "SDTwitterManager.h"
 #import "SDTwitterTaskDelegate.h"
 
-#import "SDSocialNetworkTask+Subclassing.h"
+#import "SDNetTask+Subclassing.h"
 
 @interface SDTwitterTask (Private)
 @end

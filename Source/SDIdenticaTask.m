@@ -10,11 +10,9 @@
 
 #import "SDIdenticaManager.h"
 
-#import "SDSocialNetworkTask+Subclassing.h"
+#import "SDNetTask+Subclassing.h"
 
 @implementation SDIdenticaTask
-
-@synthesize type;
 
 - (BOOL) validateType {
 	return (type > SDIdenticaTaskDoNothing && type < SDIdenticaTaskMAX);

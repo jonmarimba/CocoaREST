@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDSocialNetworkTask.h"
+#import "SDNetTask.h"
 
 typedef enum _SDIdenticaTaskType {
 	SDIdenticaTaskDoNothing,
@@ -18,10 +18,7 @@ typedef enum _SDIdenticaTaskType {
 	SDIdenticaTaskMAX // leave this alone
 } SDIdenticaTaskType;
 
-@interface SDIdenticaTask : SDSocialNetworkTask {
-	SDIdenticaTaskType type;
+@interface SDIdenticaTask : SDNetTask {
 }
-
-@property SDIdenticaTaskType type;
 
 @end

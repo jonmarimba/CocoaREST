@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDSocialNetworkManager.h"
+#import "SDNetTaskManager.h"
 
 #import "SDTwitterTask.h"
 #import "SDTwitterTaskDelegate.h"
 
-@interface SDTwitterManager : SDSocialNetworkManager {
+@interface SDTwitterManager : SDNetTaskManager {
 	NSString *appName;
 	NSString *appVersion;
 	NSString *appWebsite;

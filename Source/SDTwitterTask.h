@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDSocialNetworkTask.h"
+#import "SDNetTask.h"
 
 @class SDTwitterManager;
 
@@ -70,10 +70,8 @@ typedef enum _SDTwitterDeviceType {
 	SDTwitterDeviceTypeNone
 } SDTwitterDeviceType;
 
-@interface SDTwitterTask : SDSocialNetworkTask {
+@interface SDTwitterTask : SDNetTask {
 	SDTwitterManager *twitterManager;
-	
-	SDTwitterTaskType type;
 	
 	int count;
 	int page;
