@@ -1,6 +1,6 @@
 //
 //  SDTwitterFetchTask.h
-//  SDSocialNetwork
+//  SDNet
 //
 //  Created by Steven Degutis on 5/28/09.
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
@@ -10,17 +10,17 @@
 
 @class SDNetTaskManager;
 
-typedef enum _SDSocialNetworkTaskError {
-	SDSocialNetworkTaskErrorNone,
-	SDSocialNetworkTaskErrorInvalidType,
-	SDSocialNetworkTaskErrorManagerNotSet,
-	SDSocialNetworkTaskErrorConnectionDataIsNil,
-	SDSocialNetworkTaskErrorConnectionFailed,
-	SDSocialNetworkTaskErrorParserFailed,
-	SDSocialNetworkTaskErrorParserDataIsNil,
+typedef enum _SDNetTaskError {
+	SDNetTaskErrorNone,
+	SDNetTaskErrorInvalidType,
+	SDNetTaskErrorManagerNotSet,
+	SDNetTaskErrorConnectionDataIsNil,
+	SDNetTaskErrorConnectionFailed,
+	SDNetTaskErrorParserFailed,
+	SDNetTaskErrorParserDataIsNil,
 	
-	SDSocialNetworkTaskErrorMAX // once again, don't touch.
-} SDSocialNetworkTaskError;
+	SDNetTaskErrorMAX // once again, don't touch.
+} SDNetTaskError;
 
 @interface SDNetTask : NSOperation <NSCopying> {
 	SDNetTaskManager *manager;
@@ -30,7 +30,7 @@ typedef enum _SDSocialNetworkTaskError {
 	NSString *taskID;
 	id results;
 	
-	SDSocialNetworkTaskError errorCode;
+	SDNetTaskError errorCode;
 	NSError *error;
 	NSError *underlyingError;
 }
@@ -49,7 +49,7 @@ typedef enum _SDSocialNetworkTaskError {
 
 @property (readonly) id results;
 
-@property (readonly) SDSocialNetworkTaskError errorCode;
+@property (readonly) SDNetTaskError errorCode;
 @property (readonly) NSError *error;
 
 @property (readonly) NSString *taskID; // DEPRECATED; do not use unless you REALLY want to.

@@ -1,6 +1,6 @@
 //
-//  SDSocialNetworkTask+Subclassing.h
-//  SDSocialNetwork
+//  SDNetTask+Subclassing.h
+//  SDNet
 //
 //  Created by Steven Degutis on 5/29/09.
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
@@ -14,11 +14,11 @@
 #import "NSString+UUID.h"
 #import "NSColor+Hex.h"
 
-// the rationale for not putting much of this info into SDSocialNetworkTask.h is that it's not
+// the rationale for not putting much of this info into SDNetTask.h is that it's not
 // particularly useful or relevant to users of this library, only for subclassers.
 
 // similarly, the top half of the category might have been a protocol, but that would require
-// a separate object to be involved. plus, SDSocialNetworkTask would have to be concrete,
+// a separate object to be involved. plus, SDNetTask would have to be concrete,
 // which complicates the fact that *Task & *Manager are a pair of subclassable classes.
 
 typedef enum _SDHTTPMethod {

@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'SDSocialNetwork' target in the 'SDSocialNetwork' project
+// Prefix header for all source files of the 'SDNet' target in the 'SDNet' project
 //
 
 #ifdef __OBJC__

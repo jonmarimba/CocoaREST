@@ -1,6 +1,6 @@
 //
 //  SDTwitterFetchTask.m
-//  SDSocialNetwork
+//  SDNet
 //
 //  Created by Steven Degutis on 5/28/09.
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
@@ -81,7 +81,7 @@
 
 - (void) main {
 	if ([self validateType] == NO) {
-		errorCode = SDSocialNetworkTaskErrorInvalidType;
+		errorCode = SDNetTaskErrorInvalidType;
 		[self _sendResultsToDelegate];
 		return;
 	}
@@ -108,13 +108,13 @@
 		
 		// commented out the next line because some APIs are using HTTP error codes as return values, which is super lame
 		
-//		errorCode = SDSocialNetworkTaskErrorConnectionFailed;
+//		errorCode = SDNetTaskErrorConnectionFailed;
 //		[self _sendResultsToDelegate];
 //		return;
 	}
 	
 	if (data == nil) {
-		errorCode = SDSocialNetworkTaskErrorConnectionDataIsNil;
+		errorCode = SDNetTaskErrorConnectionDataIsNil;
 		[self _sendResultsToDelegate];
 		return;
 	}
@@ -137,11 +137,11 @@
 	[self handleHTTPResponse:response];
 	
 	if (errorFromParser) {
-		errorCode = SDSocialNetworkTaskErrorParserFailed;
+		errorCode = SDNetTaskErrorParserFailed;
 		underlyingError = errorFromParser;
 	}
 	else if (results == nil)
-		errorCode = SDSocialNetworkTaskErrorParserDataIsNil;
+		errorCode = SDNetTaskErrorParserDataIsNil;
 	
 	[self _sendResultsToDelegate];
 }
@@ -154,7 +154,7 @@
 	// we enter the main thread, waiting patiently til the delegate is done using us like a peice of meat
 	// delegate can safely access all of our properties now
 	
-	if (errorCode == SDSocialNetworkTaskErrorNone) {
+	if (errorCode == SDNetTaskErrorNone) {
 		if ([manager.delegate conformsToProtocol:[[self class] delegateProtocol]])
 			[self sendResultsToDelegate];
 	}
@@ -167,7 +167,7 @@
 			[userInfo setObject:underlyingError forKey:NSUnderlyingErrorKey];
 		
 		// we don't retain the error object, because the pool won't drain until the delegate is done anyway
-		error = [NSError errorWithDomain:@"SDSocialNetworkDomain" code:errorCode userInfo:userInfo];
+		error = [NSError errorWithDomain:@"SDNetDomain" code:errorCode userInfo:userInfo];
 		
 		if ([manager.delegate conformsToProtocol:[[self class] delegateProtocol]])
 			[self sendErrorToDelegate];
@@ -322,13 +322,13 @@
 }
 
 - (NSString*) errorString {
-	NSString *errorStrings[SDSocialNetworkTaskErrorMAX];
-	errorStrings[SDSocialNetworkTaskErrorInvalidType] = @"type property is invalid";
-	errorStrings[SDSocialNetworkTaskErrorManagerNotSet] = @"manager property is NULL; only use -runTask: to run a task!";
-	errorStrings[SDSocialNetworkTaskErrorConnectionDataIsNil] = @"Connection returned NULL data";
-	errorStrings[SDSocialNetworkTaskErrorConnectionFailed] = @"Connection failed with error";
-	errorStrings[SDSocialNetworkTaskErrorParserFailed] = @"Parser failed with error";
-	errorStrings[SDSocialNetworkTaskErrorParserDataIsNil] = @"Parser returned NULL data";
+	NSString *errorStrings[SDNetTaskErrorMAX];
+	errorStrings[SDNetTaskErrorInvalidType] = @"type property is invalid";
+	errorStrings[SDNetTaskErrorManagerNotSet] = @"manager property is NULL; only use -runTask: to run a task!";
+	errorStrings[SDNetTaskErrorConnectionDataIsNil] = @"Connection returned NULL data";
+	errorStrings[SDNetTaskErrorConnectionFailed] = @"Connection failed with error";
+	errorStrings[SDNetTaskErrorParserFailed] = @"Parser failed with error";
+	errorStrings[SDNetTaskErrorParserDataIsNil] = @"Parser returned NULL data";
 	return errorStrings[errorCode];
 }
 

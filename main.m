@@ -1,6 +1,6 @@
 //
 //  main.m
-//  SDSocialNetwork
+//  SDNet
 //
 //  Created by Steven Degutis on 5/28/09.
 //  Copyright Thoughtful Tree Software 2009. All rights reserved.
