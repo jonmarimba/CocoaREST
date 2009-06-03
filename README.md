@@ -1,20 +1,21 @@
-SDSocialNetworking - Cocoa Classes
-==================================
+NetworkTasks - Cocoa Library
+============================
 
-Created by [Steven Degutis](http://degutis.org)
+* Created by [Steven Degutis](http://degutis.org)
+* Renamed recently from `SDSocialNetworking` (and `SDSocialNetworkManager`), because I'm _terrible_ at naming things, and this new name just makes a lot more sense.
 
 
-What is SDSocialNetworking?
-===========================
+What is NetworkTasks?
+=====================
 
-SDSocialNetworking is a family of classes for the Cocoa (and Cocoa Touch) classes, which allows developers to interact with RESTful APIs on the internet. There are two abstract superclasses:
+NetworkTasks is a family of classes for the Cocoa (and Cocoa Touch) classes, which allows developers to interact with RESTful APIs on the internet. There are two abstract superclasses:
 
-* SDSocialNetworkManager
+* SDNetTaskManager
 
 	* Handles user-specified information (username, password, rate-limiting information, etc.) about the social network, and is necessary for running tasks
 	* The lifespan of this object is generally as long as your controller object
 
-* SDSocialNetworkTask
+* SDNetTask
 
 	* Handles task-specific arguments and data (such as `statusID`, `page`, `text`, `count`, etc.)
 	* returns information from the service in the form of Cocoa classes (`NSDictionary`, `NSArray`, `NSNumber`, `NSString`, etc.)
@@ -24,8 +25,8 @@ SDSocialNetworking is a family of classes for the Cocoa (and Cocoa Touch) classe
 There are several concrete subclasses of these two, which allow developers to interact with specific web APIs:
 
 	* `SDTwitterManager`/`SDTwitterTask`, interacts with Twitter.com (view [<http://apiwiki.twitter.com/REST+API+Documentation>](API))
-	* `SDIdenticaManager`/`SDIdenticaTask`, interacts with identi.ca
-	* `SDFriendfeedManager`/`SDFriendfeedTask`, interacts with Friendfeed.com (coming soon!)
+	* `SDIdenticaManager`/`SDIdenticaTask`, interacts with identi.ca (in progress!)
+	* `SDFriendfeedManager`/`SDFriendfeedTask`, interacts with Friendfeed.com (in progress!)
 
 These classes have been designed specifically for developers to *easily* be able to extend the functionality of existing services by making minor adjustments inside these APi-specific class files, which is becoming a necessity these days with the way these APIs are rapidly changing.
 
@@ -33,7 +34,7 @@ These classes have been designed specifically for developers to *easily* be able
 Why use it?
 ===========
 
-The SDSocialNetworking family of Cocoa Classes are designed to be flexible, powerful, and incredibly simple and transparent to use. Here are just some advantages:
+The NetworkTasks family of Cocoa Classes are designed to be flexible, powerful, and incredibly simple and transparent to use. Here are just some advantages:
 
 * Uses modern, up-to-date APIs. For example, SDTwitterTask uses "statuses/mentions" versus the archaic "statuses/replies"
 
@@ -42,43 +43,17 @@ The SDSocialNetworking family of Cocoa Classes are designed to be flexible, powe
 * Is built to support multiple services, including (but not limited to) Twitter, Identi.ca, and Friendfeed
 
 * Has large, automatic performance boosts, due to taking advantage of the modern technologies available in Mac OS X 10.5 Leopard, such as multi-threading (via NSOperation/Queue) and synthesized, atomic, thread-safe @properties
-	* `SDSocialNetworkTasks` runs smoothly in background threads, and can even run simultaneously with other `SDSocialNetworkTasks`
+	* `SDNetTasks` runs smoothly in background threads, and can even run simultaneously with other `SDNetTasks`
 	* Uses an optimized JSON parser to handle returned values stunningly quickly
 	* User experience is greatly improved, since the user will never see a spinning wheel due to a running Task
 
 * Requested returned values are returned in the format available for that specific API (either XML or JSON), and parsed with either `LibXML` or `YAJL`, which maximizes the number of supported services and API calls
 
 
-API Comparison with MGTwitterEngine
-===================================
+How to use NetworkTasks
+=======================
 
-The SDSocialNetworking classes are built to give developers more control over their specific calls to the API. For example, look at these 3 methods in MGTwitterEngine:
-
-	- (NSString *)getFollowedTimelineFor:(NSString *)username since:(NSDate *)date startingAtPage:(int)pageNum; // statuses/friends_timeline
-	- (NSString *)getFollowedTimelineFor:(NSString *)username since:(NSDate *)date startingAtPage:(int)pageNum count:(int)count; // statuses/friends_timeline
-	- (NSString *)getFollowedTimelineFor:(NSString *)username sinceID:(int)updateID startingAtPage:(int)pageNum count:(int)count; // statuses/friends_timeline
-
-The same 3 methods can easily be accomplished with one very customizable SDTwitterTask object, as follows:
-
-	SDTwitterManager *manager = [SDTwitterManager manager];
-	SDTwitterTask *task = [SDTwitterTask taskWithManager:manager];
-	task.type = SDTwitterTaskGetUserTimeline;
-	
-	// the following methods are optional
-	task.page = somePage;
-	task.screenName = screenName;
-	task.userID = userID;
-	task.newerThanStatusID = statusID;
-	task.olderThanStatusID = statusID;
-	
-	// run the task, and wait for delegate methods to get called (asynchronously)
-	[task run];
-
-
-How to use SDSocialNetworking
-=============================
-
-Using `SDSocialNetworking` is easy. The basic steps are:
+Using `NetworkTasks` is easy. The basic steps are:
 
 
 1. Copy all the files from the Source directory, into your own project. Make sure that `libyajl_s.a` is in your "Link Binary With Libraries" build phase of your project's relevant target(s).
@@ -101,15 +76,15 @@ More in-depth explanation of usage
 
 The bare basics that are required to request data from or send data to a social network, are as follows:
 
-* Instantiate an object of a concrete `SDSocialNetworkManager` subclass (usually using `+manager`)
+* Instantiate an object of a concrete `SDNetTaskManager` subclass (usually using `+manager`)
 
 	* Set its `delegate`
 	* Set its `username` and `password`, if any of your tasks will require authentication
 	* Optionally, you can set the specific Manager's settings. For instance, SDTwitterManager declares `appName`, `appVersion`, and `appWebsite`
 	* For more control, you can set the maximum tasks that can be run simultaneously, via the `maxConcurrentTasks` @property
-	* Be sure to look inside `SDSocialNetworkManager.h` as well as the header for your specific Manager subclass
+	* Be sure to look inside `SDNetTaskManager.h` as well as the header for your specific Manager subclass
 
-* Instantiate an object of a concrete `SDSocialNetworkTask` subclass (usually using `+taskWithManager:`)
+* Instantiate an object of a concrete `SDNetTask` subclass (usually using `+taskWithManager:`)
 
 	* Set the task's `type` @property it should use (values are located in the Task subclass's header files)
 	* Set any required properties for the specified task (ie. `screenName`, `text`, or `statusID`)
@@ -163,7 +138,7 @@ Sample Code
 A note on threads and performance
 =================================
 
-`SDSocialNetworkTask` objects are run in separate threads in the background, to both increase performance and improve the user's experience. However, despite any worries this may invoke, the vast majority of use-cases should not worry about thread-safety, since all delegate methods are called on the main thread, and the task waits until the delegate is finished before continuing execution in the background thread. Thus, it is perfectly safe to access any @properties on the task from the main thread, after the task has completed. This allows you to implement such functionality as iterating through the returned values and storing them in a Core Data context, without worrying about data corruption at all.
+`SDNetTask` objects are run in separate threads in the background, to both increase performance and improve the user's experience. However, despite any worries this may invoke, the vast majority of use-cases should not worry about thread-safety, since all delegate methods are called on the main thread, and the task waits until the delegate is finished before continuing execution in the background thread. Thus, it is perfectly safe to access any @properties on the task from the main thread, after the task has completed. This allows you to implement such functionality as iterating through the returned values and storing them in a Core Data context, without worrying about data corruption at all.
 
 
 
@@ -176,7 +151,7 @@ UUIDs: For backwards-compatibility with `MGTwitterEngine`, each Task object crea
 
 
 
-Creating a subclass-pair of SDSocialNetworkManager/Task
+Creating a subclass-pair of SDNetTaskManager/Task
 =======================================================
 
 Coming soon!
@@ -188,22 +163,20 @@ Other people's Source Code used in this project
 
 This code requires the aforementioned `NSString` and `NSData` files, which are borrowed directly from `MGTwitterEngine`. Similarly, this README file and the Source Code license borrowed heavily from their `MGTwitterEngine` counterparts.
 
-The class `SDSocialNetworkTask` uses JSON parsing (and will support XML in the near future). The JSON library used is `yajl` (written in C), and was written by Lloyd Hilaiel. For more information about `yajl`, visit <http://lloyd.github.com/yajl/>
+The class `SDNetTask` uses JSON parsing (and will support XML in the near future). The JSON library used is `yajl` (written in C), and was written by Lloyd Hilaiel. For more information about `yajl`, visit <http://lloyd.github.com/yajl/>
 
 
 
-SDSocialNetworkManager and the iPhone
-=====================================
+NetworkTasks and the iPhone
+===========================
 
-This project doesn't use any classes which (as far as I know) are unavailable on the iPhone SDK, excepting NSColor. Similarly, the `YAJL` C statuc library should work just fine when compiled against the iPhone SDK. Thus, it should be perfectly suitable for using on the iPhone SDK.
-
-Note: I have not tested this against the iPhone SDK as of the date of writing (5-29-09) so if anyone tests it and finds that it either works or fails, please let me know!
+This project doesn't use any classes which (as far as I know) are unavailable on the iPhone SDK, excepting NSColor (a UIColor counterpart coming soon!). Similarly, the `YAJL` C static library works just fine when compiled against the iPhone SDK. Thus, `NetworkTasks` is perfectly suitable for use on the iPhone SDK.
 
 
 Standard ending of a README
 ===========================
 
-That's about it. If you have trouble with the code, or want to make a feature request or report a bug (or even contribute some improvements), you can get in touch with me using the info below. I hope you enjoy using SDSocialNetworking!
+That's about it. If you have trouble with the code, or want to make a feature request or report a bug (or even contribute some improvements), you can get in touch with me using the info below. I hope you enjoy using NetworkTasks!
 
 `Steven Degutis`
 
