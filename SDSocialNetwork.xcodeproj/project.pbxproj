@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		944D89F20FD61DF7002A71C6 /* SDFriendfeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */; };
+		944D89F60FD61E44002A71C6 /* SDFriendfeedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */; };
 		94BFA1060FCF222D00806DA0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58150DA1D0A300B32029 /* MainMenu.xib */; };
 		94BFA1220FCF236800806DA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */; };
 		94BFA12D0FCF237F00806DA0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1250FCF237F00806DA0 /* NSData+Base64.m */; };
 		94BFA12E0FCF237F00806DA0 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1270FCF237F00806DA0 /* NSString+UUID.m */; };
-		94BFA12F0FCF237F00806DA0 /* SDSocialNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */; };
-		94BFA1300FCF237F00806DA0 /* SDSocialNetworkTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */; };
+		94BFA12F0FCF237F00806DA0 /* SDNetTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1290FCF237F00806DA0 /* SDNetTaskManager.m */; };
+		94BFA1300FCF237F00806DA0 /* SDNetTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA12B0FCF237F00806DA0 /* SDNetTask.m */; };
 		94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */; };
 		94BFA4550FD05F3800806DA0 /* libyajl_s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BFA4540FD05F3800806DA0 /* libyajl_s.a */; };
 		94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */; };
@@ -34,16 +36,21 @@
 		32CA4F630368D1EE00C91783 /* SDSocialNetwork_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSocialNetwork_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SDSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		944D89F00FD61DF7002A71C6 /* SDFriendfeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedManager.h; path = Source/SDFriendfeedManager.h; sourceTree = "<group>"; };
+		944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFriendfeedManager.m; path = Source/SDFriendfeedManager.m; sourceTree = "<group>"; };
+		944D89F40FD61E44002A71C6 /* SDFriendfeedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedTask.h; path = Source/SDFriendfeedTask.h; sourceTree = "<group>"; };
+		944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFriendfeedTask.m; path = Source/SDFriendfeedTask.m; sourceTree = "<group>"; };
+		944D89F90FD61EEC002A71C6 /* SDFriendfeedTaskDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedTaskDelegate.h; path = Source/SDFriendfeedTaskDelegate.h; sourceTree = "<group>"; };
 		94BFA1200FCF236800806DA0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		94BFA1210FCF236800806DA0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94BFA1240FCF237F00806DA0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Source/NSData+Base64.h"; sourceTree = "<group>"; };
 		94BFA1250FCF237F00806DA0 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Source/NSData+Base64.m"; sourceTree = "<group>"; };
 		94BFA1260FCF237F00806DA0 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+UUID.h"; path = "Source/NSString+UUID.h"; sourceTree = "<group>"; };
 		94BFA1270FCF237F00806DA0 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+UUID.m"; path = "Source/NSString+UUID.m"; sourceTree = "<group>"; };
-		94BFA1280FCF237F00806DA0 /* SDSocialNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDSocialNetworkManager.h; path = Source/SDSocialNetworkManager.h; sourceTree = "<group>"; };
-		94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDSocialNetworkManager.m; path = Source/SDSocialNetworkManager.m; sourceTree = "<group>"; };
-		94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDSocialNetworkTask.h; path = Source/SDSocialNetworkTask.h; sourceTree = "<group>"; };
-		94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDSocialNetworkTask.m; path = Source/SDSocialNetworkTask.m; sourceTree = "<group>"; };
+		94BFA1280FCF237F00806DA0 /* SDNetTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDNetTaskManager.h; path = Source/SDNetTaskManager.h; sourceTree = "<group>"; };
+		94BFA1290FCF237F00806DA0 /* SDNetTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNetTaskManager.m; path = Source/SDNetTaskManager.m; sourceTree = "<group>"; };
+		94BFA12A0FCF237F00806DA0 /* SDNetTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDNetTask.h; path = Source/SDNetTask.h; sourceTree = "<group>"; };
+		94BFA12B0FCF237F00806DA0 /* SDNetTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNetTask.m; path = Source/SDNetTask.m; sourceTree = "<group>"; };
 		94BFA42D0FD0437F00806DA0 /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+Hex.h"; path = "Source/NSColor+Hex.h"; sourceTree = "<group>"; };
 		94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+Hex.m"; path = "Source/NSColor+Hex.m"; sourceTree = "<group>"; };
 		94BFA4540FD05F3800806DA0 /* libyajl_s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyajl_s.a; path = Source/libyajl_s.a; sourceTree = "<group>"; };
@@ -55,7 +62,7 @@
 		94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterManager.m; path = Source/SDTwitterManager.m; sourceTree = "<group>"; };
 		94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterTask.h; path = Source/SDTwitterTask.h; sourceTree = "<group>"; };
 		94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterTask.m; path = Source/SDTwitterTask.m; sourceTree = "<group>"; };
-		94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SDSocialNetworkTask+Subclassing.h"; path = "Source/SDSocialNetworkTask+Subclassing.h"; sourceTree = "<group>"; };
+		94BFA5B20FD0818C00806DA0 /* SDNetTask+Subclassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SDNetTask+Subclassing.h"; path = "Source/SDNetTask+Subclassing.h"; sourceTree = "<group>"; };
 		94BFA6C90FD090DC00806DA0 /* SDIdenticaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaManager.h; path = Source/SDIdenticaManager.h; sourceTree = "<group>"; };
 		94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaManager.m; path = Source/SDIdenticaManager.m; sourceTree = "<group>"; };
 		94BFA6CD0FD0911400806DA0 /* SDIdenticaTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaTask.h; path = Source/SDIdenticaTask.h; sourceTree = "<group>"; };
@@ -153,16 +160,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		944D89EE0FD61D6B002A71C6 /* Friendfeed */ = {
+			isa = PBXGroup;
+			children = (
+				944D89F00FD61DF7002A71C6 /* SDFriendfeedManager.h */,
+				944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */,
+				944D89F40FD61E44002A71C6 /* SDFriendfeedTask.h */,
+				944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */,
+				944D89F90FD61EEC002A71C6 /* SDFriendfeedTaskDelegate.h */,
+			);
+			name = Friendfeed;
+			sourceTree = "<group>";
+		};
+		944D8ADD0FD6D887002A71C6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		94BFA1230FCF236E00806DA0 /* SDSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				94BFA1280FCF237F00806DA0 /* SDSocialNetworkManager.h */,
-				94BFA1290FCF237F00806DA0 /* SDSocialNetworkManager.m */,
-				94BFA12A0FCF237F00806DA0 /* SDSocialNetworkTask.h */,
-				94BFA12B0FCF237F00806DA0 /* SDSocialNetworkTask.m */,
-				94BFA5B20FD0818C00806DA0 /* SDSocialNetworkTask+Subclassing.h */,
+				94BFA1280FCF237F00806DA0 /* SDNetTaskManager.h */,
+				94BFA1290FCF237F00806DA0 /* SDNetTaskManager.m */,
+				94BFA12A0FCF237F00806DA0 /* SDNetTask.h */,
+				94BFA12B0FCF237F00806DA0 /* SDNetTask.m */,
+				94BFA5B20FD0818C00806DA0 /* SDNetTask+Subclassing.h */,
+				944D8ADD0FD6D887002A71C6 /* Images */,
 				94BFA48A0FD06D8500806DA0 /* Twitter */,
 				94BFA6C80FD090B800806DA0 /* identi.ca */,
+				944D89EE0FD61D6B002A71C6 /* Friendfeed */,
 				94BFA4860FD065E500806DA0 /* Categories */,
 				94BFA4870FD065F600806DA0 /* JSON Parsing */,
 			);
@@ -275,14 +303,16 @@
 				94BFA1220FCF236800806DA0 /* AppDelegate.m in Sources */,
 				94BFA12D0FCF237F00806DA0 /* NSData+Base64.m in Sources */,
 				94BFA12E0FCF237F00806DA0 /* NSString+UUID.m in Sources */,
-				94BFA12F0FCF237F00806DA0 /* SDSocialNetworkManager.m in Sources */,
-				94BFA1300FCF237F00806DA0 /* SDSocialNetworkTask.m in Sources */,
+				94BFA12F0FCF237F00806DA0 /* SDNetTaskManager.m in Sources */,
+				94BFA1300FCF237F00806DA0 /* SDNetTask.m in Sources */,
 				94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */,
 				94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */,
 				94BFA48D0FD06D9600806DA0 /* SDTwitterManager.m in Sources */,
 				94BFA49E0FD06FCC00806DA0 /* SDTwitterTask.m in Sources */,
 				94BFA6CB0FD090DC00806DA0 /* SDIdenticaManager.m in Sources */,
 				94BFA6CF0FD0911400806DA0 /* SDIdenticaTask.m in Sources */,
+				944D89F20FD61DF7002A71C6 /* SDFriendfeedManager.m in Sources */,
+				944D89F60FD61E44002A71C6 /* SDFriendfeedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
