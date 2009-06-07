@@ -47,16 +47,4 @@
 - (void) addParametersToDictionary:(NSMutableDictionary*)parameters {
 }
 
-+ (Protocol*) delegateProtocol {
-	return @protocol(SDIdenticaTaskDelegate);
-}
-
-- (void) sendResultsToDelegate {
-	[(id)manager.delegate identicaManager:(id)manager resultsReadyForTask:self];
-}
-
-- (void) sendErrorToDelegate {
-	[(id)manager.delegate identicaManager:(id)manager failedForTask:self];
-}
-
 @end

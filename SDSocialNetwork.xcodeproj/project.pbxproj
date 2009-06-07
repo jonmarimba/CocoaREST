@@ -40,7 +40,6 @@
 		944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFriendfeedManager.m; path = Source/SDFriendfeedManager.m; sourceTree = "<group>"; };
 		944D89F40FD61E44002A71C6 /* SDFriendfeedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedTask.h; path = Source/SDFriendfeedTask.h; sourceTree = "<group>"; };
 		944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFriendfeedTask.m; path = Source/SDFriendfeedTask.m; sourceTree = "<group>"; };
-		944D89F90FD61EEC002A71C6 /* SDFriendfeedTaskDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedTaskDelegate.h; path = Source/SDFriendfeedTaskDelegate.h; sourceTree = "<group>"; };
 		94BFA1200FCF236800806DA0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		94BFA1210FCF236800806DA0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94BFA1240FCF237F00806DA0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Source/NSData+Base64.h"; sourceTree = "<group>"; };
@@ -67,8 +66,6 @@
 		94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaManager.m; path = Source/SDIdenticaManager.m; sourceTree = "<group>"; };
 		94BFA6CD0FD0911400806DA0 /* SDIdenticaTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaTask.h; path = Source/SDIdenticaTask.h; sourceTree = "<group>"; };
 		94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaTask.m; path = Source/SDIdenticaTask.m; sourceTree = "<group>"; };
-		94BFA6F80FD0942300806DA0 /* SDTwitterTaskDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterTaskDelegate.h; path = Source/SDTwitterTaskDelegate.h; sourceTree = "<group>"; };
-		94BFA7120FD095CD00806DA0 /* SDIdenticaTaskDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaTaskDelegate.h; path = Source/SDIdenticaTaskDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +164,6 @@
 				944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */,
 				944D89F40FD61E44002A71C6 /* SDFriendfeedTask.h */,
 				944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */,
-				944D89F90FD61EEC002A71C6 /* SDFriendfeedTaskDelegate.h */,
 			);
 			name = Friendfeed;
 			sourceTree = "<group>";
@@ -228,7 +224,6 @@
 				94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */,
 				94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */,
 				94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */,
-				94BFA6F80FD0942300806DA0 /* SDTwitterTaskDelegate.h */,
 			);
 			name = Twitter;
 			sourceTree = "<group>";
@@ -240,7 +235,6 @@
 				94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */,
 				94BFA6CD0FD0911400806DA0 /* SDIdenticaTask.h */,
 				94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */,
-				94BFA7120FD095CD00806DA0 /* SDIdenticaTaskDelegate.h */,
 			);
 			name = identi.ca;
 			sourceTree = "<group>";

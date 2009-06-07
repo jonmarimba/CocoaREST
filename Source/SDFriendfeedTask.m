@@ -57,16 +57,4 @@
 	}
 }
 
-+ (Protocol*) delegateProtocol {
-	return @protocol(SDFriendfeedTaskDelegate);
-}
-
-- (void) sendResultsToDelegate {
-	[(id)manager.delegate friendfeedManager:(id)manager resultsReadyForTask:self];
-}
-
-- (void) sendErrorToDelegate {
-	[(id)manager.delegate friendfeedManager:(id)manager failedForTask:self];
-}
-
 @end

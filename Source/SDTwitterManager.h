@@ -11,7 +11,6 @@
 #import "SDNetTaskManager.h"
 
 #import "SDTwitterTask.h"
-#import "SDTwitterTaskDelegate.h"
 
 @interface SDTwitterManager : SDNetTaskManager {
 	NSString *appName;

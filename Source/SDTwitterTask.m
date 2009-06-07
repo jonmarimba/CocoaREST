@@ -9,7 +9,6 @@
 #import "SDTwitterTask.h"
 
 #import "SDTwitterManager.h"
-#import "SDTwitterTaskDelegate.h"
 
 #import "SDNetTask+Subclassing.h"
 
@@ -128,18 +127,6 @@
 	SDTwitterTask *task = [self copy];
 	task.page++;
 	return task;
-}
-
-+ (Protocol*) delegateProtocol {
-	return @protocol(SDTwitterTaskDelegate);
-}
-
-- (void) sendResultsToDelegate {
-	[(id)manager.delegate twitterManager:twitterManager resultsReadyForTask:self];
-}
-
-- (void) sendErrorToDelegate {
-	[(id)manager.delegate twitterManager:twitterManager failedForTask:self];
 }
 
 - (BOOL) shouldUseBasicHTTPAuthentication {

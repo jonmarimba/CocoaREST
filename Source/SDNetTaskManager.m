@@ -12,6 +12,9 @@
 
 @synthesize delegate;
 
+@synthesize successSelector;
+@synthesize failSelector;
+
 @synthesize username;
 @synthesize password;
 

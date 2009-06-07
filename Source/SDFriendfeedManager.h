@@ -11,7 +11,6 @@
 #import "SDNetTaskManager.h"
 
 #import "SDFriendfeedTask.h"
-#import "SDFriendfeedTaskDelegate.h"
 
 @interface SDFriendfeedManager : SDNetTaskManager {
 

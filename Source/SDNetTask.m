@@ -155,8 +155,7 @@
 	// delegate can safely access all of our properties now
 	
 	if (errorCode == SDNetTaskErrorNone) {
-		if ([manager.delegate conformsToProtocol:[[self class] delegateProtocol]])
-			[self sendResultsToDelegate];
+		[self sendResultsToDelegate];
 	}
 	else {
 		// we'll create our error manually and let the delegate get all touchy-feely with it all they want
@@ -169,8 +168,7 @@
 		// we don't retain the error object, because the pool won't drain until the delegate is done anyway
 		error = [NSError errorWithDomain:@"SDNetDomain" code:errorCode userInfo:userInfo];
 		
-		if ([manager.delegate conformsToProtocol:[[self class] delegateProtocol]])
-			[self sendErrorToDelegate];
+		[self sendErrorToDelegate];
 	}
 }
 
@@ -235,9 +233,15 @@
 - (SDParseFormat) parseFormatBasedOnTaskType { return SDParseFormatJSON; }
 - (void) addParametersToDictionary:(NSMutableDictionary*)parameters {}
 
-- (Protocol*) delegateProtocol { return NULL; }
-- (void) sendResultsToDelegate {}
-- (void) sendErrorToDelegate {}
+- (void) sendResultsToDelegate {
+	if ([manager.delegate respondsToSelector:manager.successSelector])
+		objc_msgSend(manager.delegate, manager.successSelector, manager, self);
+}
+
+- (void) sendErrorToDelegate {
+	if ([manager.delegate respondsToSelector:manager.failSelector])
+		objc_msgSend(manager.delegate, manager.failSelector, manager, self);
+}
 
 // MARK: -
 // MARK: General Helper Methods

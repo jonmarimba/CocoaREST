@@ -11,7 +11,6 @@
 #import "SDNetTaskManager.h"
 
 #import "SDIdenticaTask.h"
-#import "SDIdenticaTaskDelegate.h"
 
 @interface SDIdenticaManager : SDNetTaskManager {
 

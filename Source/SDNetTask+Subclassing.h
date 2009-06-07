@@ -50,7 +50,11 @@ typedef enum _SDParseFormat {
 - (SDParseFormat) parseFormatBasedOnTaskType;
 - (void) addParametersToDictionary:(NSMutableDictionary*)parameters;
 
-+ (Protocol*) delegateProtocol;
+// the following methods are implemented in the superclass, which just sends the proper
+// selector to the delegate. subclasses may override either of these methods to perform
+// their own specific delegate-notifying implementations, or can call super's impl. in
+// order to provide custom logic for when or how to send these notifications to delegates
+// (see the Facebook subclasses for an example of this custom logic).
 - (void) sendResultsToDelegate;
 - (void) sendErrorToDelegate;
 
