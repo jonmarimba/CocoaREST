@@ -8,9 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SDTwitterManager.h"
-
-@interface AppDelegate : NSObject <SDTwitterTaskDelegate> {
+@interface AppDelegate : NSObject {
 	
 }
 

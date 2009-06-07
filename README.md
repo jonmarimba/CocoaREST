@@ -50,6 +50,44 @@ The NetworkTasks family of Cocoa Classes are designed to be flexible, powerful, 
 * Requested returned values are returned in the format available for that specific API (either XML or JSON), and parsed with either `LibXML` or `YAJL`, which maximizes the number of supported services and API calls
 
 
+Sample Code
+===========
+
+	- (void) awakeFromNib {
+		// inside a header file, declare manager as an instance variable
+		SDTwitterManager *manager;
+		
+		// create out manager, retaining it as we want it to stick around
+		manager = [[SDTwitterManager manager] retain];
+		manager.successSelector = @selector(twitterManager:resultsReadyForTask:);
+		manager.failSelector = @selector(twitterManager:failedForTask:);
+		manager.delegate = self;
+		
+		// this is a must for certain API calls which require authentication
+		// change them to real login values or the tasks will fail
+		manager.username = @"USERNAME";
+		manager.password = @"PASSWORD";
+		
+		// 3 tasks can be run simultaneously
+		manager.maxConcurrentTasks = 3;
+		
+		// create a basic task
+		SDTwitterTask *mentionsTask = [SDTwitterTask taskWithManager:manager];
+		mentionsTask.type = SDTwitterTaskGetPersonalTimeline;
+		mentionsTask.count = 3;
+		mentionsTask.page = 10;
+		[mentionsTask run];
+	}
+
+	- (void) twitterManager:(SDTwitterManager*)manager resultsReadyForTask:(SDTwitterTask*)task {
+		NSLog(@"%@", task.results);
+	}
+
+	- (void) twitterManager:(SDTwitterManager*)manager failedForTask:(SDTwitterTask*)task {
+		NSLog(@"%@", task.error);
+	}
+
+
 How to use NetworkTasks
 =======================
 
@@ -59,7 +97,7 @@ Using `NetworkTasks` is easy. The basic steps are:
 1. Copy all the files from the Source directory, into your own project. Make sure that `libyajl_s.a` is in your "Link Binary With Libraries" build phase of your project's relevant target(s).
 
 
-2. Pick your a service-specific pair of subclasses, such as SDTwitterManager and SDTwitterTask, and #import their header files into whatever class you plan to use them in. You should also declare that your class implements the `SDTwitterTaskDelegate` protocol. The `AppDelegate.h` header file in the demo project is an example you can use.
+2. Pick your a service-specific pair of subclasses, such as SDTwitterManager and SDTwitterTask, and #import their header files into whatever class you plan to use them in. The `AppDelegate.h` header file in the demo project is an example you can use.
 
 
 3. Implement the delegate methods you have chosen, just as the AppDelegate in the demo project does. Inside your delegate methods, you can access the Manager and Task objects to fully see the context surrounding `task.results`. For example, if you were implementing `SDTwitterTaskDelegate`, these are the methods you'd need to implement:
@@ -78,7 +116,8 @@ The bare basics that are required to request data from or send data to a social 
 
 * Instantiate an object of a concrete `SDNetTaskManager` subclass (usually using `+manager`)
 
-	* Set its `delegate`
+	* Set its `delegate`, along with the `successSelector` and `failSelector`
+		* Read SDNetManager.h for information on what the signature of these selectors should look like
 	* Set its `username` and `password`, if any of your tasks will require authentication
 	* Optionally, you can set the specific Manager's settings. For instance, SDTwitterManager declares `appName`, `appVersion`, and `appWebsite`
 	* For more control, you can set the maximum tasks that can be run simultaneously, via the `maxConcurrentTasks` @property
@@ -97,42 +136,6 @@ The bare basics that are required to request data from or send data to a social 
 	* The `results` @property of the task object will contain returned information from the social networking service.
 	* Once a task has completed, it will deallocate on its own. It should not be retained, and cannot be run a second time (as it is an NSOperation subclass).
 
-
-
-Sample Code
-===========
-
-	- (void) awakeFromNib {
-		// inside a header file, declare manager as an instance variable
-		SDTwitterManager *manager;
-		
-		// create out manager, retaining it as we want it to stick around
-		manager = [[SDTwitterManager manager] retain];
-		manager.delegate = self;
-		
-		// this is a must for certain API calls which require authentication
-		// change them to real login values or the tasks will fail
-		manager.username = @"USERNAME";
-		manager.password = @"PASSWORD";
-		
-		// 3 tasks can be run simultaneously
-		manager.maxConcurrentTasks = 3;
-		
-		// create a basic task
-		SDTwitterTask *mentionsTask = [SDTwitterTask taskWithManager:manager];
-		mentionsTask.type = SDTwitterTaskGetMentions;
-		mentionsTask.count = 3;
-		mentionsTask.page = 10;
-		[mentionsTask run];
-	}
-
-	- (void) twitterManager:(SDTwitterManager*)manager resultsReadyForTask:(SDTwitterTask*)task {
-		NSLog(@"%@", task.results);
-	}
-
-	- (void) twitterManager:(SDTwitterManager*)manager failedForTask:(SDTwitterTask*)task {
-		NSLog(@"%@", task.error);
-	}
 
 
 A note on threads and performance

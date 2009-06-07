@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "SDTwitterManager.h"
+
 @implementation AppDelegate
 
 - (void) awakeFromNib {
@@ -16,6 +18,8 @@
 	
 	// create out manager, retaining it as we want it to stick around
 	manager = [[SDTwitterManager manager] retain];
+	manager.successSelector = @selector(twitterManager:resultsReadyForTask:);
+	manager.failSelector = @selector(twitterManager:failedForTask:);
 	manager.delegate = self;
 	
 	// this is a must for certain API calls which require authentication
@@ -28,7 +32,7 @@
 	
 	// create a basic task
 	SDTwitterTask *mentionsTask = [SDTwitterTask taskWithManager:manager];
-	mentionsTask.type = SDTwitterTaskGetMentions;
+	mentionsTask.type = SDTwitterTaskGetPersonalTimeline;
 	mentionsTask.count = 3;
 	mentionsTask.page = 10;
 	[mentionsTask run];
