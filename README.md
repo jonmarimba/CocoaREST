@@ -1,14 +1,14 @@
-NetworkTasks - Cocoa Library
-============================
+CocoaREST - Cocoa Library
+=========================
 
 * Created by [Steven Degutis](http://degutis.org)
-* Renamed recently from `SDSocialNetworking` (and `SDSocialNetworkManager`), because I'm _terrible_ at naming things, and this new name just makes a lot more sense.
+* Recently renamed yet again (this time for the final time, thank goodness!) to CocoaREST
 
 
-What is NetworkTasks?
-=====================
+What is CocoaREST?
+==================
 
-NetworkTasks is a family of classes for the Cocoa (and Cocoa Touch) classes, which allows developers to interact with RESTful APIs on the internet. There are two abstract superclasses:
+CocoaREST is a family of classes for the Cocoa (and Cocoa Touch) platforms, which allows developers to interact with RESTful APIs on the internet. There are two abstract superclasses:
 
 * SDNetTaskManager
 
@@ -34,7 +34,7 @@ These classes have been designed specifically for developers to *easily* be able
 Why use it?
 ===========
 
-The NetworkTasks family of Cocoa Classes are designed to be flexible, powerful, and incredibly simple and transparent to use. Here are just some advantages:
+The CocoaREST family of Cocoa Classes are designed to be flexible, powerful, and incredibly simple and transparent to use. Here are just some advantages:
 
 * Uses modern, up-to-date APIs. For example, SDTwitterTask uses "statuses/mentions" versus the archaic "statuses/replies"
 
@@ -88,13 +88,13 @@ Sample Code
 	}
 
 
-How to use NetworkTasks
-=======================
+How to use CocoaREST
+====================
 
-Using `NetworkTasks` is easy. The basic steps are:
+Using `CocoaREST` is easy. The basic steps are:
 
 
-1. Copy all the files from the Source directory, into your own project. Make sure that `libyajl_s.a` is in your "Link Binary With Libraries" build phase of your project's relevant target(s).
+1. Copy all the files from the Source directory, into your own project. For now, developers will need to link against the dynamic library libcrypto.dylib (which comes standard on all modern versions of Mac OS X and is available on the iPhone SDK as well).
 
 
 2. Pick your a service-specific pair of subclasses, such as SDTwitterManager and SDTwitterTask, and #import their header files into whatever class you plan to use them in. The `AppDelegate.h` header file in the demo project is an example you can use.
@@ -170,16 +170,16 @@ The class `SDNetTask` uses JSON parsing (and will support XML in the near future
 
 
 
-NetworkTasks and the iPhone
+CocoaREST and the iPhone
 ===========================
 
-This project doesn't use any classes which (as far as I know) are unavailable on the iPhone SDK, excepting NSColor (a UIColor counterpart coming soon!). Similarly, the `YAJL` C static library works just fine when compiled against the iPhone SDK. Thus, `NetworkTasks` is perfectly suitable for use on the iPhone SDK.
+This project doesn't use any classes which (as far as I know) are unavailable on the iPhone SDK, excepting NSColor (a UIColor counterpart coming soon!). Similarly, the `YAJL` C static library works just fine when compiled against the iPhone SDK. Thus, `CocoaREST` is perfectly suitable for use on the iPhone SDK.
 
 
 Standard ending of a README
 ===========================
 
-That's about it. If you have trouble with the code, or want to make a feature request or report a bug (or even contribute some improvements), you can get in touch with me using the info below. I hope you enjoy using NetworkTasks!
+That's about it. If you have trouble with the code, or want to make a feature request or report a bug (or even contribute some improvements), you can get in touch with me using the info below. I hope you enjoy using CocoaREST!
 
 `Steven Degutis`
 
