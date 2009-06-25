@@ -26,6 +26,12 @@
 
 @synthesize UIDs;
 
+@synthesize noteID;
+@synthesize title;
+@synthesize content;
+
+@synthesize appPermissionType;
+
 - (id) initWithManager:(SDFacebookTaskManager*)newManager {
 	if (self = [super initWithManager:newManager]) {
 		facebookManager = newManager;
@@ -42,11 +48,42 @@
 - (void) dealloc {
 	[UIDs release], UIDs = nil;
 	
+	[noteID release], noteID = nil;
+	[title release], title = nil;
+	[content release], content = nil;
+	
+	[appPermissionType release], appPermissionType = nil;
+	
 	[super dealloc];
 }
 
+- (void) run {
+	if (type == SDFacebookTaskGetAllowAppPermissionsURL) {
+		NSString *URLString = [NSString stringWithFormat:@"http://www.facebook.com/authorize.php?api_key=%@&v=%@&ext_perm=%@&popup&skipcookie",
+							   facebookManager.apiKey,
+							   facebookManager.apiVersion,
+							   self.appPermissionType];
+		
+		results = [URLString retain];
+		[self sendResultsToDelegate];
+		
+		return;
+	}
+	
+	[super run];
+}
+
 - (id) copyWithZone:(NSZone*)zone {
-	id copy = [super copyWithZone:zone];
+	SDFacebookTask *copy = [super copyWithZone:zone];
+	
+	copy.UIDs = self.UIDs;
+	
+	copy.noteID = self.noteID;
+	copy.title = self.title;
+	copy.content = self.content;
+	
+	copy.appPermissionType = self.appPermissionType;
+
 	return copy;
 }
 
@@ -66,7 +103,12 @@
 }
 
 - (SDHTTPMethod) methodBasedOnTaskType {
-	return SDHTTPMethodGet;
+	switch (type) {
+		case SDFacebookTaskEditNote:
+			return SDHTTPMethodPost;
+		default:
+			return SDHTTPMethodGet;
+	}
 }
 
 - (NSString*) URLStringBasedOnTaskType {
@@ -75,6 +117,7 @@
 
 - (SDParseFormat) parseFormatBasedOnTaskType {
 	switch (type) {
+		case SDFacebookTaskGetAppPermissions:
 		case SDFacebookTaskGetLoginURL:
 			return SDParseFormatNone;
 	}
@@ -82,17 +125,17 @@
 }
 
 - (NSString*) apiMethodBasedOnTaskType {
-	switch (type) {
-		case SDFacebookTaskGetLoginURL:
-			return @"Auth.createToken";
-		case SDFacebookTaskFinishLoginProcess:
-			return @"Auth.getSession";
-		case SDFacebookTaskGetUserInfo:
-			return @"Users.getInfo";
-		case SDFacebookTaskGetFriends:
-			return @"Friends.get";
-	}
-	return nil;
+	NSString *methods[SDFacebookTaskMAX] = {@""};
+	
+	methods[SDFacebookTaskGetLoginURL] = @"Auth.createToken";
+	methods[SDFacebookTaskFinishLoginProcess] = @"Auth.getSession";
+	methods[SDFacebookTaskGetUserInfo] = @"Users.getInfo";
+	methods[SDFacebookTaskGetFriends] = @"Friends.get";
+	methods[SDFacebookTaskGetNotes] = @"Notes.get";
+	methods[SDFacebookTaskEditNote] = @"Notes.edit";
+	methods[SDFacebookTaskGetAppPermissions] = @"Users.hasAppPermission";
+	
+	return methods[type];
 }
 
 - (void) addParametersToDictionary:(NSMutableDictionary*)parameters {
@@ -108,6 +151,19 @@
 	if (type > SDFacebookTaskFinishLoginProcess)
 		[parameters setObject:facebookManager.sessionKey forKey:@"session_key"];
 	
+	if (noteID)
+		[parameters setObject:noteID forKey:@"note_id"];
+	
+	if (title)
+		[parameters setObject:title forKey:@"title"];
+	
+	if (content)
+		[parameters setObject:content forKey:@"content"];
+	
+	if (appPermissionType)
+		[parameters setObject:appPermissionType forKey:@"ext_perm"];
+	
+	
 	if (UIDs)
 		[parameters setObject:[UIDs componentsJoinedByString:@","] forKey:@"uids"];
 	
@@ -120,6 +176,12 @@
 }
 
 - (void) sendResultsToDelegate {
+	if ([results isKindOfClass:[NSDictionary class]] && [[results allKeys] containsObject:@"error_code"]) {
+		error = [NSError errorWithDomain:@"SDNetDomain" code:SDNetTaskErrorServiceDefinedError userInfo:nil];
+		[self sendErrorToDelegate];
+		return;
+	}
+	
 	if (type == SDFacebookTaskGetLoginURL) {
 		NSString *authToken = self.results;
 		
@@ -127,12 +189,10 @@
 		facebookManager.authToken = [authToken substringWithRange:range];
 		
 		NSString *baseURLString = @"http://www.facebook.com/login.php?v=1.0&skipcookie=1&popup=1&api_key=%@&auth_token=%@";
-		NSString *URLString = NSSTRINGF(baseURLString, facebookManager.apiKey, facebookManager.authToken);
+		NSString *URLString = [NSString stringWithFormat:baseURLString, facebookManager.apiKey, facebookManager.authToken];
 		
 		[results autorelease];
 		results = [URLString retain];
-		
-		[super sendResultsToDelegate];
 	}
 	else if (type == SDFacebookTaskFinishLoginProcess) {
 		facebookManager.sessionSecret = [self.results objectForKey:@"secret"];
@@ -141,16 +201,20 @@
 		NSNumber *sessionUID = [self.results objectForKey:@"uid"];
 		facebookManager.sessionUID = [NSString stringWithFormat:@"%lld", [sessionUID longLongValue]];
 		
-		BOOL success = YES;
+		NSNumber *expires = [self.results objectForKey:@"expires"];
+		NSDate *expirationDate = [NSDate dateWithTimeIntervalSince1970:[expires doubleValue]];
+		
+		NSMutableDictionary *newResults = [NSMutableDictionary dictionary];
+		[newResults setObject:facebookManager.sessionUID forKey:@"sessionIdentifier"];
+		[newResults setObject:[facebookManager sessionCredentials] forKey:@"sessionCredentials"];
+		if ([expires isEqualToNumber:[NSNumber numberWithInt:0]])
+			[newResults setObject:expirationDate forKey:@"sessionExpirationDate"];
 		
 		[results autorelease];
-		results = [[NSNumber numberWithBool:success] retain];;
-		
-		[super sendResultsToDelegate];
+		results = [newResults retain];
 	}
-	else {
-		[super sendResultsToDelegate];
-	}
+	
+	[super sendResultsToDelegate];
 }
 
 - (void) sendErrorToDelegate {

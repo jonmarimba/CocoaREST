@@ -18,8 +18,14 @@ typedef enum _SDFacebookTaskType {
 	SDFacebookTaskGetLoginURL,
 	SDFacebookTaskFinishLoginProcess,
 	
+	SDFacebookTaskGetAppPermissions,
+	SDFacebookTaskGetAllowAppPermissionsURL,
+	
 	SDFacebookTaskGetFriends,
 	SDFacebookTaskGetUserInfo,
+	
+	SDFacebookTaskGetNotes,
+	SDFacebookTaskEditNote,
 	
 	SDFacebookTaskGetPublicTimeline,
 	
@@ -30,8 +36,20 @@ typedef enum _SDFacebookTaskType {
 	SDFacebookTaskManager *facebookManager;
 	
 	NSArray *UIDs;
+	
+	NSString *noteID;
+	NSString *title;
+	NSString *content;
+	
+	NSString *appPermissionType;
 }
 
 @property (copy) NSArray *UIDs;
+
+@property (copy) NSString *noteID;
+@property (copy) NSString *title;
+@property (copy) NSString *content;
+
+@property (copy) NSString *appPermissionType;
 
 @end
