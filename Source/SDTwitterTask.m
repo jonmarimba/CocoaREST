@@ -346,4 +346,16 @@
 	twitterManager.limitResetEpochDate = [limitResetEpochTime doubleValue];
 }
 
+- (void) sendResultsToDelegate {
+	if ([results isKindOfClass:[NSDictionary class]] && [[results allKeys] containsObject:@"error"]) {
+		error = [NSError errorWithDomain:@"SDNetDomain" code:SDNetTaskErrorServiceDefinedError userInfo:nil];
+		[self sendErrorToDelegate];
+	}
+	else
+		[super sendResultsToDelegate];
+}
+
+//- (void) sendErrorToDelegate {
+//}
+
 @end

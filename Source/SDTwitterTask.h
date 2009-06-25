@@ -71,7 +71,7 @@ typedef enum _SDTwitterDeviceType {
 } SDTwitterDeviceType;
 
 @interface SDTwitterTask : SDNetTask {
-	SDTwitterManager *twitterManager;
+	SDTwitterTaskManager *twitterManager;
 	
 	int count;
 	int page;
