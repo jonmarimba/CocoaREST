@@ -27,6 +27,8 @@
 
 @synthesize type;
 
+@synthesize context;
+
 @synthesize results;
 @synthesize errorCode;
 @synthesize error;

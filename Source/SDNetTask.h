@@ -26,6 +26,7 @@ typedef enum _SDNetTaskError {
 	SDNetTaskManager *manager;
 	
 	int type;
+	void* context;
 	
 	NSString *taskID;
 	id results;
@@ -46,6 +47,8 @@ typedef enum _SDNetTaskError {
 // readable properties: use after task is complete
 
 @property int type;
+
+@property void* context;
 
 @property (readonly) id results;
 
