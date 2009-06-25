@@ -34,4 +34,8 @@
 @property (copy) NSString *sessionKey;
 @property (copy) NSString *sessionUID;
 
+- (void) useSessionIdentifier:(NSString*)sessionIdentifier sessionCredentials:(NSString*)sessionCredentials;
+
+- (NSString*) sessionCredentials;
+
 @end

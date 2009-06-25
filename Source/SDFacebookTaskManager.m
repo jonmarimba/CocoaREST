@@ -21,6 +21,8 @@
 @synthesize sessionKey;
 @synthesize sessionUID;
 
+#define SDSessionCredentialsDelimiter @"~"
+
 - (void) dealloc {
 	[apiKey release], apiKey = nil;
 	[apiSecret release], apiSecret = nil;
@@ -32,6 +34,17 @@
 	[sessionUID release], sessionUID = nil;
 	
 	[super dealloc];
+}
+
+- (void) useSessionIdentifier:(NSString*)sessionIdentifier sessionCredentials:(NSString*)sessionCredentials {
+	NSArray *parts = [sessionCredentials componentsSeparatedByString:SDSessionCredentialsDelimiter];
+	self.sessionUID = sessionIdentifier;
+	self.sessionSecret = [parts objectAtIndex:0];
+	self.sessionKey = [parts objectAtIndex:1];
+}
+
+- (NSString*) sessionCredentials {
+	return [NSString stringWithFormat:@"%@%@%@", self.sessionSecret, SDSessionCredentialsDelimiter, self.sessionKey];
 }
 
 @end
