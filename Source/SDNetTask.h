@@ -51,7 +51,7 @@ typedef enum _SDNetTaskError {
 
 @property void* context;
 
-@property (readonly) id results;
+@property (retain, readonly) id results;
 
 @property (readonly) SDNetTaskError errorCode;
 @property (readonly) NSError *error;
