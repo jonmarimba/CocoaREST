@@ -47,9 +47,9 @@ int yajl_boolean(void *ctx, int boolVal) {
 	return 1;
 }
 
-int yajl_integer(void *ctx, long integerVal) {
+int yajl_integer(void *ctx, long long integerVal) {
 	//YAJLDebug(@"Integer(%d)", integerVal);
-	[(id)ctx _add:[NSNumber numberWithLong:integerVal]];
+	[(id)ctx _add:[NSNumber numberWithLongLong:integerVal]];
 	return 1;
 }
 
@@ -126,7 +126,7 @@ yajl_end_array
 		0, // allowComments: if nonzero, javascript style comments will be allowed in the input (both /* */ and //)
 		0  // checkUTF8: if nonzero, invalid UTF8 strings will cause a parse error
 	};
-	handle_ = yajl_alloc(&callbacks, &cfg, self);
+	handle_ = yajl_alloc(&callbacks, &cfg, NULL, self);
 	if (!handle_) {		
 		if (error) {
 			NSDictionary *userInfo = [NSDictionary dictionaryWithObject:@"Unable to allocate YAJL handle" forKey:NSLocalizedDescriptionKey];
@@ -260,7 +260,7 @@ yajl_end_array
 		NSDictionary *userInfo = [NSDictionary dictionaryWithObject:errorString forKey:NSLocalizedDescriptionKey];
 		if (error) *error = [NSError errorWithDomain:YAJLErrorDomain code:status userInfo:userInfo];
 		YAJLDebug(@"Error: %@", *error);
-		yajl_free_error(errorMessage);
+		yajl_free_error(handle_, errorMessage);
 	}
 
 	[self _reset];	
