@@ -12,7 +12,7 @@
 
 #import "SDFriendfeedTask.h"
 
-@interface SDFriendfeedManager : SDNetTaskManager {
+@interface SDFriendfeedTaskManager : SDNetTaskManager {
 
 }
 

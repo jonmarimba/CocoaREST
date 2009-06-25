@@ -12,7 +12,7 @@
 
 #import "SDIdenticaTask.h"
 
-@interface SDIdenticaManager : SDNetTaskManager {
+@interface SDIdenticaTaskManager : SDNetTaskManager {
 
 }
 

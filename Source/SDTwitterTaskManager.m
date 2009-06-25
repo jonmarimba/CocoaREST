@@ -6,10 +6,10 @@
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
 //
 
-#import "SDTwitterManager.h"
+#import "SDTwitterTaskManager.h"
 
 
-@implementation SDTwitterManager
+@implementation SDTwitterTaskManager
 
 @synthesize appName;
 @synthesize appVersion;

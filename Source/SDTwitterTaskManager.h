@@ -12,7 +12,7 @@
 
 #import "SDTwitterTask.h"
 
-@interface SDTwitterManager : SDNetTaskManager {
+@interface SDTwitterTaskManager : SDNetTaskManager {
 	NSString *appName;
 	NSString *appVersion;
 	NSString *appWebsite;

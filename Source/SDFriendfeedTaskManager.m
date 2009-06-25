@@ -6,9 +6,9 @@
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
 //
 
-#import "SDFriendfeedManager.h"
+#import "SDFriendfeedTaskManager.h"
 
 
-@implementation SDFriendfeedManager
+@implementation SDFriendfeedTaskManager
 
 @end

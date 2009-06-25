@@ -8,7 +8,7 @@
 
 #import "SDFriendfeedTask.h"
 
-#import "SDFriendfeedManager.h"
+#import "SDFriendfeedTaskManager.h"
 
 #import "SDNetTask+Subclassing.h"
 

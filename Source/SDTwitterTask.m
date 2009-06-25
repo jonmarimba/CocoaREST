@@ -8,7 +8,7 @@
 
 #import "SDTwitterTask.h"
 
-#import "SDTwitterManager.h"
+#import "SDTwitterTaskManager.h"
 
 #import "SDNetTask+Subclassing.h"
 
@@ -45,7 +45,7 @@
 @synthesize shouldTileBackgroundImage;
 @synthesize imageToUpload;
 
-- (id) initWithManager:(SDTwitterManager*)newManager {
+- (id) initWithManager:(SDTwitterTaskManager*)newManager {
 	if (self = [super initWithManager:newManager]) {
 		twitterManager = newManager;
 		

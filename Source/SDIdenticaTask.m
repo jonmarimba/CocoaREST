@@ -8,7 +8,7 @@
 
 #import "SDIdenticaTask.h"
 
-#import "SDIdenticaManager.h"
+#import "SDIdenticaTaskManager.h"
 
 #import "SDNetTask+Subclassing.h"
 

@@ -10,7 +10,7 @@
 
 #import "SDNetTask.h"
 
-@class SDTwitterManager;
+@class SDTwitterTaskManager;
 
 typedef enum _SDTwitterTaskType {
 	SDTwitterTaskDoNothing,

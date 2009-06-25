@@ -6,9 +6,9 @@
 //  Copyright 2009 Thoughtful Tree Software. All rights reserved.
 //
 
-#import "SDIdenticaManager.h"
+#import "SDIdenticaTaskManager.h"
 
 
-@implementation SDIdenticaManager
+@implementation SDIdenticaTaskManager
 
 @end

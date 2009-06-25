@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		944D89F20FD61DF7002A71C6 /* SDFriendfeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */; };
+		944D89F20FD61DF7002A71C6 /* SDFriendfeedTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D89F10FD61DF7002A71C6 /* SDFriendfeedTaskManager.m */; };
 		944D89F60FD61E44002A71C6 /* SDFriendfeedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */; };
+		94B3E92C0FDC35C5003762C3 /* SDFacebookTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B3E92B0FDC35C5003762C3 /* SDFacebookTaskManager.m */; };
+		94B3E9300FDC35FD003762C3 /* SDFacebookTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B3E92F0FDC35FD003762C3 /* SDFacebookTask.m */; };
 		94BFA1060FCF222D00806DA0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58150DA1D0A300B32029 /* MainMenu.xib */; };
 		94BFA1220FCF236800806DA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1200FCF236800806DA0 /* AppDelegate.m */; };
 		94BFA12D0FCF237F00806DA0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1250FCF237F00806DA0 /* NSData+Base64.m */; };
@@ -18,12 +20,19 @@
 		94BFA12F0FCF237F00806DA0 /* SDNetTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA1290FCF237F00806DA0 /* SDNetTaskManager.m */; };
 		94BFA1300FCF237F00806DA0 /* SDNetTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA12B0FCF237F00806DA0 /* SDNetTask.m */; };
 		94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */; };
-		94BFA4550FD05F3800806DA0 /* libyajl_s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BFA4540FD05F3800806DA0 /* libyajl_s.a */; };
-		94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */; };
-		94BFA48D0FD06D9600806DA0 /* SDTwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */; };
+		94BFA48D0FD06D9600806DA0 /* SDTwitterTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA48C0FD06D9600806DA0 /* SDTwitterTaskManager.m */; };
 		94BFA49E0FD06FCC00806DA0 /* SDTwitterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */; };
-		94BFA6CB0FD090DC00806DA0 /* SDIdenticaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */; };
+		94BFA6CB0FD090DC00806DA0 /* SDIdenticaTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA6CA0FD090DC00806DA0 /* SDIdenticaTaskManager.m */; };
 		94BFA6CF0FD0911400806DA0 /* SDIdenticaTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */; };
+		94D0E28F0FF3C012006D9C6F /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E27D0FF3C012006D9C6F /* yajl_alloc.c */; };
+		94D0E2900FF3C012006D9C6F /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E27F0FF3C012006D9C6F /* yajl_buf.c */; };
+		94D0E2910FF3C012006D9C6F /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E2830FF3C012006D9C6F /* yajl_encode.c */; };
+		94D0E2920FF3C012006D9C6F /* yajl_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E2850FF3C012006D9C6F /* yajl_gen.c */; };
+		94D0E2930FF3C012006D9C6F /* yajl_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E2870FF3C012006D9C6F /* yajl_lex.c */; };
+		94D0E2940FF3C012006D9C6F /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E28A0FF3C012006D9C6F /* yajl_parser.c */; };
+		94D0E2950FF3C012006D9C6F /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E28C0FF3C012006D9C6F /* yajl.c */; };
+		94D0E2960FF3C012006D9C6F /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D0E28E0FF3C012006D9C6F /* YAJLDecoder.m */; };
+		94D0E29A0FF3C02F006D9C6F /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D0E2990FF3C02F006D9C6F /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +45,14 @@
 		32CA4F630368D1EE00C91783 /* SDSocialNetwork_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSocialNetwork_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SDSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		944D89F00FD61DF7002A71C6 /* SDFriendfeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedManager.h; path = Source/SDFriendfeedManager.h; sourceTree = "<group>"; };
-		944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFriendfeedManager.m; path = Source/SDFriendfeedManager.m; sourceTree = "<group>"; };
+		944D89F00FD61DF7002A71C6 /* SDFriendfeedTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedTaskManager.h; path = Source/SDFriendfeedTaskManager.h; sourceTree = "<group>"; };
+		944D89F10FD61DF7002A71C6 /* SDFriendfeedTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFriendfeedTaskManager.m; path = Source/SDFriendfeedTaskManager.m; sourceTree = "<group>"; };
 		944D89F40FD61E44002A71C6 /* SDFriendfeedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFriendfeedTask.h; path = Source/SDFriendfeedTask.h; sourceTree = "<group>"; };
 		944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFriendfeedTask.m; path = Source/SDFriendfeedTask.m; sourceTree = "<group>"; };
+		94B3E92A0FDC35C5003762C3 /* SDFacebookTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFacebookTaskManager.h; path = Source/SDFacebookTaskManager.h; sourceTree = "<group>"; };
+		94B3E92B0FDC35C5003762C3 /* SDFacebookTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFacebookTaskManager.m; path = Source/SDFacebookTaskManager.m; sourceTree = "<group>"; };
+		94B3E92E0FDC35FD003762C3 /* SDFacebookTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDFacebookTask.h; path = Source/SDFacebookTask.h; sourceTree = "<group>"; };
+		94B3E92F0FDC35FD003762C3 /* SDFacebookTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDFacebookTask.m; path = Source/SDFacebookTask.m; sourceTree = "<group>"; };
 		94BFA1200FCF236800806DA0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		94BFA1210FCF236800806DA0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94BFA1240FCF237F00806DA0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Source/NSData+Base64.h"; sourceTree = "<group>"; };
@@ -52,20 +65,34 @@
 		94BFA12B0FCF237F00806DA0 /* SDNetTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNetTask.m; path = Source/SDNetTask.m; sourceTree = "<group>"; };
 		94BFA42D0FD0437F00806DA0 /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+Hex.h"; path = "Source/NSColor+Hex.h"; sourceTree = "<group>"; };
 		94BFA42E0FD0437F00806DA0 /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+Hex.m"; path = "Source/NSColor+Hex.m"; sourceTree = "<group>"; };
-		94BFA4540FD05F3800806DA0 /* libyajl_s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyajl_s.a; path = Source/libyajl_s.a; sourceTree = "<group>"; };
-		94BFA4560FD05F5A00806DA0 /* YAJLDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAJLDecoder.h; path = Source/YAJLDecoder.h; sourceTree = "<group>"; };
-		94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAJLDecoder.m; path = Source/YAJLDecoder.m; sourceTree = "<group>"; };
-		94BFA4790FD0602B00806DA0 /* yajl_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parse.h; path = Source/yajl_parse.h; sourceTree = "<group>"; };
-		94BFA47B0FD0603900806DA0 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_common.h; path = Source/yajl_common.h; sourceTree = "<group>"; };
-		94BFA48B0FD06D9600806DA0 /* SDTwitterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterManager.h; path = Source/SDTwitterManager.h; sourceTree = "<group>"; };
-		94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterManager.m; path = Source/SDTwitterManager.m; sourceTree = "<group>"; };
+		94BFA48B0FD06D9600806DA0 /* SDTwitterTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterTaskManager.h; path = Source/SDTwitterTaskManager.h; sourceTree = "<group>"; };
+		94BFA48C0FD06D9600806DA0 /* SDTwitterTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterTaskManager.m; path = Source/SDTwitterTaskManager.m; sourceTree = "<group>"; };
 		94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTwitterTask.h; path = Source/SDTwitterTask.h; sourceTree = "<group>"; };
 		94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTwitterTask.m; path = Source/SDTwitterTask.m; sourceTree = "<group>"; };
 		94BFA5B20FD0818C00806DA0 /* SDNetTask+Subclassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SDNetTask+Subclassing.h"; path = "Source/SDNetTask+Subclassing.h"; sourceTree = "<group>"; };
-		94BFA6C90FD090DC00806DA0 /* SDIdenticaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaManager.h; path = Source/SDIdenticaManager.h; sourceTree = "<group>"; };
-		94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaManager.m; path = Source/SDIdenticaManager.m; sourceTree = "<group>"; };
+		94BFA6C90FD090DC00806DA0 /* SDIdenticaTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaTaskManager.h; path = Source/SDIdenticaTaskManager.h; sourceTree = "<group>"; };
+		94BFA6CA0FD090DC00806DA0 /* SDIdenticaTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaTaskManager.m; path = Source/SDIdenticaTaskManager.m; sourceTree = "<group>"; };
 		94BFA6CD0FD0911400806DA0 /* SDIdenticaTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDIdenticaTask.h; path = Source/SDIdenticaTask.h; sourceTree = "<group>"; };
 		94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDIdenticaTask.m; path = Source/SDIdenticaTask.m; sourceTree = "<group>"; };
+		94D0E27D0FF3C012006D9C6F /* yajl_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_alloc.c; path = Source/yajl_alloc.c; sourceTree = "<group>"; };
+		94D0E27E0FF3C012006D9C6F /* yajl_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_alloc.h; path = Source/yajl_alloc.h; sourceTree = "<group>"; };
+		94D0E27F0FF3C012006D9C6F /* yajl_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_buf.c; path = Source/yajl_buf.c; sourceTree = "<group>"; };
+		94D0E2800FF3C012006D9C6F /* yajl_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_buf.h; path = Source/yajl_buf.h; sourceTree = "<group>"; };
+		94D0E2810FF3C012006D9C6F /* yajl_bytestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_bytestack.h; path = Source/yajl_bytestack.h; sourceTree = "<group>"; };
+		94D0E2820FF3C012006D9C6F /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_common.h; path = Source/yajl_common.h; sourceTree = "<group>"; };
+		94D0E2830FF3C012006D9C6F /* yajl_encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_encode.c; path = Source/yajl_encode.c; sourceTree = "<group>"; };
+		94D0E2840FF3C012006D9C6F /* yajl_encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_encode.h; path = Source/yajl_encode.h; sourceTree = "<group>"; };
+		94D0E2850FF3C012006D9C6F /* yajl_gen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_gen.c; path = Source/yajl_gen.c; sourceTree = "<group>"; };
+		94D0E2860FF3C012006D9C6F /* yajl_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_gen.h; path = Source/yajl_gen.h; sourceTree = "<group>"; };
+		94D0E2870FF3C012006D9C6F /* yajl_lex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_lex.c; path = Source/yajl_lex.c; sourceTree = "<group>"; };
+		94D0E2880FF3C012006D9C6F /* yajl_lex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_lex.h; path = Source/yajl_lex.h; sourceTree = "<group>"; };
+		94D0E2890FF3C012006D9C6F /* yajl_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parse.h; path = Source/yajl_parse.h; sourceTree = "<group>"; };
+		94D0E28A0FF3C012006D9C6F /* yajl_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_parser.c; path = Source/yajl_parser.c; sourceTree = "<group>"; };
+		94D0E28B0FF3C012006D9C6F /* yajl_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parser.h; path = Source/yajl_parser.h; sourceTree = "<group>"; };
+		94D0E28C0FF3C012006D9C6F /* yajl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl.c; path = Source/yajl.c; sourceTree = "<group>"; };
+		94D0E28D0FF3C012006D9C6F /* YAJLDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAJLDecoder.h; path = Source/YAJLDecoder.h; sourceTree = "<group>"; };
+		94D0E28E0FF3C012006D9C6F /* YAJLDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAJLDecoder.m; path = Source/YAJLDecoder.m; sourceTree = "<group>"; };
+		94D0E2990FF3C02F006D9C6F /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				94BFA4550FD05F3800806DA0 /* libyajl_s.a in Frameworks */,
+				94D0E29A0FF3C02F006D9C6F /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +121,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94BFA4540FD05F3800806DA0 /* libyajl_s.a */,
+				94D0E2990FF3C02F006D9C6F /* libcrypto.dylib */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -160,8 +187,8 @@
 		944D89EE0FD61D6B002A71C6 /* Friendfeed */ = {
 			isa = PBXGroup;
 			children = (
-				944D89F00FD61DF7002A71C6 /* SDFriendfeedManager.h */,
-				944D89F10FD61DF7002A71C6 /* SDFriendfeedManager.m */,
+				944D89F00FD61DF7002A71C6 /* SDFriendfeedTaskManager.h */,
+				944D89F10FD61DF7002A71C6 /* SDFriendfeedTaskManager.m */,
 				944D89F40FD61E44002A71C6 /* SDFriendfeedTask.h */,
 				944D89F50FD61E44002A71C6 /* SDFriendfeedTask.m */,
 			);
@@ -175,6 +202,17 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		94B3E9160FDC352E003762C3 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				94B3E92A0FDC35C5003762C3 /* SDFacebookTaskManager.h */,
+				94B3E92B0FDC35C5003762C3 /* SDFacebookTaskManager.m */,
+				94B3E92E0FDC35FD003762C3 /* SDFacebookTask.h */,
+				94B3E92F0FDC35FD003762C3 /* SDFacebookTask.m */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
 		94BFA1230FCF236E00806DA0 /* SDSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +222,7 @@
 				94BFA12B0FCF237F00806DA0 /* SDNetTask.m */,
 				94BFA5B20FD0818C00806DA0 /* SDNetTask+Subclassing.h */,
 				944D8ADD0FD6D887002A71C6 /* Images */,
+				94B3E9160FDC352E003762C3 /* Facebook */,
 				94BFA48A0FD06D8500806DA0 /* Twitter */,
 				94BFA6C80FD090B800806DA0 /* identi.ca */,
 				944D89EE0FD61D6B002A71C6 /* Friendfeed */,
@@ -209,10 +248,24 @@
 		94BFA4870FD065F600806DA0 /* JSON Parsing */ = {
 			isa = PBXGroup;
 			children = (
-				94BFA4790FD0602B00806DA0 /* yajl_parse.h */,
-				94BFA47B0FD0603900806DA0 /* yajl_common.h */,
-				94BFA4560FD05F5A00806DA0 /* YAJLDecoder.h */,
-				94BFA4570FD05F5A00806DA0 /* YAJLDecoder.m */,
+				94D0E27D0FF3C012006D9C6F /* yajl_alloc.c */,
+				94D0E27E0FF3C012006D9C6F /* yajl_alloc.h */,
+				94D0E27F0FF3C012006D9C6F /* yajl_buf.c */,
+				94D0E2800FF3C012006D9C6F /* yajl_buf.h */,
+				94D0E2810FF3C012006D9C6F /* yajl_bytestack.h */,
+				94D0E2820FF3C012006D9C6F /* yajl_common.h */,
+				94D0E2830FF3C012006D9C6F /* yajl_encode.c */,
+				94D0E2840FF3C012006D9C6F /* yajl_encode.h */,
+				94D0E2850FF3C012006D9C6F /* yajl_gen.c */,
+				94D0E2860FF3C012006D9C6F /* yajl_gen.h */,
+				94D0E2870FF3C012006D9C6F /* yajl_lex.c */,
+				94D0E2880FF3C012006D9C6F /* yajl_lex.h */,
+				94D0E2890FF3C012006D9C6F /* yajl_parse.h */,
+				94D0E28A0FF3C012006D9C6F /* yajl_parser.c */,
+				94D0E28B0FF3C012006D9C6F /* yajl_parser.h */,
+				94D0E28C0FF3C012006D9C6F /* yajl.c */,
+				94D0E28D0FF3C012006D9C6F /* YAJLDecoder.h */,
+				94D0E28E0FF3C012006D9C6F /* YAJLDecoder.m */,
 			);
 			name = "JSON Parsing";
 			sourceTree = "<group>";
@@ -220,8 +273,8 @@
 		94BFA48A0FD06D8500806DA0 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				94BFA48B0FD06D9600806DA0 /* SDTwitterManager.h */,
-				94BFA48C0FD06D9600806DA0 /* SDTwitterManager.m */,
+				94BFA48B0FD06D9600806DA0 /* SDTwitterTaskManager.h */,
+				94BFA48C0FD06D9600806DA0 /* SDTwitterTaskManager.m */,
 				94BFA49C0FD06FCC00806DA0 /* SDTwitterTask.h */,
 				94BFA49D0FD06FCC00806DA0 /* SDTwitterTask.m */,
 			);
@@ -231,8 +284,8 @@
 		94BFA6C80FD090B800806DA0 /* identi.ca */ = {
 			isa = PBXGroup;
 			children = (
-				94BFA6C90FD090DC00806DA0 /* SDIdenticaManager.h */,
-				94BFA6CA0FD090DC00806DA0 /* SDIdenticaManager.m */,
+				94BFA6C90FD090DC00806DA0 /* SDIdenticaTaskManager.h */,
+				94BFA6CA0FD090DC00806DA0 /* SDIdenticaTaskManager.m */,
 				94BFA6CD0FD0911400806DA0 /* SDIdenticaTask.h */,
 				94BFA6CE0FD0911400806DA0 /* SDIdenticaTask.m */,
 			);
@@ -265,7 +318,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SDSocialNetwork" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CocoaREST" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* SDSocialNetwork */;
@@ -300,13 +353,22 @@
 				94BFA12F0FCF237F00806DA0 /* SDNetTaskManager.m in Sources */,
 				94BFA1300FCF237F00806DA0 /* SDNetTask.m in Sources */,
 				94BFA42F0FD0437F00806DA0 /* NSColor+Hex.m in Sources */,
-				94BFA4580FD05F5A00806DA0 /* YAJLDecoder.m in Sources */,
-				94BFA48D0FD06D9600806DA0 /* SDTwitterManager.m in Sources */,
+				94BFA48D0FD06D9600806DA0 /* SDTwitterTaskManager.m in Sources */,
 				94BFA49E0FD06FCC00806DA0 /* SDTwitterTask.m in Sources */,
-				94BFA6CB0FD090DC00806DA0 /* SDIdenticaManager.m in Sources */,
+				94BFA6CB0FD090DC00806DA0 /* SDIdenticaTaskManager.m in Sources */,
 				94BFA6CF0FD0911400806DA0 /* SDIdenticaTask.m in Sources */,
-				944D89F20FD61DF7002A71C6 /* SDFriendfeedManager.m in Sources */,
+				944D89F20FD61DF7002A71C6 /* SDFriendfeedTaskManager.m in Sources */,
 				944D89F60FD61E44002A71C6 /* SDFriendfeedTask.m in Sources */,
+				94B3E92C0FDC35C5003762C3 /* SDFacebookTaskManager.m in Sources */,
+				94B3E9300FDC35FD003762C3 /* SDFacebookTask.m in Sources */,
+				94D0E28F0FF3C012006D9C6F /* yajl_alloc.c in Sources */,
+				94D0E2900FF3C012006D9C6F /* yajl_buf.c in Sources */,
+				94D0E2910FF3C012006D9C6F /* yajl_encode.c in Sources */,
+				94D0E2920FF3C012006D9C6F /* yajl_gen.c in Sources */,
+				94D0E2930FF3C012006D9C6F /* yajl_lex.c in Sources */,
+				94D0E2940FF3C012006D9C6F /* yajl_parser.c in Sources */,
+				94D0E2950FF3C012006D9C6F /* yajl.c in Sources */,
+				94D0E2960FF3C012006D9C6F /* YAJLDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SDSocialNetwork" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CocoaREST" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
