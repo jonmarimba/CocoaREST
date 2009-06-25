@@ -129,10 +129,10 @@
 			break;
 		}
 		case SDParseFormatImage:
-			results = [[[NSImage alloc] initWithData:data] autorelease];
+			results = [[NSImage alloc] initWithData:data];
 			break;
 		case SDParseFormatNone:
-			results = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+			results = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 			break;
 	}
 	
