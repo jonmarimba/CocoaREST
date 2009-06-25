@@ -8,42 +8,45 @@
 
 #import "AppDelegate.h"
 
-#import "SDTwitterTaskManager.h"
-
 @implementation AppDelegate
 
-- (void) awakeFromNib {
-	// inside a header file, declare manager as an instance variable
-	SDTwitterTaskManager *manager;
-	
-	// create out manager, retaining it as we want it to stick around
+@synthesize isWaiting;
+@synthesize results;
+
+- (void) applicationDidFinishLaunching:(NSNotification*)notification {
 	manager = [[SDTwitterTaskManager manager] retain];
 	manager.delegate = self;
 	manager.successSelector = @selector(twitterManager:resultsReadyForTask:);
 	manager.failSelector = @selector(twitterManager:failedForTask:);
-	
-	// this is a must for certain API calls which require authentication
-	// change them to real login values or the tasks will fail
-	manager.username = @"USERNAME";
-	manager.password = @"PASSWORD";
-	
-	// 3 tasks can be run simultaneously
 	manager.maxConcurrentTasks = 3;
+}
+
+- (IBAction) runTask:(id)sender {
+	manager.username = [userField stringValue];
+	manager.password = [passField stringValue];
 	
-	// create a basic task
 	SDTwitterTask *basicTask = [SDTwitterTask taskWithManager:manager];
-	basicTask.type = SDTwitterTaskGetMentions;
-	basicTask.count = 3;
-	basicTask.page = 10;
+	basicTask.type = [[taskTypeButton selectedItem] tag];
 	[basicTask run];
+	
+	self.isWaiting = YES;
 }
 
 - (void) twitterManager:(SDTwitterTaskManager*)manager resultsReadyForTask:(SDTwitterTask*)task {
-	NSLog(@"%@", task.results);
+	self.isWaiting = NO;
+	
+	self.results = task.results;
 }
 
 - (void) twitterManager:(SDTwitterTaskManager*)manager failedForTask:(SDTwitterTask*)task {
-	NSLog(@"%@", task.error);
+	self.isWaiting = NO;
+	
+	self.results = nil;
+	
+	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	[alert setMessageText:@"Error"];
+	[alert setInformativeText:[task.error localizedDescription]];
+	[alert runModal];
 }
 
 @end
